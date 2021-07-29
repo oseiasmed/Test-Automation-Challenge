@@ -1,13 +1,18 @@
+import { userInput, passwordInput, officeInput, signInButton } from '../lib/elementsMap'
+import { waitAndClick, waitAndWrite } from '../lib/helpers'
+
 export default class BasePage {
-	async wait(time) {
-		await page.waitFor(time)
+	
+	async login(username, password, office) {
+
+		await waitAndWrite(page, userInput, username)
+		await waitAndWrite(page, passwordInput, password)
+		await waitAndWrite(page, officeInput, office)
+		await waitAndClick(page, signInButton)
+
 	}
 
-	async getTitle() {
-		return await page.title()
-	}
-
-	async getUrl() {
-		return await page.url()
+	async goToPage() {
+		await page.goto('https://qa.lawoffice.com.br/login')
 	}
 }
