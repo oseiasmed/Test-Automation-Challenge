@@ -13,6 +13,7 @@ describe('Lawoffice Login', () => {
 	})
 
 	it('Should login to application', async () => {
+
 		await homePage.goToPage()
 		await loginPage.login(username, password, office)
 	})

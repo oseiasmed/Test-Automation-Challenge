@@ -1,15 +1,15 @@
 import BasePage from './BasePage'
+const { waitAndClick } = require('../lib/helpers')
+const { waitAndWrite } = require('../lib/helpers')
 
 export default class LoginPage extends BasePage {
 
 	async login(username, password, office) {
-		await page.waitForSelector('input[type="text"]')
-		await page.type('input[type="text"]', username)
-		await page.waitForSelector('input[type="password"]')
-		await page.type('input[type="password"]', password)
-		await page.waitForSelector('#Domain')
-		await page.type('#Domain', office)
-		await page.click('button[type="submit"]')
-		// //span[@class="ant-avatar-string"]
+
+		await waitAndWrite(page, 'input[type="text"]', username)
+		await waitAndWrite(page, 'input[type="password"]', password)
+		await waitAndWrite(page, '#Domain', office)
+		await waitAndClick(page, 'button[type="submit"]')
+			
 	}
 }
