@@ -1,5 +1,5 @@
-import BasePage from '../../pages/BasePage'
-import { username, password, office, timeout } from '../../config'
+import BasePage from '../pages/BasePage'
+import { username, password, office, timeout } from '../config'
 
 describe('Lawoffice Login', () => {
 
@@ -15,5 +15,6 @@ describe('Lawoffice Login', () => {
 		await basePage.login(username, password, office)
 	})
 })
+
 
 
