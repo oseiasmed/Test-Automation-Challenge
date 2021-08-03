@@ -1,5 +1,5 @@
-import { userInput, passwordInput, officeInput, signInButton, clickLogoutOne, clickLogoutTwo } from '../lib/elementsMap'
-import { waitAndClick, waitAndWrite, waitForText } from '../lib/helpers'
+import { userInput, passwordInput, officeInput, signInButton } from '../lib/elementsMap'
+import { waitAndClick, waitAndWrite } from '../lib/helpers'
 
 export default class BasePage {
 
@@ -12,14 +12,7 @@ export default class BasePage {
 		await waitAndWrite(page, userInput, username)
 		await waitAndWrite(page, passwordInput, password)
 		await waitAndWrite(page, officeInput, office)
-		await waitAndClick(page, signInButton)
-
-	}
-
-	async logout() {
-
-		await waitAndClick(page, clickLogoutOne)
-		await waitAndClick(page, clickLogoutTwo)
-
+		await waitAndClick(page, signInButton)	
+		//await waitAndClick(page, remunerations)	
 	}
 }
