@@ -1,4 +1,4 @@
-import { waitAndClick, waitAndWrite } from '../lib/helpers'
+import { waitAndClick, waitAndWriteDate } from '../lib/helpers'
 import { remunerationsLink } from '../lib/elementsMap'
 
 export default class RemunerationsPage {
@@ -6,8 +6,8 @@ export default class RemunerationsPage {
 	async remunerations() {
 
 		await waitAndClick(page, remunerationsLink)
-		await waitAndWrite(page, '.ant-calendar-picker-input', '2021-07-19')
-		await waitAndWrite(page, '.ant-calendar-picker-input', '2021-07-25')
-		await waitAndClick(page, '.ant-btn-success')
+		await waitAndWriteDate(page, '//input[@placeholder="Início"]', '2021-07-01')
+		await waitAndWriteDate(page, '//input[@placeholder="Fim"]', '2021-07-19')
+		//await waitAndClick(page, listButton)
 	}
 }

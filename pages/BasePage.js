@@ -13,6 +13,5 @@ export default class BasePage {
 		await waitAndWrite(page, passwordInput, password)
 		await waitAndWrite(page, officeInput, office)
 		await waitAndClick(page, signInButton)	
-		//await waitAndClick(page, remunerations)	
 	}
 }
