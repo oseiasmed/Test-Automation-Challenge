@@ -3,7 +3,7 @@ import PreRegistrationEditionPage from '../pages/PreRegistrationEditionPage'
 import { username, password, office, timeout } from '../config'
 const expect = require('chai').expect
 
-describe('Lawoffice Login', () => {
+describe('Pre Registration', () => {
 
 	let basePage
 	let preRegistrationEditionPage

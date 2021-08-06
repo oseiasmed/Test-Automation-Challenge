@@ -1,5 +1,5 @@
 import { waitAndClick } from '../lib/helpers'
-import { linkCases, linkPreRegistration, preRegistrationCheckbox, buttonEditSelected } from '../lib/elementsMap'
+import { linkCases, linkPreRegistration } from '../lib/elementsMap'
 
 export default class PreRegistrationEditionPage {
 
