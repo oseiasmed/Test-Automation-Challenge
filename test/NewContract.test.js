@@ -10,8 +10,7 @@ describe('Lawoffice Login', () => {
 	beforeAll(async () => {
 		jest.setTimeout(timeout)
         newContractPage = new NewContractPage()
-		basePage = new BasePage()
-		
+		basePage = new BasePage()	
 	})
 
 	it('Should remunerations', async () => {
@@ -19,6 +18,5 @@ describe('Lawoffice Login', () => {
 		await basePage.goToPage()
 		await basePage.login(username, password, office)
 		await newContractPage.newContract()
-	
 	})
 })
