@@ -1,6 +1,5 @@
-import ExtractPage from '../pages/ExtractPage'
-import BasePage from '../pages/BasePage'
-
+import BasePage from '../pages/Base/BasePage'
+import ExtractPage from '../pages/Reports/ExtractPage'
 import { username, password, office, timeout } from '../config'
 
 describe('Extract Page', () => {

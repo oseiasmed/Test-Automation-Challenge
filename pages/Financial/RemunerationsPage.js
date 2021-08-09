@@ -1,5 +1,5 @@
-import { waitAndClick } from '../lib/helpers'
-import { remunerationsLink, inputDateStart, inputDateEnd, listButton, inputDateStartNumber, inputDateEndNumber } from '../lib/elementsMap'
+import { waitAndClick } from '../../lib/helpers'
+import { remunerationsLink, inputDateStart, inputDateEnd, listButton, inputDateStartNumber, inputDateEndNumber } from '../Financial/elementsMap'
 
 export default class RemunerationsPage {
 

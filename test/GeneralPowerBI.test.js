@@ -1,5 +1,5 @@
-import GeneralPowerBIPage from '../pages/GeneralPowerBIPage'
-import BasePage from '../pages/BasePage'
+import BasePage from '../pages/Base/BasePage'
+import GeneralPowerBIPage from '../pages/Reports/GeneralPowerBIPage'
 import { username, password, office, timeout } from '../config'
 
 describe('Lawoffice Login', () => {

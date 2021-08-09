@@ -1,7 +1,5 @@
-import RemunerationContractPage from '../pages/RemunerationContractPage'
-import BasePage from '../pages/BasePage'
-
-
+import BasePage from '../pages/Base/BasePage'
+import RemunerationContractPage from '../pages/Financial/RemunerationContractPage'
 import { username, password, office, timeout } from '../config'
 
 describe('Lawoffice Login', () => {

@@ -1,5 +1,5 @@
-import { waitAndClick } from '../lib/helpers'
-import { remunerationContract } from '../lib/elementsMap'
+import { waitAndClick } from '../../lib/helpers'
+import { remunerationContract } from '../Financial/elementsMap'
 
 export default class RemunerationContractPage {
 

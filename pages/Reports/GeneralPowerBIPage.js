@@ -1,5 +1,5 @@
-import { waitAndClick } from '../lib/helpers'
-import { generalPowerBI } from '../lib/elementsMap'
+import { waitAndClick } from '../../lib/helpers'
+import { generalPowerBI } from '../Reports/elementsMap'
 
 export default class GeneralPowerBIPage {
 

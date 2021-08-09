@@ -1,5 +1,5 @@
-import { waitAndClick } from '../lib/helpers'
-import { linkExtract } from '../lib/elementsMap'
+import { waitAndClick } from '../../lib/helpers'
+import { linkExtract } from '../Reports/elementsMap'
 
 export default class ExtractPage {
 

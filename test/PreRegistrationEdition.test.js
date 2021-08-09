@@ -1,5 +1,5 @@
-import BasePage from '../pages/BasePage'
-import PreRegistrationEditionPage from '../pages/PreRegistrationEditionPage'
+import BasePage from '../pages/Base/BasePage'
+import PreRegistrationEditionPage from '../pages/Cases/PreRegistrationEditionPage'
 import { username, password, office, timeout } from '../config'
 const expect = require('chai').expect
 

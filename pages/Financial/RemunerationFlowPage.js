@@ -1,5 +1,5 @@
-import { waitAndClick } from '../lib/helpers'
-import { financial, remunerationFlow } from '../lib/elementsMap'
+import { waitAndClick } from '../../lib/helpers'
+import { financial, remunerationFlow } from '../Financial/elementsMap'
 
 export default class RemunerationFlowPage {
 

@@ -1,5 +1,5 @@
-import BasePage from '../pages/BasePage'
-import RemunerationFlowPage from '../pages/RemunerationFlowPage'
+import BasePage from '../pages/Base/BasePage'
+import RemunerationFlowPage from '../pages/Financial/RemunerationFlowPage'
 import { username, password, office, timeout } from '../config'
 const expect = require('chai').expect
 
