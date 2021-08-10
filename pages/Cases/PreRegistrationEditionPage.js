@@ -1,7 +1,7 @@
 import { waitAndClick, waitAndWrite } from '../../lib/helpers'
 import { linkCases, linkPreRegistration, preRegistrationCheckbox, buttonEditSelected, inputSelectACustomer, inputTitle,
 	inputSelectACustomerLi, inputSelectAnArea, inputSelectAnAreaLi, inputSelectAPart, inputSelectAPartLi, 
-	TextAreaObservation, inputSelectAResponsible, inputSelectAResponsibleLi } from '../Cases/elementsMap'
+	TextAreaObservation, inputSelectAResponsible, inputSelectAResponsibleLi, inputCoResponsible, inputCoResponsibleLi, buttonSubmit } from '../Cases/elementsMap'
 
 export default class PreRegistrationEditionPage {
 
@@ -21,5 +21,9 @@ export default class PreRegistrationEditionPage {
 		await waitAndWrite(page, TextAreaObservation, 'Teste de edição em Pré Cadastro')
 		await waitAndClick(page, inputSelectAResponsible)
 		await waitAndClick(page, inputSelectAResponsibleLi)
+		await waitAndClick(page, inputCoResponsible)
+		await waitAndClick(page, inputCoResponsibleLi)
+		await waitAndClick(page, buttonSubmit)
+
 	}
 }

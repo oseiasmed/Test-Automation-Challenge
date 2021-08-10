@@ -12,3 +12,6 @@ export var inputSelectAPartLi = "(//li[@class='ant-select-dropdown-menu-item ng-
 export var TextAreaObservation = "//textarea[@placeholder='Observação do caso']"
 export var inputSelectAResponsible = "//div[.='Selecione um responsável']"
 export var inputSelectAResponsibleLi = "(//li[@class='ant-select-dropdown-menu-item ng-star-inserted']/following::li[@class='ant-select-dropdown-menu-item ng-star-inserted'])[2]"
+export var inputCoResponsible = "//div[.='Selecione os correponsáveis']"
+export var inputCoResponsibleLi = "(//li[@class='ant-select-dropdown-menu-item ng-star-inserted'])[4]"
+export var buttonSubmit = "//button[@type='submit']"
