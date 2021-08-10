@@ -5,8 +5,8 @@ export default class PreRegistrationPage {
 
 	async registration() {
 
-		// await waitAndClick(page, linkCases)
-		// await waitAndClick(page, linkPreRegistration)
+		await waitAndClick(page, linkCases)
+		await waitAndClick(page, linkPreRegistration)
 
 	}
 }
