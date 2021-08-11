@@ -1,25 +1,47 @@
 import BasePage from '../pages/Base/BasePage'
-import PreRegistrationPage from '../pages/Cases/PreRegistrationPage'
+import PreRegistrationListingPage from '../pages/Cases/PreRegistrationListingPage'
+import PreRegistrationEdition from '../pages/Cases/PreRegistrationEditionPage'
+import PreRegistrationDeletePage from '../pages/Cases/PreRegistrationDeletePage'
 import { username, password, office, timeout } from '../config'
 const expect = require('chai').expect
 
-describe('Lawoffice Login', () => {
+describe('Must do a crud on Pre-Registration', () => {
 
 	let basePage
-    let preRegistrationPage
+    let preRegistrationListingPage
+    let preRegistrationEditionPage
+    let preRegistrationDeletePage
 
 	beforeAll(async () => {
 		jest.setTimeout(timeout)
 		basePage = new BasePage()
-        preRegistrationPage = new PreRegistrationPage()
+        preRegistrationListingPage = new PreRegistrationListingPage()
+        preRegistrationEditionPage = new PreRegistrationEdition()
+        preRegistrationDeletePage = new PreRegistrationDeletePage()
 	})
 
-	it('Should click in Menu Cases', async () => {
+	it('Should pre registration listing page', async () => {
 		const title = await page.title()
 		await basePage.goToPage()
 		await basePage.login(username, password, office)
-        await preRegistrationPage.registration()
+        await preRegistrationListingPage.preRegistrationListing()
 		expect(title).to.be.a('string','Lista')
+	})
+
+	it('Should pre registration edition page', async () => {
+		const title = await page.title()
+		await basePage.goToPage()
+		await basePage.login(username, password, office)
+		await preRegistrationEditionPage.preRegistrationEdition()
+		expect(title).to.be.a('string', 'Lista')
+	})
+
+	it('Should pre registration delete page', async () => {
+		const title = await page.title()
+		await basePage.goToPage()
+		await basePage.login(username, password, office)
+		await preRegistrationDeletePage.preRegistrationDelete()
+		expect(title).to.be.a('string', 'Lista')
 	})
 })
 

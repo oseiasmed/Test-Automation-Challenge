@@ -2,6 +2,7 @@ export var linkCases = '//span[.="Casos"]'
 export var linkPreRegistration = '//a[@href="/processos/capa"]'
 export var preRegistrationCheckbox = "(//tr[@class='ant-table-row ng-star-inserted']//td)[1]"
 export var buttonEditSelected = "//button//span[.=' Editar Selecionados '] "
+export var buttonDeleteSelected = "//button[@class='ant-btn ant-btn-danger']"
 export var inputSelectACustomer = "//div[.='Selecione um cliente']"
 export var inputSelectACustomerLi = "(//li[@class='ant-select-dropdown-menu-item ng-star-inserted'])[2]"
 export var inputTitle = "//input[@placeholder='Título']"

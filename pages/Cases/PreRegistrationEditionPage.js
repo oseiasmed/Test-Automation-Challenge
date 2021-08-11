@@ -1,11 +1,13 @@
 import { waitAndClick, waitAndWrite } from '../../lib/helpers'
-import { linkCases, linkPreRegistration, preRegistrationCheckbox, buttonEditSelected, inputSelectACustomer, inputTitle,
-	inputSelectACustomerLi, inputSelectAnArea, inputSelectAnAreaLi, inputSelectAPart, inputSelectAPartLi, 
-	TextAreaObservation, inputSelectAResponsible, inputSelectAResponsibleLi, inputCoResponsible, inputCoResponsibleLi, buttonSubmit } from '../Cases/elementsMap'
+import {
+	linkCases, linkPreRegistration, preRegistrationCheckbox, buttonEditSelected, inputSelectACustomer, inputTitle,
+	inputSelectACustomerLi, inputSelectAnArea, inputSelectAnAreaLi, inputSelectAPart, inputSelectAPartLi,
+	TextAreaObservation, inputSelectAResponsible, inputSelectAResponsibleLi, inputCoResponsible, inputCoResponsibleLi, buttonSubmit
+} from '../Cases/elementsMap'
 
-export default class PreRegistrationEditionPage {
+export default class PreRegistrationEdition {
 
-	async preRegistrationEd() {
+	async preRegistrationEdition() {
 
 		await waitAndClick(page, linkCases)
 		await waitAndClick(page, linkPreRegistration)
