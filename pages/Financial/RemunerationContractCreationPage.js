@@ -1,7 +1,7 @@
 import { waitAndClick, waitAndWrite } from '../../lib/helpers'
 import { financial, remunerationContract, linkAddContract, linkArrow, contractTitle, inputDateStart, inputDateStartContract, inputDateEnd, inputDateEndContract, btnSaveContract } from '../Financial/elementsMap'
 
-export default class NewContractPage {
+export default class RemunerationContractCreationPage {
 
 	async newContract() {
 
@@ -9,7 +9,7 @@ export default class NewContractPage {
 		await waitAndClick(page, remunerationContract)
 		await waitAndClick(page, linkAddContract)
 		await waitAndClick(page, linkArrow)
-		await waitAndWrite(page, contractTitle, 'Novo contrato de remuneração')
+		await waitAndWrite(page, contractTitle, 'Criação de novos contratos')
 		await waitAndClick(page, inputDateStart)
 		await waitAndClick(page, inputDateStartContract)
 		await waitAndClick(page, inputDateEnd)

@@ -2,7 +2,7 @@ import { userInput, passwordInput, officeInput, signInButton } from '../Base/ele
 import { waitAndClick, waitAndWrite } from '../../lib/helpers'
 
 export default class BasePage {
-
+	
 	async goToPage() {
 		await page.goto('https://qa.lawoffice.com.br/login')
 	}
@@ -14,4 +14,5 @@ export default class BasePage {
 		await waitAndWrite(page, officeInput, office)
 		await waitAndClick(page, signInButton)	
 	}
+
 }

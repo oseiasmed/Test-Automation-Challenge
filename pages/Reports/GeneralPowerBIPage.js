@@ -1,10 +1,11 @@
 import { waitAndClick } from '../../lib/helpers'
-import { generalPowerBI } from '../Reports/elementsMap'
+import { linkReports, generalPowerBI } from '../Reports/elementsMap'
 
 export default class GeneralPowerBIPage {
 
-	async general() {
+	async generalPowerBI() {
 
+		await waitAndClick(page, linkReports)
 		await waitAndClick(page, generalPowerBI)
 
 	}

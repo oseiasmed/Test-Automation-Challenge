@@ -1,9 +1,9 @@
 import { waitAndClick } from '../../lib/helpers'
-import { remunerationsLink, inputDateStart, inputDateEnd, listButton, inputDateStartNumber, inputDateEndNumber } from '../Financial/elementsMap'
+import { remunerationsLink, inputDateStart, inputDateEnd, listButton, inputDateStartNumber, inputDateEndNumber } from '../../pages/Financial/elementsMap'
 
-export default class RemunerationsPage {
+export default class RemunerationsListingPage {
 
-	async remunerations() {
+	async remunerationsListing() {
 
 		await waitAndClick(page, remunerationsLink)
 		await waitAndClick(page, inputDateStart)

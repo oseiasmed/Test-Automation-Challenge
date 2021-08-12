@@ -8,38 +8,35 @@ const expect = require('chai').expect
 describe('Must do a crud on Pre-Registration', () => {
 
 	let basePage
-    let preRegistrationListingPage
-    let preRegistrationEditionPage
-    let preRegistrationDeletePage
+	let preRegistrationListingPage
+	let preRegistrationEditionPage
+	let preRegistrationDeletePage
 
 	beforeAll(async () => {
 		jest.setTimeout(timeout)
-		basePage = new BasePage()
-        preRegistrationListingPage = new PreRegistrationListingPage()
-        preRegistrationEditionPage = new PreRegistrationEdition()
-        preRegistrationDeletePage = new PreRegistrationDeletePage()
+		await basePage.goToPage()
+		await basePage.login(username, password, office)
 	})
+
+	basePage = new BasePage()
+	preRegistrationListingPage = new PreRegistrationListingPage()
+	preRegistrationEditionPage = new PreRegistrationEdition()
+	preRegistrationDeletePage = new PreRegistrationDeletePage()
 
 	it('Should pre registration listing page', async () => {
 		const title = await page.title()
-		await basePage.goToPage()
-		await basePage.login(username, password, office)
-        await preRegistrationListingPage.preRegistrationListing()
-		expect(title).to.be.a('string','Lista')
+		await preRegistrationListingPage.preRegistrationListing()
+		expect(title).to.be.a('string', 'Lista')
 	})
 
 	it('Should pre registration edition page', async () => {
 		const title = await page.title()
-		await basePage.goToPage()
-		await basePage.login(username, password, office)
 		await preRegistrationEditionPage.preRegistrationEdition()
 		expect(title).to.be.a('string', 'Lista')
 	})
 
 	it('Should pre registration delete page', async () => {
 		const title = await page.title()
-		await basePage.goToPage()
-		await basePage.login(username, password, office)
 		await preRegistrationDeletePage.preRegistrationDelete()
 		expect(title).to.be.a('string', 'Lista')
 	})
