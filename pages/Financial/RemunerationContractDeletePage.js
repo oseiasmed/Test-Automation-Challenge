@@ -7,7 +7,7 @@ export default class RemunerationContractDeletePage {
 
 		await waitAndClick(page, financial)
 		await waitAndClick(page, remunerationContract)
-		await waitAndClick(page, deleteContractButton)
+		//await waitAndClick(page, deleteContractButton)
 		
 	}
 }

@@ -14,7 +14,7 @@ export var inputDateStartNumber = "(//div[@class='ant-calendar-date ng-star-inse
 export var inputDateEndNumber = "(//div[@class='ant-calendar-date ng-star-inserted'][text()=' 5 '])[1]"
 export var listButton = '//button[.="Listar"]'
 export var linkArrow = "//div[@class='panel panel-flat']"
-export var deleteContractButton = "//tbody/tr[1]/td[7]/span[1]/a[1]/i[1]"
+export var deleteContractButton = "(//span[@class='gt-row-content ng-star-inserted']//i)[2]"
 
 
 
