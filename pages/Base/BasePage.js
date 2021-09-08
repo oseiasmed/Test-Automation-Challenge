@@ -1,4 +1,4 @@
-import { userInput, passwordInput, officeInput, signInButton } from '../Base/elementsMap'
+import { userInput, passwordInput, officeInput, signInButton, reCaptcha } from '../Base/elementsMap'
 import { waitAndClick, waitAndWrite } from '../../lib/helpers'
 
 export default class BasePage {
@@ -13,6 +13,6 @@ export default class BasePage {
 		await waitAndWrite(page, passwordInput, password)
 		await waitAndWrite(page, officeInput, office)
 		await waitAndClick(page, signInButton)	
+			
 	}
-
 }

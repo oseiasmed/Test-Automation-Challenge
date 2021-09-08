@@ -5,7 +5,7 @@ import RemunerationContractDeletePage from '../pages/Financial/RemunerationContr
 const expect = require('chai').expect
 import { username, password, office, timeout } from '../config'
 
-describe('Lawoffice Login', () => {
+describe('Lawoffice Financial Page', () => {
 
 	let basePage
 	let remunerationsListingPage

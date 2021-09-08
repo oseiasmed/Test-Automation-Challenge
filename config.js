@@ -1,4 +1,4 @@
-export const username = 'greg'
-export const password = '1234'
+export const username = 'ftl'
+export const password = '123456Aa;'
 export const office = 'suporte'
 export const timeout = 150000

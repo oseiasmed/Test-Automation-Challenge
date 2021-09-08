@@ -7,6 +7,5 @@ export default class PreRegistrationListingPage{
 
 		await waitAndClick(page, linkCases)
 		await waitAndClick(page, linkPreRegistration)
-
 	}
 }

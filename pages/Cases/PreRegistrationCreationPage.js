@@ -1,12 +1,12 @@
-import { waitAndClick } from '../../lib/helpers'
-import { linkCases, linkPreRegistration } from '../Cases/elementsMap'
+// import { waitAndClick } from '../../lib/helpers'
+// import { linkCases, linkPreRegistration } from '../Cases/elementsMap'
 
-export default class PreRegistrationListingPage{
+// export default class PreRegistrationListingPage{
 
-	async preRegistrationListing() {
+// 	async preRegistrationListing() {
 
-		await waitAndClick(page, linkCases)
-		await waitAndClick(page, linkPreRegistration)
+// 		await waitAndClick(page, linkCases)
+// 		await waitAndClick(page, linkPreRegistration)
 
-	}
-}
+// 	}
+// }
