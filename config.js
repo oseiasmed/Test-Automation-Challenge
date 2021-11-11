@@ -1,4 +1,3 @@
-export const username = 'ftl'
-export const password = '123456Aa;'
-export const office = 'suporte'
+export const username = 'oseias.medeiros@lawsoft.com.br'
+export const password = 'Mudar@123'
 export const timeout = 150000

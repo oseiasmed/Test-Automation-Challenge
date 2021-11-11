@@ -15,11 +15,8 @@
     "babel-jest": "^26.3.0",
     "jest": "^26.4.2",
     "jest-puppeteer": "^4.4.0",
-<<<<<<< HEAD
     "mochawesome": "^6.3.1",
     "project-name-generator": "^2.1.9",
-=======
->>>>>>> 314dcb9cd0e78a0bb5b135fbe91f075e6ace1bcf
     "puppeteer": "^5.2.1",
     "puppeteer-firefox": "^0.5.0",
     "puppeteer-xpath": "^0.1.0",
@@ -27,10 +24,7 @@
   },
   "devDependencies": {
     "chai": "^4.3.4",
-<<<<<<< HEAD
     "mocha": "^9.1.2",
-=======
->>>>>>> 314dcb9cd0e78a0bb5b135fbe91f075e6ace1bcf
     "prettier": "^2.1.1"
   }
 }
