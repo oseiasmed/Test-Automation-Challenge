@@ -52,6 +52,11 @@ export const closingForecastInput = "(//div[@class='ant-picker-input']//input)[2
 export const input_Input = "(//div[@class='ant-picker-input']//input)[3]"
 export const observationsRemarks ="//textarea[@placeholder='Observações']"
 export const okRemarksButton = "//span[text()='Ok']"
+export const forumNumberingAndAreaEdit = "(//button[@class='ant-btn']//span)[4]"
+export const justiceTypeInput = "(//input[@role='combobox'])[4]"
+export const justiceTypeOption = "(//div[@class='ant-select-item-option-content'])[2]"
+export const justiceTypeButtonOk = "//span[text()='Ok']"
+export const justiceTypeTitle ="(//label[text()='Título']/following::input)[1]"
 
 
 

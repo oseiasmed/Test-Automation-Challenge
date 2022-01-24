@@ -9,6 +9,7 @@ import TimeSheetDeletePage from '../pages/Cases/TimesheetDeletePage'
 import TimesheetUpdatePanelPage  from '../pages/Cases/TimesheetUpdatePanelPage'
 import TimeSheetDeletePanelPage from '../pages/Cases/TimesheetDeletePanelPage'
 import DatesAndRemarksUpdatePage from '../pages/Cases/DatesAndRemarksUpdatePage'
+import ForumNumberingAndAreaUpdatePage from '../pages/Cases/ForumNumberingAndAreaUpdatePage'
 
 import { username, password, timeout } from '../config'
 //const expect = require('chai').expect
@@ -26,6 +27,7 @@ describe('Must do a crud on Cases itens', () => {
 	let timesheetUpdatePanel
 	let timesheetDeletePanel
 	let datesAndRemarksUpdate
+	let forumNumberingAndArea
 
 	beforeAll(async () => {
 		jest.setTimeout(timeout)
@@ -45,6 +47,7 @@ describe('Must do a crud on Cases itens', () => {
 	timesheetUpdatePanel = new TimesheetUpdatePanelPage()
 	timesheetDeletePanel = new TimeSheetDeletePanelPage()
 	datesAndRemarksUpdate = new DatesAndRemarksUpdatePage()
+	forumNumberingAndArea = new ForumNumberingAndAreaUpdatePage()
 
 	it('Must create a new Progress', async () => {
 		await menuPage.menuPage()
@@ -90,6 +93,11 @@ describe('Must do a crud on Cases itens', () => {
 	it('Should DatesAndRemarksUpdatePage', async () => {
 		
     	await datesAndRemarksUpdate.datesAndRemarksUpdate()	
+	})
+
+	it('Should ForumNumberingAndAreaUpdatePage', async () => {
+		await menuPage.menuPage()
+    	await forumNumberingAndArea.forumNumberingAndArea()	
 	})
 })
 
