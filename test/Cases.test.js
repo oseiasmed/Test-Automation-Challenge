@@ -1,24 +1,95 @@
 import BasePage from '../pages/Base/BasePage'
-import CasesPage from '../pages/Cases/CasesPage'
-import { timeout } from '../config'
-const expect = require('chai').expect
+import MenuPage from '../pages/Base/MenuPage'
+import ProgressCreatePage from '../pages/Cases/ProgressCreatePage'
+import ProgressUpdatePage from '../pages/Cases/ProgressUpdatePage'
+import ProgressDeletePage from '../pages/Cases/ProgressDeletePage'
+import TimeSheetCreatePage from '../pages/Cases/TimeSheetCreatePage'
+import TimeSheetUpdatePage from '../pages/Cases/TimesheetUpdatePage'
+import TimeSheetDeletePage from '../pages/Cases/TimesheetDeletePage'
+import TimesheetUpdatePanelPage  from '../pages/Cases/TimesheetUpdatePanelPage'
+import TimeSheetDeletePanelPage from '../pages/Cases/TimesheetDeletePanelPage'
+import DatesAndRemarksUpdatePage from '../pages/Cases/DatesAndRemarksUpdatePage'
 
-describe('Must do enter in page', () => {
+import { username, password, timeout } from '../config'
+//const expect = require('chai').expect
+
+describe('Must do a crud on Cases itens', () => {
 
 	let basePage
-	let casesPage
-	
+	let menuPage
+	let progressCreate 
+	let progressUpdate
+	let progressDelete
+	let timesheetCreate
+	let timesheetUpdate
+	let timesheetDelete
+	let timesheetUpdatePanel
+	let timesheetDeletePanel
+	let datesAndRemarksUpdate
+
 	beforeAll(async () => {
 		jest.setTimeout(timeout)
 		await basePage.goToPage()
+		await basePage.login(username, password)
+
 	})
 
 	basePage = new BasePage()
-	casesPage = new CasesPage()
+	menuPage = new MenuPage()
+	progressCreate = new ProgressCreatePage()
+	progressUpdate = new ProgressUpdatePage()
+	progressDelete = new ProgressDeletePage()
+	timesheetCreate = new TimeSheetCreatePage()
+	timesheetUpdate = new TimeSheetUpdatePage()
+	timesheetDelete = new TimeSheetDeletePage()
+	timesheetUpdatePanel = new TimesheetUpdatePanelPage()
+	timesheetDeletePanel = new TimeSheetDeletePanelPage()
+	datesAndRemarksUpdate = new DatesAndRemarksUpdatePage()
 
-	it('Should pre registration listing page', async () => {
-		//const title = await page.title()
-		await casesPage.listingPage()
-		//expect(title).to.be.a('string', 'Casos')
+	it('Must create a new Progress', async () => {
+		await menuPage.menuPage()
+		await progressCreate.progressCreate()
+	})
+
+	it('Must update a Progress', async () => {
+
+		await progressUpdate.progressUpdate()
+	})
+
+	it('Must delete a Progress', async () => {
+		await menuPage.menuPage()
+		await progressDelete.progressDelete()	
+	})
+
+	it('Must create a new Timesheet', async () => {
+		await menuPage.menuPage()
+		await timesheetCreate.timesheetCreate()
+	})
+
+	it('Must be update Timesheet', async () => {
+		
+		await timesheetUpdate.timeSheetUpdate()
+	})
+
+	it('Must delete a Timesheet', async () => {
+		await menuPage.menuPage()
+		await timesheetDelete.timeSheetDelete()	
+	})
+
+		it('Must update timesheet Panel', async () => {
+			
+		await menuPage.menuPage()
+		await timesheetUpdatePanel.timeSheetUpdatePanel()
+	})
+
+		it('Must delete timesheet Panel', async () => {
+
+		await timesheetDeletePanel.timesheetDeletePanel()	
+	})
+
+	it('Should DatesAndRemarksUpdatePage', async () => {
+		
+    	await datesAndRemarksUpdate.datesAndRemarksUpdate()	
 	})
 })
+

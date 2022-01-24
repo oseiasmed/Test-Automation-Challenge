@@ -1,7 +1,7 @@
 module.exports = {
 	launch: {
 		headless: false,
-		"slowMo": 20
+		"slowMo": 50
 	},
 	browserContext: 'default',
 }

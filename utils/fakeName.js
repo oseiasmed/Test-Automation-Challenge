@@ -1,10 +1,10 @@
 var generate = require('project-name-generator');
 
-const getName = () => {
+const fakeName  = () => {
 
     return generate().spaced.toUpperCase();
 
 }
 
-exports.getName = getName;
+exports.fakeName  = fakeName ;
 
