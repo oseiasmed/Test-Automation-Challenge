@@ -1,12 +1,12 @@
 import { waitAndClick } from '../../lib/helpers'
-import { progressList, progressDeleteBtn } from '../Cases/elementsMap'
+let elements = require('./elementsMap')
 
 export default class ProgressDeletePage {
 
     async progressDelete() {
 
-        await waitAndClick(page,progressList)
-        await waitAndClick(page,progressDeleteBtn)
+        await waitAndClick(page,elements.progressList)
+        await waitAndClick(page,elements.progressDeleteBtn)
   
     }
 }

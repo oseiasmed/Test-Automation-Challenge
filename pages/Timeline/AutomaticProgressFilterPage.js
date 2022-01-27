@@ -1,19 +1,19 @@
 import { waitAndClick } from '../../lib/helpers'
-import { timelineFilter, buttonFilterThree, buttonFilterFour, buttonFilterFive, buttonFilterSix, buttonFilterSeven, buttonFilterEight, buttonFilter, buttonFilterOne } from '../Timeline/elementsMap'
+let elements = require('./elementsMap')
 
 export default class AutomaticProgressFilterPage {
 
     async automaticProgressFilter() {
 
-        await waitAndClick(page, timelineFilter)
-        await waitAndClick(page,buttonFilterOne)
-        await waitAndClick(page,buttonFilterThree)
-        await waitAndClick(page,buttonFilterFour)
-        await waitAndClick(page,buttonFilterFive)
-        await waitAndClick(page,buttonFilterSix)
-        await waitAndClick(page,buttonFilterSeven)
-        await waitAndClick(page,buttonFilterEight)
-        await waitAndClick(page, buttonFilter)
+        await waitAndClick(page, elements.timelineFilter)
+        await waitAndClick(page, elements.buttonFilterOne)
+        await waitAndClick(page, elements.buttonFilterThree)
+        await waitAndClick(page, elements.buttonFilterFour)
+        await waitAndClick(page, elements.buttonFilterFive)
+        await waitAndClick(page, elements.buttonFilterSix)
+        await waitAndClick(page, elements.buttonFilterSeven)
+        await waitAndClick(page, elements.buttonFilterEight)
+        await waitAndClick(page, elements.buttonFilter)
 
     }
 }

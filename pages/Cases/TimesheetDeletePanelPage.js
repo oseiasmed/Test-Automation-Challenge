@@ -1,13 +1,13 @@
 import { waitAndClick } from '../../lib/helpers'
-import { hoursPanel, timesheetEditPanel, timesheetDeleteBtn } from '../Cases/elementsMap'
+let elements = require('./elementsMap')
 
 export default class TimeSheetDeletePanelPage {
 
     async timesheetDeletePanel() {
 
-        await waitAndClick(page, hoursPanel)
-        await waitAndClick(page,timesheetEditPanel)
-        await waitAndClick(page, timesheetDeleteBtn)
+        await waitAndClick(page, elements.hoursPanel)
+        await waitAndClick(page,elements.timesheetEditPanel)
+        await waitAndClick(page, elements.timesheetDeleteBtn)
 
     }
 }

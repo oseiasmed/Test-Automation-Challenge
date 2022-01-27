@@ -1,5 +1,5 @@
 import { waitAndClick } from '../../lib/helpers'
-import { timesheetList, timesheetDeleteBtn } from '../Cases/elementsMap'
+let elements = require('./elementsMap')
 
 export default class TimeSheetDeletePage {
 
@@ -7,8 +7,8 @@ export default class TimeSheetDeletePage {
 
         const now = new Date()
 
-        await waitAndClick(page, timesheetList)
-        await waitAndClick(page, timesheetDeleteBtn)
+        await waitAndClick(page, elements.timesheetList)
+        await waitAndClick(page, elements.timesheetDeleteBtn)
 
     }
 }

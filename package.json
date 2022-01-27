@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --detectOpenHandles"
+    "test": "jest --detectOpenHandles",
+    "test:Cases": "jest --detectOpenHandles",
+    "test:Timeline": "jest --detectOpenHandles",
+    "test:CasesPanel": "jest --detectOpenHandles"
   },
   "keywords": [],
   "author": "",

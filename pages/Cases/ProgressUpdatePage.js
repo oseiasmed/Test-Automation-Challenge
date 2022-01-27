@@ -1,8 +1,7 @@
 import { waitAndClick, waitAndSelect, waitAndWrite } from '../../lib/helpers'
-import { progressDate, casesModelInput, progressClassification, casesModel, casesTextArea, progressClassificationInput, casesButtonOk, progressList } from '../Cases/elementsMap'
-
-const name = require('../../utils/fakeName');
-const date = require('date-and-time');
+let elements = require('./elementsMap')
+let name = require('../../utils/fakeName');
+let date = require('date-and-time');
 
 export default class ProgressUpdatePage {
 
@@ -10,12 +9,12 @@ export default class ProgressUpdatePage {
 
 		const today= new Date()
         
-        await waitAndClick(page, progressList)
-        await waitAndWrite(page, progressDate, (date.format(today, 'DD/MM/YYYY')))
-        await waitAndSelect(page, progressClassificationInput, progressClassification)
-        await waitAndWrite(page, casesTextArea, name.fakeName())
-        await waitAndSelect(page, casesModelInput, casesModel)
-        await waitAndClick(page, casesButtonOk)
+        await waitAndClick(page, elements.progressList)
+        await waitAndWrite(page, elements.progressDate, (date.format(today, 'DD/MM/YYYY')))
+        await waitAndSelect(page, elements.progressClassificationInput, elements.progressClassification)
+        await waitAndWrite(page, elements.casesTextArea, name.fakeName())
+        await waitAndSelect(page, elements.casesModelInput, elements.casesModel)
+        await waitAndClick(page, elements.casesButtonOk)
 
 	}
 }

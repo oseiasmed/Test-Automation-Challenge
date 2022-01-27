@@ -1,15 +1,16 @@
-import BasePage from '../pages/Base/BasePage'
-import MenuPage from '../pages/Base/MenuPage'
-import ManualProgressFilterPage from '../pages/Timeline/ManualProgressFilterPage'
-import AutomaticProgressFilterPage from '../pages/Timeline/AutomaticProgressFilterPage' 
-import TimesheetFilterPage from '../pages/Timeline/TimesheetFilterPage'
-import ScheduleFilterPage from '../pages/Timeline/ScheduleFilterPage'
-import AssignmentFilterPage from '../pages/Timeline/AssignmentFilterPage'
-import DecisionFilterPage from '../pages/Timeline/DecisionFilterPage'
-import ExpenseFilterPage from '../pages/Timeline/ExpenseFilterPage'
-import GuaranteeFilterPage from '../pages/Timeline/GuaranteeFilterPage'
+// import BasePage from '../pages/Base/BasePage'
+import BasePage from '../Timeline/../../pages/Base/BasePage'
+import MenuPage from '../Timeline/../../pages/Base/MenuPage'
+import ManualProgressFilterPage from '../Timeline/../../pages/Timeline/ManualProgressFilterPage'
+import AutomaticProgressFilterPage from '../Timeline/../../pages/Timeline/AutomaticProgressFilterPage' 
+import TimesheetFilterPage from '../Timeline/../../pages/Timeline/TimesheetFilterPage'
+import ScheduleFilterPage from '../Timeline/../../pages/Timeline/ScheduleFilterPage'
+import AssignmentFilterPage from '../Timeline/../../pages/Timeline/AssignmentFilterPage'
+import DecisionFilterPage from '../Timeline/../../pages/Timeline/DecisionFilterPage'
+import ExpenseFilterPage from '../Timeline/../../pages/Timeline/ExpenseFilterPage'
+import GuaranteeFilterPage from '../Timeline/../../pages/Timeline/GuaranteeFilterPage'
 
-import { username, password, timeout } from '../config'
+import { username, password, timeout } from '../Timeline/../../config'
 
 describe('Must a timeline filter', () => {
 

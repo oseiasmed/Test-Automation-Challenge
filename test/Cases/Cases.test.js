@@ -1,24 +1,24 @@
-import BasePage from '../pages/Base/BasePage'
-import MenuPage from '../pages/Base/MenuPage'
-import ProgressCreatePage from '../pages/Cases/ProgressCreatePage'
-import ProgressUpdatePage from '../pages/Cases/ProgressUpdatePage'
-import ProgressDeletePage from '../pages/Cases/ProgressDeletePage'
-import TimeSheetCreatePage from '../pages/Cases/TimeSheetCreatePage'
-import TimeSheetUpdatePage from '../pages/Cases/TimesheetUpdatePage'
-import TimeSheetDeletePage from '../pages/Cases/TimesheetDeletePage'
-import TimesheetUpdatePanelPage  from '../pages/Cases/TimesheetUpdatePanelPage'
-import TimeSheetDeletePanelPage from '../pages/Cases/TimesheetDeletePanelPage'
-import DatesAndRemarksUpdatePage from '../pages/Cases/DatesAndRemarksUpdatePage'
-import ForumNumberingAndAreaUpdatePage from '../pages/Cases/ForumNumberingAndAreaUpdatePage'
+// import BasePage from '../pages/Base/BasePage'
+import BasePage from '../Cases/../../pages/Base/BasePage'
+import MenuPage from '../Cases/../../pages/Base/MenuPage'
+import ProgressCreatePage from '../Cases/../../pages/Cases/ProgressCreatePage'
+import ProgressUpdatePage from '../Cases/../../pages/Cases/ProgressUpdatePage'
+import ProgressDeletePage from '../Cases/../../pages/Cases/ProgressDeletePage'
+import TimeSheetCreatePage from '../Cases/../../pages/Cases/TimeSheetCreatePage'
+import TimeSheetUpdatePage from '../Cases/../../pages/Cases/TimesheetUpdatePage'
+import TimeSheetDeletePage from '../Cases/../../pages/Cases/TimesheetDeletePage'
+import TimesheetUpdatePanelPage from '../Cases/../../pages/Cases/TimesheetUpdatePanelPage'
+import TimeSheetDeletePanelPage from '../Cases/../../pages/Cases/TimesheetDeletePanelPage'
+import DatesAndRemarksUpdatePage from '../Cases/../../pages/Cases/DatesAndRemarksUpdatePage'
+import ForumNumberingAndAreaUpdatePage from '../Cases/../../pages/Cases/ForumNumberingAndAreaUpdatePage'
 
-import { username, password, timeout } from '../config'
-//const expect = require('chai').expect
+import { username, password, timeout } from '../Cases/../../config'
 
 describe('Must do a crud on Cases itens', () => {
 
 	let basePage
 	let menuPage
-	let progressCreate 
+	let progressCreate
 	let progressUpdate
 	let progressDelete
 	let timesheetCreate
@@ -55,13 +55,13 @@ describe('Must do a crud on Cases itens', () => {
 	})
 
 	it('Must update a Progress', async () => {
-
+        await menuPage.menuPage()
 		await progressUpdate.progressUpdate()
 	})
 
 	it('Must delete a Progress', async () => {
 		await menuPage.menuPage()
-		await progressDelete.progressDelete()	
+		await progressDelete.progressDelete()
 	})
 
 	it('Must create a new Timesheet', async () => {
@@ -70,34 +70,34 @@ describe('Must do a crud on Cases itens', () => {
 	})
 
 	it('Must be update Timesheet', async () => {
-		
+        await menuPage.menuPage()
 		await timesheetUpdate.timeSheetUpdate()
 	})
 
 	it('Must delete a Timesheet', async () => {
 		await menuPage.menuPage()
-		await timesheetDelete.timeSheetDelete()	
+		await timesheetDelete.timeSheetDelete()
 	})
 
-		it('Must update timesheet Panel', async () => {
-			
+	it('Must update timesheet Panel', async () => {
+
 		await menuPage.menuPage()
 		await timesheetUpdatePanel.timeSheetUpdatePanel()
 	})
 
-		it('Must delete timesheet Panel', async () => {
-
-		await timesheetDeletePanel.timesheetDeletePanel()	
+	it('Must delete timesheet Panel', async () => {
+		await menuPage.menuPage()
+		await timesheetDeletePanel.timesheetDeletePanel()
 	})
 
 	it('Should DatesAndRemarksUpdatePage', async () => {
-		
-    	await datesAndRemarksUpdate.datesAndRemarksUpdate()	
+		await menuPage.menuPage()
+		await datesAndRemarksUpdate.datesAndRemarksUpdate()
 	})
 
 	it('Should ForumNumberingAndAreaUpdatePage', async () => {
 		await menuPage.menuPage()
-    	await forumNumberingAndArea.forumNumberingAndArea()	
+		await forumNumberingAndArea.forumNumberingAndArea()
 	})
 })
 

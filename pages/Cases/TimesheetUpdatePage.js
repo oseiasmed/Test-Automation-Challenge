@@ -1,28 +1,24 @@
 import { waitAndClick, waitAndWrite, waitAndSelect } from '../../lib/helpers'
-import { timesheetList, professionalInput, professional,
-	     timesheetDateInput, timesheetHourInput, nowButtonOk, clientInput, client,
-		 timesheetClassificationInput, legalInput, titleInput, timesheetDescription, timesheetButtonOk
-} from '../Cases/elementsMap'
-
-const name = require('../../utils/fakeName')
-const date = require('date-and-time')
+let elements = require('./elementsMap')
+let name = require('../../utils/fakeName')
+let date = require('date-and-time')
 
 export default class TimeSheetUpdatePage {
 
 	async timeSheetUpdate() {
 
-		const now = new Date()
+		let now = new Date()
 
-		await waitAndClick(page, timesheetList)
-	    await waitAndSelect(page, professionalInput, professional)
-		await waitAndWrite(page, timesheetDateInput, (date.format(now, 'DD/MM/YYYY')))
-		await waitAndWrite(page, timesheetHourInput, (date.format(now, 'HH:mm')))
-		await waitAndClick(page, nowButtonOk)
-		await waitAndSelect(page, clientInput, client)
-		await waitAndSelect(page, timesheetClassificationInput, legalInput)
-		await waitAndWrite(page, titleInput, name.fakeName())
-		await waitAndWrite(page, timesheetDescription, name.fakeName())
-		await waitAndClick(page, timesheetButtonOk)
+		await waitAndClick(page, elements.timesheetList)
+	    await waitAndSelect(page, elements.professionalInput, elements.professional)
+		await waitAndWrite(page, elements.timesheetDateInput, (date.format(now, 'DD/MM/YYYY')))
+		await waitAndWrite(page, elements.timesheetHourInput, (date.format(now, 'HH:mm')))
+		await waitAndClick(page, elements.nowButtonOk)
+		await waitAndSelect(page, elements.clientInput, elements.client)
+		await waitAndSelect(page, elements.timesheetClassificationInput, elements.legalInput)
+		await waitAndWrite(page, elements.titleInput, name.fakeName())
+		await waitAndWrite(page, elements.timesheetDescription, name.fakeName())
+		await waitAndClick(page, elements.timesheetButtonOk)
 
 	}
 }
