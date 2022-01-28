@@ -5,9 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --detectOpenHandles",
-    "test:Cases": "jest --detectOpenHandles",
+    "test:Progress": "jest --detectOpenHandles",
+    "test:Timesheet": "jest --detectOpenHandles",
     "test:Timeline": "jest --detectOpenHandles",
-    "test:CasesPanel": "jest --detectOpenHandles"
+    "test:Panel": "jest --detectOpenHandles",
+    "test:Decision": "jest --detectOpenHandles",
+    "test:Guarantee": "jest --detectOpenHandles"
   },
   "keywords": [],
   "author": "",

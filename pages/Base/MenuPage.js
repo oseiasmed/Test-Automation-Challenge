@@ -1,5 +1,5 @@
 import { waitAndClick } from '../../lib/helpers'
-import { linkCases, firstElementTable } from '../Cases/elementsMap'
+import { linkCases, firstElementTable } from '../Progress/elementsMap'
 
 
 export default class MenuPage {
