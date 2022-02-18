@@ -8,7 +8,7 @@ export default class TimeSheetDeletePage {
         const now = new Date()
 
         await waitAndClick(page, elements.timesheetList)
-        await waitAndClick(page, elements.timesheetDeleteBtn)
+        await waitAndClick(page, elements.timesheetDeleteBtn) 
 
     }
 }

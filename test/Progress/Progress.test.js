@@ -6,12 +6,12 @@ import ProgressDeletePage from '../Progress/../../pages/Progress/ProgressDeleteP
 
 import { username, password, timeout } from '../Progress/../../config'
 
-describe('Must do a crud on Progress itens', () => {
+describe('Must do a crud on Progress items', () => {
 
 	let basePage
 	let menuPage
 	let progressCreate
-	let progressUpdate
+	let progressUpdate 
 	let progressDelete
 
 	beforeAll(async () => {

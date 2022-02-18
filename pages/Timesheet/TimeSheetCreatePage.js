@@ -7,7 +7,7 @@ export default class TimeSheetCreatePage {
 
 	async timesheetCreate() {
 
-		let now = new Date()
+		let now = new Date() 
 
 		await waitAndClick(page, elements.buttonNew)
 		await waitAndClick(page, elements.timesheetOption)
@@ -16,13 +16,14 @@ export default class TimeSheetCreatePage {
 		await waitAndWrite(page, elements.timesheetHourInput, (date.format(now, 'HH:mm')))
 		await waitAndClick(page, elements.nowButtonOk)
 		await waitAndSelect(page, elements.clientInput, elements.client)
+		await waitAndSelect(page,elements.timesheetCase, elements.timesheetCaseOption)
 		await waitAndSelect(page, elements.timesheetClassificationInput, elements.legalInput)
 		await waitAndWrite(page, elements.titleInput, name.fakeName())
 		await waitAndWrite(page, elements.timesheetDescription, name.fakeName())
 		await waitAndClick(page, elements.additionalInformationLink)
 		await waitAndSelect(page, elements.timesheetArea, elements.specialtyArea)
 		await waitAndClick(page, elements.launchProgress)
-		await waitAndClick(page, elements.timesheetButtonOk)
+		await waitAndClick(page, elements.timesheetButtonOk) 
 
 	}
 }

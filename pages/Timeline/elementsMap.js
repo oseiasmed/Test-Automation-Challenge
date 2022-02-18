@@ -6,7 +6,7 @@ export const buttonFilterFour = "(//button[@role='switch'])[4]"
 export const buttonFilterFive = "(//button[@role='switch'])[5]"
 export const buttonFilterSix = "(//button[@role='switch'])[6]"
 export const buttonFilterSeven = "(//button[@role='switch'])[7]"
-export const buttonFilterEight = "(//button[@role='switch'])[8]"
+export const buttonFilterEight = "(//button[@role='switch'])[8]" 
 export const buttonFilter = "//span[text()='Filtrar']"
 
 

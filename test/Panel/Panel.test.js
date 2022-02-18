@@ -38,7 +38,7 @@ describe('Must do a crud on Cases itens', () => {
 
 	it('Must delete timesheet Panel', async () => {
 		await menuPage.menuPage()
-		await timesheetDeletePanel.timesheetDeletePanel()
+		await timesheetDeletePanel.timesheetDeletePanel() 
 	})
 
 	it('Should DatesAndRemarksUpdatePage', async () => {

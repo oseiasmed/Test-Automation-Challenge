@@ -3,7 +3,7 @@ let elements = require('./elementsMap')
 let name = require('../../utils/fakeName');
 let date = require('date-and-time');
 
-export default class ProgressUpdatePage {
+export default class ProgressUpdatePage {   
 
 	async progressUpdate() {
 

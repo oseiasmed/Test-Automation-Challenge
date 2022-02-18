@@ -3,14 +3,13 @@ let elements = require('./elementsMap')
 let name = require('../../utils/fakeName')
 let date = require('date-and-time')
 
-export default class ScheduleCreatePage {
+export default class DecisionCreatePage {  
 
-    async ScheduleCreate() {
+    async decisionCreate() {
 
-        const today = new Date();
-
+        const today= new Date();
+  
         await waitAndClick(page, elements.buttonNew)
-        await waitAndClick(page, elements.scheduleOption)
-
+        
     }
 }

@@ -3,13 +3,13 @@ let elements = require('./elementsMap')
 let name = require('../../utils/fakeName')
 let date = require('date-and-time')
 
-export default class TimeSheetUpdatePage {
+export default class TimeSheetUpdatePage { 
 
 	async timeSheetUpdate() {
 
 		let now = new Date()
 
-		await waitAndClick(page, elements.timesheetList)
+		await waitAndClick(page, elements.timesheetList) 
 	    await waitAndSelect(page, elements.professionalInput, elements.professional)
 		await waitAndWrite(page, elements.timesheetDateInput, (date.format(now, 'DD/MM/YYYY')))
 		await waitAndWrite(page, elements.timesheetHourInput, (date.format(now, 'HH:mm')))

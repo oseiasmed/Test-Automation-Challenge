@@ -9,7 +9,7 @@ export default class ManualProgressFilterPage {
         await waitAndClick(page, elements.buttonFilterTwo)
         await waitAndClick(page, elements.buttonFilterThree)
         await waitAndClick(page, elements.buttonFilterFour)
-        await waitAndClick(page, elements.buttonFilterFive)
+        await waitAndClick(page, elements.buttonFilterFive) 
         await waitAndClick(page, elements.buttonFilterSix)
         await waitAndClick(page, elements.buttonFilterSeven)
         await waitAndClick(page, elements.buttonFilterEight)

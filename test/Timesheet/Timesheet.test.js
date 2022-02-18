@@ -4,7 +4,7 @@ import TimeSheetCreatePage from '../Timesheet/../../pages/Timesheet/TimeSheetCre
 import TimeSheetUpdatePage from '../Timesheet/../../pages/Timesheet/TimesheetUpdatePage'
 import TimeSheetDeletePage from '../Timesheet/../../pages/Timesheet/TimesheetDeletePage'
 
-import { username, password, timeout } from '../Cases/../../config'
+import { username, password, timeout } from '../Timesheet/../../config'
 
 describe('Must do a crud on Timesheet itens', () => {
 
@@ -39,7 +39,7 @@ describe('Must do a crud on Timesheet itens', () => {
 
 	it('Must delete a Timesheet', async () => {
 		await menuPage.menuPage()
-		await timesheetDelete.timeSheetDelete()
+		await timesheetDelete.timeSheetDelete() 
 	})
 })
 

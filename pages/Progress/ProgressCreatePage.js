@@ -3,7 +3,7 @@ let elements = require('./elementsMap')
 let name = require('../../utils/fakeName')
 let date = require('date-and-time')
 
-export default class ProgressCreatePage {
+export default class ProgressCreatePage {  
 
     async progressCreate() {
 

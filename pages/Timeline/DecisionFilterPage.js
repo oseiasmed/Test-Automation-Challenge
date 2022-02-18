@@ -5,7 +5,7 @@ export default class DecisionFilterPage {
 
     async decisionFilter() {
 
-        await waitAndClick(page, elements.timelineFilter)
+        await waitAndClick(page, elements.timelineFilter) 
         await waitAndClick(page, elements.buttonFilterOne)
         await waitAndClick(page, elements.buttonFilterTwo)
         await waitAndClick(page, elements.buttonFilterThree)

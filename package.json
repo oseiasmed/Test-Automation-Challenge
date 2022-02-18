@@ -10,7 +10,8 @@
     "test:Timeline": "jest --detectOpenHandles",
     "test:Panel": "jest --detectOpenHandles",
     "test:Decision": "jest --detectOpenHandles",
-    "test:Guarantee": "jest --detectOpenHandles"
+    "test:Guarantee": "jest --detectOpenHandles",
+    "test:ScheduleDeletePanelPage": "jest --detectOpenHandles"
   },
   "keywords": [],
   "author": "",

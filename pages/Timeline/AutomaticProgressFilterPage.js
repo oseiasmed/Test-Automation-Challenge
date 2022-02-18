@@ -5,7 +5,7 @@ export default class AutomaticProgressFilterPage {
 
     async automaticProgressFilter() {
 
-        await waitAndClick(page, elements.timelineFilter)
+        await waitAndClick(page, elements.timelineFilter) 
         await waitAndClick(page, elements.buttonFilterOne)
         await waitAndClick(page, elements.buttonFilterThree)
         await waitAndClick(page, elements.buttonFilterFour)

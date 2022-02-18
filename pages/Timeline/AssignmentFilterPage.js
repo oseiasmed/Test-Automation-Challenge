@@ -5,7 +5,7 @@ export default class AssignmentFilterPage {
 
     async assignmentFilter() {
 
-        await waitAndClick(page, elements.timelineFilter)
+        await waitAndClick(page, elements.timelineFilter) 
         await waitAndClick(page, elements.buttonFilterOne)
         await waitAndClick(page, elements.buttonFilterTwo)
         await waitAndClick(page, elements.buttonFilterThree)

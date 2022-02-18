@@ -8,7 +8,7 @@ export default class GuaranteeFilterPage {
         await waitAndClick(page, elements.timelineFilter)
         await waitAndClick(page, elements.buttonFilterOne)
         await waitAndClick(page, elements.buttonFilterTwo)
-        await waitAndClick(page, elements.buttonFilterThree)
+        await waitAndClick(page, elements.buttonFilterThree) 
         await waitAndClick(page, elements.buttonFilterFour)
         await waitAndClick(page, elements.buttonFilterFive)
         await waitAndClick(page, elements.buttonFilterSix)

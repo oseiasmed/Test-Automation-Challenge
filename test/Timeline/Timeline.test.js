@@ -70,7 +70,7 @@ describe('Must a timeline filter', () => {
 
 	it('Must filter Decision', async () => {
 		await menuPage.menuPage()
-		await decisionFilter.decisionFilter()
+		await decisionFilter.decisionFilter() 
 	})
 
 	it('Must filter Expense', async () => {
