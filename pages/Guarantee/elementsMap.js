@@ -1,0 +1,5 @@
+export const buttonNew = "//button[@class='ant-btn ant-btn-primary ant-dropdown-trigger']"
+export const guaranteeOption = "(//span[text()='Garantia'])[2]"
+export const guaranteeType = "(//label[text()='Tipo de garantia']/following::input)[1]"
+export const guaranteeItem = "//div[@title='Penhora']//div[1]"
+export const guaranteeTextArea = "(//label[text()='Identificação']/following::textarea)[1]"
