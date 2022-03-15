@@ -12,7 +12,8 @@
     "test:Decision": "jest --detectOpenHandles",
     "test:Guarantee": "jest --detectOpenHandles",
     "test:ValuesAndOrders": "jest --detectOpenHandles",
-    "test:ScheduleDeletePanelPage": "jest --detectOpenHandles"
+    "test:ScheduleDeletePanelPage": "jest --detectOpenHandles",
+    "test:Cases": "jest --detectOpenHandles"
   },
   "keywords": [],
   "author": "",

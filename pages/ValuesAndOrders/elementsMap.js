@@ -7,3 +7,7 @@
 // export const valueOfTheCase = "(//label[text()='Valor da causa']/following::input)[1]"
 // export const expectedValue = "(//label[text()='Valor previsto']/following::input)[1]"
 // export const ContingenceValue = "(//label[text()='Valor de contingência']/following::input)[1]"
+// export const AddOrder = "//span[text()='Adicionar pedido']"
+// export const OrderItem = "(//div[@class='ant-select-selector']//span)[4]"
+// export const AccordingWork = "//div[text()='Acordo Coletivo de Trabalho - Anulação']"
+// export const AddOrderButtonSave = "//span[text()='Salvar']"

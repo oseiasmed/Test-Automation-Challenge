@@ -23,4 +23,8 @@
 // export const linkProgress = "(//b[text()='Andamento manual'])[1]" 
 // export const hoursPanel = "(//div[text()='Horas'])[1]"
 // export const timesheetEditPanel = "(//td[@class='ant-table-cell']//a)[1]"
+// export const timesheetHoursPanel = "(//div[text()='Horas'])[1]"
+// export const DateEdit = "(//label[text()='Data']/following::input)[1]"
+// export const Today = "//div[@class='ant-picker-footer']//a[1]"
+
 
