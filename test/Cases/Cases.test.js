@@ -2,6 +2,7 @@ import BasePage from '../Cases/../../pages/Base/BasePage'
 import MenuPage from '../Cases/../../pages/Base/MenuPage'
 import CasesSearchPage from '../Cases/../../pages/Cases/CasesSearchPage'
 import FilterCasesPage from '../Cases/../../pages/Cases/FilterCasesPage'
+import CloseCasePage from '../Cases/../../pages/Cases/CloseCasePage'
 
 import { username, password, timeout } from '../ValuesAndOrders/../../config'
 
@@ -11,6 +12,7 @@ describe('Must do search in Cases', () => {
 	let menuPage
 	let casesSearch
 	let filterCases
+	let closeCase
 
 	
 
@@ -25,7 +27,7 @@ describe('Must do search in Cases', () => {
 	menuPage = new MenuPage()
 	casesSearch = new CasesSearchPage()
 	filterCases = new FilterCasesPage()
-
+	closeCase = new CloseCasePage()
 
 	it('Must do search in Cases', async () => {
 			
@@ -36,6 +38,12 @@ describe('Must do search in Cases', () => {
 	it('Must do filter in Cases', async () => {
 			
 		await filterCases.filterCases()
+
+	})	
+
+	it('Must close a Cases', async () => {
+			
+		await closeCase.closeCase()
 
 	})	
 })

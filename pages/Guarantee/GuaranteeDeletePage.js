@@ -1,12 +1,12 @@
-// import { waitAndClick } from '../../lib/helpers'
-// let elements = require('./elementsMap')
+import { waitAndClick } from '../../lib/helpers'
+let elements = require('./elementsMap')
 
-// export default class GuaranteeDeletePage {
+export default class GuaranteeDeletePage {
 
-//     async guaranteeDelete() {
+    async guaranteeDelete() {
 
-//         await waitAndClick(page, elements.InformationLink)
-//         await waitAndClick(page, elements.guaranteeDeleteButton)  
+        await waitAndClick(page, elements.InformationLink)
+        await waitAndClick(page, elements.guaranteeDeleteButton)  
 
-//     }
-// }
+    }
+}
