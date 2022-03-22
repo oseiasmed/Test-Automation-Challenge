@@ -1,13 +1,12 @@
-import { waitAndClick } from '../../lib/helpers'
-let elements = require('./elementsMap')
+// import { waitAndClick } from '../../lib/helpers'
+// let elements = require('./elementsMap')
 
+// export default class DecisionDeletePage {
 
-export default class DecisionDeletePage {
+//     async decisionDelete() {
 
-    async decisionDelete() {
+//         await waitAndClick(page, elements.decisionDeleteButton)
+//         await waitAndClick(page, elements.decisionDeleteBtnPopUp)
 
-        await waitAndClick(page, elements.decisionTimelineLink)  
-        await waitAndClick(page, elements.decisionDeleteButton)
-
-    }
-}
+//     }
+// }

@@ -1,12 +1,12 @@
-import { waitAndClick, waitAndWrite } from '../../lib/helpers'
-let elements = require('./elementsMap')
+// import { waitAndClick, waitAndWrite } from '../../lib/helpers'
+// let elements = require('./elementsMap')
 
-export default class CasesSearchPage {  
+// export default class CasesSearchPage {  
 
-    async casesSearch() {
+//     async casesSearch() {
 
-        await waitAndWrite(page, elements.casesSearchInput, "Ação")
-        await waitAndClick(page, elements.casesSearchButton)  
+//         await waitAndWrite(page, elements.casesSearchInput, "Ação")
+//         await waitAndClick(page, elements.casesSearchButton)  
     
-    }
-}
+//     }
+// }

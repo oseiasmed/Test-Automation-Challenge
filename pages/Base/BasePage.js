@@ -1,6 +1,7 @@
 import { authUser, authPassword, authUserButton, authButton, authContinue, authCheck } from './elementsMap'
 import { waitAndClick, waitAndWrite } from '../../lib/helpers'
 import { password, username } from '../../config'
+let elements = require('./elementsMap')
 
 export default class BasePage {
 
@@ -18,7 +19,13 @@ export default class BasePage {
 		await waitAndWrite(page, authPassword, password)
 		await waitAndClick(page, authButton)
 		await waitAndClick(page, authCheck)
-		await waitAndClick(page, authContinue)	
-			
+		await waitAndClick(page, authContinue)
+
+	}
+
+	async save() {
+
+		await waitAndClick(page, elements.saveButton)
+
 	}
 }

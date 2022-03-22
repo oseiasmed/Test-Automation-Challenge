@@ -1,12 +1,12 @@
-import { waitAndClick } from '../../lib/helpers'
-let elements = require('./elementsMap')
+// import { waitAndClick } from '../../lib/helpers'
+// let elements = require('./elementsMap')
 
-export default class CloseCasePage {  
+// export default class CloseCasePage {  
 
-    async closeCase() {
+//     async closeCase() {
 
-        await waitAndClick(page, elements.selectACase)  
-        await waitAndClick(page, elements.closeButton) 
+//         await waitAndClick(page, elements.selectACase)  
+//         await waitAndClick(page, elements.closeButton) 
     
-    }
-}
+//     }
+// }
