@@ -5,8 +5,8 @@
 
 //     async guaranteeDelete() {
 
-//         await waitAndClick(page, elements.InformationLink)
 //         await waitAndClick(page, elements.guaranteeDeleteButton)  
+//         await waitAndClick(page, elements.guaranteeDeleteButtonPopUp)  
 
 //     }
 // }

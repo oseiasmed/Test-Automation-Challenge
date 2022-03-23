@@ -9,8 +9,6 @@
 
 //         const today= new Date();
         
-//         await waitAndClick(page, elements.buttonNew)
-//         await waitAndClick(page, elements.guaranteeOption)
 //         await waitAndSelect(page, elements.guaranteeType, elements.guaranteeItem)
 //         await waitAndWrite(page, elements.guaranteeTextArea, name.fakeName())
 //         await waitAndWrite(page, elements.guaranteeSelectDate, (date.format(today, 'DD/MM/YYYY')))

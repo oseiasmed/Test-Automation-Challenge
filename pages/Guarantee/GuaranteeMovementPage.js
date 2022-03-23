@@ -9,8 +9,6 @@
 
 //         const today= new Date();
 
-//         await waitAndClick(page, elements.InformationLink)
-//         await waitAndClick(page, elements.guaranteeMovementButton)  
 //         await waitAndWrite(page, elements.guaranteeMovementValue, "1000")
 //         await waitAndClick(page, elements.guaranteeTranferRadio)
 //         await waitAndWrite(page, elements.guaranteeSelectDate, (date.format(today, 'DD/MM/YYYY')))

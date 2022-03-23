@@ -6,8 +6,6 @@
 
 //     async guaranteeEdit() {
 
-//         await waitAndClick(page, elements.InformationLink)
-//         await waitAndClick(page, elements.guaranteeLinkEdit)
 //         await waitAndSelect(page, elements.guaranteeType, elements.guaranteeItem)
 //         await waitAndWrite(page, elements.guaranteeTextArea, name.fakeName())
 //         await waitAndSelect(page, elements.guaranteeCurrency, elements.guaranteeReal)

@@ -3,15 +3,15 @@
 // let name = require('../../utils/fakeName')
 // let date = require('date-and-time')
 
-// export default class ScheduleCreatePage {
+// export default class ScheduleUpdatePage {
 
-//     async scheduleCreate() {
+//     async scheduleUpdate() {
 
 //         const today = new Date();
 
 //         await waitAndSelect(page, elements.inputType, elements.inputTypeOption)
 //         await waitAndClick(page, elements.freeTextCheckbox)
-//         await waitAndWrite(page, elements.billingTitleInput,"Agenda")
+//         await waitAndWrite(page, elements.billingTitleInput, "Agenda")
 //         await waitAndSelect(page, elements.scheduleRemember, elements.scheduleRememberTime)
 //         await waitAndSelect(page, elements.scheduleParts, elements.schedulePartsOption)
 //         await waitAndClick(page, elements.scheduleDescription)
