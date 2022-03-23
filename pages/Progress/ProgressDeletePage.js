@@ -5,7 +5,8 @@
 
 //     async progressDelete() {
 
-//         await waitAndClick(page,elements.progressDeleteBtn)  
+//         await waitAndClick(page,elements.progressDeleteBtn) 
+//         await waitAndClick(page, elements.timesheetDeleteBtnPopUp)  
   
 //     }
 // }

@@ -3,9 +3,8 @@
 // import DecisionCreatePage from '../Decision/../../pages/Decision/DecisionCreatePage'
 // import DecisionUpdatePage from '../Decision/../../pages/Decision/DecisionUpdatePage'
 // import DecisionDeletePage from '../Decision/../../pages/Decision/DecisionDeletePage'
-// let elements = require('../../pages/Base/elementsMap')
-
 // import { username, password, timeout } from '../Decision/../../config'
+// let elements = require('../../pages/Base/elementsMap')
 
 // describe('Must do a crud on Decision items', () => {
 

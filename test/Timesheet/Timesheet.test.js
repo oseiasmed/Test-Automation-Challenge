@@ -5,7 +5,6 @@
 // import TimeSheetDeletePage from '../Timesheet/../../pages/Timesheet/TimesheetDeletePage'
 // import TimesheetUpdatePanelPage from '../Timesheet/../../pages/Timesheet/TimesheetUpdatePanelPage'
 // import TimesheetDeletePanelPage from '../Timesheet/../../pages/Timesheet/TimesheetDeletePanelPage'
-
 // import { username, password, timeout } from '../Timesheet/../../config'
 // let elements = require('../../pages/Base/elementsMap')
 

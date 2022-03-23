@@ -8,50 +8,52 @@
 
 // describe('Must do a crud on Progress items', () => {
 
-//     let basePage
-//     let linksMenu
-//     let mainMenu
-//     let listMenu
-//     let progressCreate
-//     let progressUpdate
-//     let progressDelete
+//   let basePage
+//   let mainMenu
+//   let listMenu
+//   let linksMenu
+//   let filterMenu
+//   let progressCreate
+//   let progressUpdate
+//   let progressDelete
+
+//   beforeAll(async () => {
+//     jest.setTimeout(timeout)
+//     await basePage.goToPage()
+//     await basePage.login(username, password)
+
+//   })
+
+//   beforeEach(async function () {
+//     await mainMenu.mainMenu()
+//   })
+
+//   basePage = new BasePage()
+//   mainMenu = new MenuPage()
+//   filterMenu = new MenuPage()
+//   listMenu = new MenuPage()
+//   linksMenu = new MenuPage()
+//   progressCreate = new ProgressCreatePage()
+//   progressUpdate = new ProgressUpdatePage()
+//   progressDelete = new ProgressDeletePage()
+
+//   it('Must create a new Progress', async () => {
+
+//     await linksMenu.linksMenu(elements.buttonNew, elements.progressOption)
+//     await progressCreate.progressCreate()
+//   })
+
+//   it('Must update a Progress', async () => {
    
-//     beforeAll(async () => {
-//         jest.setTimeout(timeout)
-//         await basePage.goToPage()
-//         await basePage.login(username, password) 
+//     await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterSix, elements.buttonFilter)
+//     await listMenu.listMenu(elements.progressList)
+//     await progressUpdate.progressUpdate()
+//   })
 
-//     })
-
-//     beforeEach(async function(){
-//       await mainMenu.mainMenu()
-      
-//     })
-
-
-//     basePage = new BasePage()
-//     linksMenu = new MenuPage()
-//     mainMenu = new MenuPage()
-//     listMenu = new MenuPage()
-//     progressCreate = new ProgressCreatePage()
-//     progressUpdate = new ProgressUpdatePage()
-//     progressDelete = new ProgressDeletePage()
+//   it('Must delete a Progress', async () => {
     
-//     it('Must create a new Progress', async () => {
-
-//         await linksMenu.linksMenu(elements.buttonNew,elements.progressOption)
-//         await progressCreate.progressCreate()   
-//     })
-
-//     it('Must update a Progress', async () => {
-        
-//         await listMenu.listMenu(elements.progressList)
-//         await progressUpdate.progressUpdate()
-//     })
-
-//     it('Must delete a Progress', async () => {
-        
-//       await listMenu.listMenu(elements.progressList)
-//       await progressDelete.progressDelete()
+//     await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterSix, elements.buttonFilter)
+//     await listMenu.listMenu(elements.progressList)
+//     await progressDelete.progressDelete()
 //   })
 // })

@@ -23,4 +23,6 @@ export const timesheetEditPanel = "(//td[@class='ant-table-cell']//a)[1]"
 export const decisionOption = "//span[text()='Decisão']"
 export const buttonFilterOne = "(//button[@role='switch'])[1]"
 export const decisionList = "(//b[text()='Decisão'])[1]"
+export const buttonFilterSix = "(//button[@role='switch'])[6]"
+export const scheduleOption = "//span[text()='Agenda']"
 
