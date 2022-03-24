@@ -5,7 +5,8 @@
 
 //     async scheduleDelete() {
 
-//         await waitAndClick(page, elements.deleteButtonSchedulePanel) 
+//         await waitAndClick(page, elements.scheduleDeleteButton) 
+//         await waitAndClick(page, elements.scheduleDeleteButtonPopUp) 
 
 //     }
 // }

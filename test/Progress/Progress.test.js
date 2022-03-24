@@ -18,10 +18,11 @@
 //   let progressDelete
 
 //   beforeAll(async () => {
+
 //     jest.setTimeout(timeout)
 //     await basePage.goToPage()
 //     await basePage.login(username, password)
-
+  
 //   })
 
 //   beforeEach(async function () {
@@ -40,20 +41,21 @@
 //   it('Must create a new Progress', async () => {
 
 //     await linksMenu.linksMenu(elements.buttonNew, elements.progressOption)
-//     await progressCreate.progressCreate()
-//   })
-
-//   it('Must update a Progress', async () => {
+//     await progressCreate.progressCreate() 
    
-//     await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterSix, elements.buttonFilter)
-//     await listMenu.listMenu(elements.progressList)
-//     await progressUpdate.progressUpdate()
 //   })
 
-//   it('Must delete a Progress', async () => {
-    
-//     await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterSix, elements.buttonFilter)
-//     await listMenu.listMenu(elements.progressList)
-//     await progressDelete.progressDelete()
-//   })
+//     it('Must update a Progress', async () => {
+
+//       await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterSix, elements.buttonFilter)
+//       await listMenu.listMenu(elements.progressList)
+//       await progressUpdate.progressUpdate()
+//     })
+
+//     it('Must delete a Progress', async () => {
+
+//       await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterSix, elements.buttonFilter)
+//       await listMenu.listMenu(elements.progressList)
+//       await progressDelete.progressDelete()
+//     })
 // })

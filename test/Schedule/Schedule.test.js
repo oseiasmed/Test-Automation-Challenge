@@ -2,7 +2,7 @@
 // import MenuPage from '../Schedule/../../pages/Base/MenuPage'
 // import ScheduleCreatePage from '../Schedule/../../pages/Schedule/ScheduleCreatePage'
 // import ScheduleUpdatePage from '../Schedule/../../pages/Schedule/ScheduleUpdatePage'
-// import scheduleDeletePanelPage from '../Schedule/../../pages/Schedule/ScheduleDeletePanelPage'
+// import scheduleDeletePage from '../Schedule/../../pages/Schedule/ScheduleDeletePage'
 // import ScheduleDeletePanelPage from '../Schedule/../../pages/Schedule/ScheduleDeletePanelPage'
 // let elements = require('../../pages/Base/elementsMap')
 
@@ -17,6 +17,7 @@
 //     let filterMenu
 //     let scheduleCreate
 //     let scheduleUpdate
+//     let scheduleDelete
 //     let scheduleDeletePanel
 
 
@@ -34,13 +35,13 @@
 //     basePage = new BasePage()
 //     scheduleCreate = new ScheduleCreatePage()
 //     scheduleUpdate = new ScheduleUpdatePage()
+//     scheduleDelete= new scheduleDeletePage()
+//     scheduleDeletePanel = new ScheduleDeletePanelPage()
 //     mainMenu = new MenuPage()
 //     filterMenu = new MenuPage()
 //     listMenu = new MenuPage()
 //     linksMenu = new MenuPage()
-//     scheduleDeletePanel = new ScheduleDeletePanelPage()
-
-
+    
 //     it('Must be a Schedule Create Page', async () => {
 //         await linksMenu.linksMenu(elements.buttonNew, elements.scheduleOption)
 //         await scheduleCreate.scheduleCreate()
@@ -57,9 +58,11 @@
 //         await listMenu.listMenu(elements.scheduleList)
 //         await scheduleDelete.scheduleDelete()
 //     })
-//      it('Must delete Schedule Panel', async () => {
-//     	await menuPage.menuPage()
-//     	await scheduleDeletePanel.scheduleDeletePanel() 
+
+//     it('Must delete Schedule Panel', async () => {
+//         await linksMenu.linksMenu(elements.tasksLinkPanel,elements.tasksEditPanel)
+//         await scheduleDeletePanel.scheduleDeletePanel() 
+
 //     })
 // })
 

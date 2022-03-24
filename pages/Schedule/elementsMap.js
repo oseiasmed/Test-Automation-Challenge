@@ -5,7 +5,6 @@
 // export const titleOption = "(//div[@class='ant-select-item-option-content'])[1]"
 // export const dateInput = "(//input[@placeholder='Qual data?'])[1]"
 // export const dateInputToday = "//a[contains(text(),'Hoje')]"
-// //export const dateInputNewDay = "//a[text()='Hoje']"
 // export const scheduleHour = "//input[@placeholder='Hora inicial']"
 // export const scheduleNow = "//li[@class='ant-picker-now']//a[1]"
 // export const scheduleRemember = "(//label[text()='Lembrete']/following::input)[1]"
@@ -20,5 +19,7 @@
 // export const schedulePartsOption = "//div[text()='Adriana Cruz de Jesus']"
 // export const scheduleDescription = "//textarea[@id='Observacao']"
 // export const scheduleButtonSave = "//button[@type='submit']//span[1]"
+// export const scheduleDeleteButton = "//span[text()='Excluir']"
+// export const scheduleDeleteButtonPopUp = "(//span[text()='Excluir'])[2]"
  
 

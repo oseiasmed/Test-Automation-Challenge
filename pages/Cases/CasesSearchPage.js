@@ -7,6 +7,5 @@
 
 //         await waitAndWrite(page, elements.casesSearchInput, "Ação")
 //         await waitAndClick(page, elements.casesSearchButton)  
-    
 //     }
 // }

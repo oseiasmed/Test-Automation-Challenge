@@ -8,12 +8,12 @@
 //     async progressCreate() {
 
 //         const today= new Date();
-  
+        
 //         await waitAndWrite(page, elements.progressDate, (date.format(today, 'DD/MM/YYYY')))
 //         await waitAndSelect(page, elements.progressClassificationInput, elements.progressClassification)
 //         await waitAndSelect(page, elements.casesModelInput, elements.casesModel)
 //         await waitAndWrite(page, elements.casesTextArea, name.fakeName())
 //         await waitAndClick (page, elements.saveButton)
-       
+        
 //     }
 // }

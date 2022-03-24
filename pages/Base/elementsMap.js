@@ -7,8 +7,12 @@ export const authPassword = "//input[@id='i0118']"
 export const authButton = "//input[@id='idSIButton9']"
 export const authCheck = "//input[@id='KmsiCheckboxField']"
 export const authContinue = "//input[@id='idSIButton9']"
+
+
 export const linkCases = "(//a[@href='/cases'])[1]"
 export const firstElementTable = "(//td[@class='ant-table-cell']//a)[1]"
+
+
 export const buttonNew = "//button[@class='ant-btn ant-btn-primary ant-dropdown-trigger']"
 export const saveButton = "//span[text()='Salvar']"
 export const progressOption = "(//li[@class='ant-dropdown-menu-item']//span)[2]"
@@ -33,4 +37,7 @@ export const InformationLink = "//div[text()='Informações']"
 export const guaranteeLinkEdit ="(//div[@class='ant-table-content']//table)[2]/tbody[1]/tr[2]/td[8]/div[1]/div[3]/a[1]/span[1]"
 export const guaranteeDeleteButtonPanel = "//span[contains(@class, 'anticon anticon-delete')]"
 export const guaranteeMovementButton = "//span[@class='anticon anticon-file-add']"
+export const tasksLinkPanel = "(//div[text()='Tarefas'])[1]"
+export const tasksEditPanel = "//span[@class='anticon anticon-edit']"
+
 

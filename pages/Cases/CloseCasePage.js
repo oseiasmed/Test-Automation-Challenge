@@ -7,6 +7,6 @@
 
 //         await waitAndClick(page, elements.selectACase)  
 //         await waitAndClick(page, elements.closeButton) 
-    
+
 //     }
 // }
