@@ -5,15 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --detectOpenHandles",
-    "test:Progress": "jest --detectOpenHandles",
-    "test:Timesheet": "jest --detectOpenHandles",
-    "test:Timeline": "jest --detectOpenHandles",
-    "test:Panel": "jest --detectOpenHandles",
-    "test:Decision": "jest --detectOpenHandles",
-    "test:Guarantee": "jest --detectOpenHandles",
-    "test:ValuesAndOrders": "jest --detectOpenHandles",
-    "test:ScheduleDeletePanelPage": "jest --detectOpenHandles",
-    "test:Cases": "jest --detectOpenHandles"
+    "test:Progress": "jest ./test/Progress/Progress.test.js",
+    "test:Timesheet": "jest ./test/Timesheet/Timesheet.test.js",
+    "test:Decision": "jest ./test/Decision/Decision.test.js",
+    "test:Guarantee": "jest ./test/Guarantee/Guarantee.test.js",
+    "test:Panel": "jest ./test/Panel/Panel.test.js",
+    "test:ValuesAndOrders": "jest ./test/ValuesAndOrders/ValuesAndOrders.test.js",
+    "test:Schedule": "jest ./test/Schedule/Schedule.test.js",
+    "test:Timeline": "jest ./test/Timeline/Timeline.test.js",
+    "test:Cases": "jest ./test/Cases/Cases.test.js"
   },
   "keywords": [],
   "author": "",
@@ -24,8 +24,8 @@
     "babel-jest": "^26.3.0",
     "date-and-time": "^2.0.1",
     "jest": "^26.4.2",
+    "jest-html-reporter": "^3.4.2",
     "jest-puppeteer": "^4.4.0",
-    "mochawesome": "^6.3.1",
     "project-name-generator": "^2.1.9",
     "puppeteer": "^5.2.1",
     "puppeteer-firefox": "^0.5.0",
@@ -35,7 +35,9 @@
   },
   "devDependencies": {
     "chai": "^4.3.4",
+    "jest-step-by-step-report": "^0.1.2",
     "mocha": "^9.1.2",
+    "mochawesome": "^6.3.1",
     "prettier": "^2.1.1"
   }
 }

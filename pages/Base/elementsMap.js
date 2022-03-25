@@ -39,5 +39,9 @@ export const guaranteeDeleteButtonPanel = "//span[contains(@class, 'anticon anti
 export const guaranteeMovementButton = "//span[@class='anticon anticon-file-add']"
 export const tasksLinkPanel = "(//div[text()='Tarefas'])[1]"
 export const tasksEditPanel = "//span[@class='anticon anticon-edit']"
+export const valueAndOrdersEdit = "//button[@class='ant-btn']"
+export const datesAndRemarksHome = "//div[text()='Home']"
+export const datesAndRemarksEdit = "(//button[@class='ant-btn'])[1]"
+export const forumNumberingAndAreaEdit = "(//button[@class='ant-btn']//span)[4]"
 
 

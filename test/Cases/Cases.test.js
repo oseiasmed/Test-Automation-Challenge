@@ -1,50 +1,48 @@
-// import BasePage from '../Cases/../../pages/Base/BasePage'
-// import MenuPage from '../Cases/../../pages/Base/MenuPage'
-// import CasesSearchPage from '../Cases/../../pages/Cases/CasesSearchPage'
-// import FilterCasesPage from '../Cases/../../pages/Cases/FilterCasesPage'
-// import CloseCasePage from '../Cases/../../pages/Cases/CloseCasePage'
+import BasePage from '../Cases/../../pages/Base/BasePage'
+import MenuPage from '../Cases/../../pages/Base/MenuPage'
+import CasesSearchPage from '../Cases/../../pages/Cases/CasesSearchPage'
+import FilterCasesPage from '../Cases/../../pages/Cases/FilterCasesPage'
+import CloseCasePage from '../Cases/../../pages/Cases/CloseCasePage'
 
-// import { username, password, timeout } from '../ValuesAndOrders/../../config'
+import { username, password, timeout } from '../ValuesAndOrders/../../config'
 
-// describe('Must do search in Cases', () => {
+describe('Must do search in Cases', () => {
 
-// 	let basePage
-// 	let menuPage
-// 	let casesSearch
-// 	let filterCases
-// 	let closeCase
+	let basePage
+	let menuPage
+	let casesSearch
+	let filterCases
+	let closeCase
 
-	
+	beforeAll(async () => {
+		jest.setTimeout(timeout)
+		await basePage.goToPage()
+		await basePage.login(username, password)
 
-// 	beforeAll(async () => {
-// 		jest.setTimeout(timeout)
-// 		await basePage.goToPage()
-// 		await basePage.login(username, password)
+	})
 
-// 	})
+	basePage = new BasePage()
+	menuPage = new MenuPage()
+	casesSearch = new CasesSearchPage()
+	filterCases = new FilterCasesPage()
+	closeCase = new CloseCasePage()
 
-// 	basePage = new BasePage()
-// 	menuPage = new MenuPage()
-// 	casesSearch = new CasesSearchPage()
-// 	filterCases = new FilterCasesPage()
-// 	closeCase = new CloseCasePage()
-
-// 	it('Must do search in Cases', async () => {
+	it('Must do search in Cases', async () => {
 			
-// 		await casesSearch.casesSearch()
+		await casesSearch.casesSearch()
 
-// 	})	
+	})	
 
-// 	it('Must do filter in Cases', async () => {
+	it('Must do filter in Cases', async () => {
 			
-// 		await filterCases.filterCases()
+		await filterCases.filterCases()
 
-// 	})	
+	})	
 
-// 	it('Must close a Cases', async () => {
+	it('Must close a Cases', async () => {
 			
-// 		await closeCase.closeCase()
+		await closeCase.closeCase()
 
-// 	})	
-// })
+	})	
+})
 

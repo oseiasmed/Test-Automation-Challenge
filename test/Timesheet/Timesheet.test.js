@@ -1,73 +1,73 @@
-// import BasePage from '../Timesheet/../../pages/Base/BasePage'
-// import MenuPage from '../Timesheet/../../pages/Base/MenuPage'
-// import TimeSheetCreatePage from '../Timesheet/../../pages/Timesheet/TimeSheetCreatePage'
-// import TimeSheetUpdatePage from '../Timesheet/../../pages/Timesheet/TimesheetUpdatePage'
-// import TimeSheetDeletePage from '../Timesheet/../../pages/Timesheet/TimesheetDeletePage'
-// import TimesheetUpdatePanelPage from '../Timesheet/../../pages/Timesheet/TimesheetUpdatePanelPage'
-// import TimesheetDeletePanelPage from '../Timesheet/../../pages/Timesheet/TimesheetDeletePanelPage'
-// import { username, password, timeout } from '../Timesheet/../../config'
-// let elements = require('../../pages/Base/elementsMap')
+import BasePage from '../Timesheet/../../pages/Base/BasePage'
+import MenuPage from '../Timesheet/../../pages/Base/MenuPage'
+import TimeSheetCreatePage from '../Timesheet/../../pages/Timesheet/TimeSheetCreatePage'
+import TimeSheetUpdatePage from '../Timesheet/../../pages/Timesheet/TimesheetUpdatePage'
+import TimeSheetDeletePage from '../Timesheet/../../pages/Timesheet/TimesheetDeletePage'
+import TimesheetUpdatePanelPage from '../Timesheet/../../pages/Timesheet/TimesheetUpdatePanelPage'
+import TimesheetDeletePanelPage from '../Timesheet/../../pages/Timesheet/TimesheetDeletePanelPage'
+import { username, password, timeout } from '../Timesheet/../../config'
+let elements = require('../../pages/Base/elementsMap')
 
-// describe('Must do a crud on Timesheet itens', () => {
+describe('Must do a crud on Timesheet itens', () => {
 
-//     let basePage
-//     let mainMenu
-//     let listMenu
-//     let filterMenu
-//     let linksMenu
-//     let timesheetCreate
-//     let timesheetUpdate
-//     let timesheetDelete
-//     let timeSheetUpdatePanel
-//     let timesheetDeletePanel
+    let basePage
+    let mainMenu
+    let listMenu
+    let filterMenu
+    let linksMenu
+    let timesheetCreate
+    let timesheetUpdate
+    let timesheetDelete
+    let timeSheetUpdatePanel
+    let timesheetDeletePanel
   
-//     beforeAll(async () => {
-//         jest.setTimeout(timeout)
-//         await basePage.goToPage()
-//         await basePage.login(username, password)
+    beforeAll(async () => {
+        jest.setTimeout(timeout)
+        await basePage.goToPage()
+        await basePage.login(username, password)
 
-//     })
+    })
 
-//     beforeEach(async function () {
-//         await mainMenu.mainMenu()
-//     })
+    beforeEach(async function () {
+        await mainMenu.mainMenu()
+    })
 
-//     basePage = new BasePage()
-//     mainMenu = new MenuPage()
-//     filterMenu = new MenuPage()
-//     listMenu = new MenuPage()
-//     linksMenu = new MenuPage()
-//     timesheetCreate = new TimeSheetCreatePage()
-//     timesheetUpdate = new TimeSheetUpdatePage()
-//     timesheetDelete = new TimeSheetDeletePage()
-//     timeSheetUpdatePanel = new TimesheetUpdatePanelPage()
-//     timesheetDeletePanel = new TimesheetDeletePanelPage()
+    basePage = new BasePage()
+    mainMenu = new MenuPage()
+    filterMenu = new MenuPage()
+    listMenu = new MenuPage()
+    linksMenu = new MenuPage()
+    timesheetCreate = new TimeSheetCreatePage()
+    timesheetUpdate = new TimeSheetUpdatePage()
+    timesheetDelete = new TimeSheetDeletePage()
+    timeSheetUpdatePanel = new TimesheetUpdatePanelPage()
+    timesheetDeletePanel = new TimesheetDeletePanelPage()
 
-//     it('Must create a new Timesheet', async () => {
-//         await linksMenu.linksMenu(elements.buttonNew,elements.timesheetOption)
-//         await timesheetCreate.timesheetCreate()
-//     })
+    it('Must create a new Timesheet', async () => {
+        await linksMenu.linksMenu(elements.buttonNew,elements.timesheetOption)
+        await timesheetCreate.timesheetCreate()
+    })
 
-//     it('Must be update Timesheet', async () => {
-//         await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterThree, elements.buttonFilter)
-//         await listMenu.listMenu(elements.timesheetList)
-//         await timesheetUpdate.timeSheetUpdate()
-//     })
+    it('Must be update Timesheet', async () => {
+        await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterThree, elements.buttonFilter)
+        await listMenu.listMenu(elements.timesheetList)
+        await timesheetUpdate.timeSheetUpdate()
+    })
 
-//     it('Must delete a Timesheet', async () => {
-//         await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterThree, elements.buttonFilter)
-//         await listMenu.listMenu(elements.timesheetList)
-//         await timesheetDelete.timeSheetDelete() 
-//     })
+    it('Must delete a Timesheet', async () => {
+        await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterThree, elements.buttonFilter)
+        await listMenu.listMenu(elements.timesheetList)
+        await timesheetDelete.timeSheetDelete() 
+    })
 
-//     it('Must update Timesheet', async () => {
+    it('Must update Timesheet', async () => {
   
-//         await linksMenu.linksMenu(elements.timesheetHoursPanel,elements.timesheetEditPanel)
-//     	await timeSheetUpdatePanel.timeSheetUpdatePanel() 
-//     })
+        await linksMenu.linksMenu(elements.timesheetHoursPanel,elements.timesheetEditPanel)
+    	await timeSheetUpdatePanel.timeSheetUpdatePanel() 
+    })
 
-//     it('Must update Timesheet', async () => {
-//     	await linksMenu.linksMenu(elements.timesheetHoursPanel,elements.timesheetEditPanel)
-//     	await timesheetDeletePanel.timesheetDeletePanel() 
-//     })
-// })
+    it('Must update Timesheet', async () => {
+    	await linksMenu.linksMenu(elements.timesheetHoursPanel,elements.timesheetEditPanel)
+    	await timesheetDeletePanel.timesheetDeletePanel() 
+    })
+})

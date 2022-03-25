@@ -1,9 +1,15 @@
 module.exports = {
 	launch: {
 		headless: false,
-		"slowMo": 50,
+		"slowMo":50,
 		defaultViewport: null,
+		
 	},
 	
-	browserContext: 'default',
+	"jest": {
+		"reporters": [
+		  "jest-step-by-step-report",
+		  
+		]
+	  },
 }

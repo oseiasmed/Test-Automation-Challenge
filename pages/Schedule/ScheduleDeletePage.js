@@ -1,12 +1,12 @@
-// import { waitAndClick, waitAndDoubleClick } from '../../lib/helpers'
-// let elements = require('./elementsMap')
+import { waitAndClick, waitAndDoubleClick } from '../../lib/helpers'
+let elements = require('./elementsMap')
 
-// export default class ScheduleDeletePage {
+export default class ScheduleDeletePage {
 
-//     async scheduleDelete() {
+    async scheduleDelete() {
 
-//         await waitAndClick(page, elements.scheduleDeleteButton) 
-//         await waitAndClick(page, elements.scheduleDeleteButtonPopUp) 
+        await waitAndClick(page, elements.scheduleDeleteButton) 
+        await waitAndClick(page, elements.scheduleDeleteButtonPopUp) 
 
-//     }
-// }
+    }
+}
