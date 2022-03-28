@@ -1,4 +1,4 @@
-import { waitAndClick, waitAndWrite, waitAndSelect } from '../../lib/helpers'
+import { waitAndClearField, waitAndClick, waitAndWrite, waitAndSelect } from '../../lib/helpers'
 let elements = require('./elementsMap')
 let name = require('../../utils/fakeName')
 let date = require('date-and-time')
@@ -10,7 +10,9 @@ export default class TimeSheetCreatePage {
 		let now = new Date() 
 
 		await waitAndSelect(page, elements.professionalInput, elements.professional)
+		await waitAndClearField(page, elements.timesheetDateInput)
 		await waitAndWrite(page, elements.timesheetDateInput, (date.format(now, 'DD/MM/YYYY')))
+		await waitAndClearField(page, elements.timesheetHourInput)
 		await waitAndWrite(page, elements.timesheetHourInput, (date.format(now, 'HH:mm')))
 		await waitAndClick(page, elements.nowButtonOk)
 		await waitAndSelect(page, elements.clientInput, elements.client)

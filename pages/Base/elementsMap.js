@@ -43,5 +43,8 @@ export const valueAndOrdersEdit = "//button[@class='ant-btn']"
 export const datesAndRemarksHome = "//div[text()='Home']"
 export const datesAndRemarksEdit = "(//button[@class='ant-btn'])[1]"
 export const forumNumberingAndAreaEdit = "(//button[@class='ant-btn']//span)[4]"
+export const buttonFilterFour = "(//button[@role='switch'])[4]"
+export const buttonFilterTen = "(//button[@role='switch'])[10]"
+export const buttonFilterEleven = "//div[9]//div[1]//div[2]//button[1]" 
 
 

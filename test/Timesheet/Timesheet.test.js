@@ -20,6 +20,7 @@ describe('Must do a crud on Timesheet itens', () => {
     let timesheetDelete
     let timeSheetUpdatePanel
     let timesheetDeletePanel
+    //let timeFilter
   
     beforeAll(async () => {
         jest.setTimeout(timeout)
@@ -42,7 +43,7 @@ describe('Must do a crud on Timesheet itens', () => {
     timesheetDelete = new TimeSheetDeletePage()
     timeSheetUpdatePanel = new TimesheetUpdatePanelPage()
     timesheetDeletePanel = new TimesheetDeletePanelPage()
-
+ 
     it('Must create a new Timesheet', async () => {
         await linksMenu.linksMenu(elements.buttonNew,elements.timesheetOption)
         await timesheetCreate.timesheetCreate()
@@ -50,6 +51,7 @@ describe('Must do a crud on Timesheet itens', () => {
 
     it('Must be update Timesheet', async () => {
         await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterThree, elements.buttonFilter)
+        await timeFilter.timesheetFilter()
         await listMenu.listMenu(elements.timesheetList)
         await timesheetUpdate.timeSheetUpdate()
     })

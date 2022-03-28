@@ -5,7 +5,6 @@ import ProgressUpdatePage from '../Progress/../../pages/Progress/ProgressUpdateP
 import ProgressDeletePage from '../Progress/../../pages/Progress/ProgressDeletePage'
 import { username, password, timeout } from '../Progress/../../config'
 let elements = require('../../pages/Base/elementsMap')
-var mochawesomeReportGenerator = require("mochawesome-report-generator")
 
 describe('Must do a crud on Progress items', () => {
 
@@ -17,7 +16,7 @@ describe('Must do a crud on Progress items', () => {
   let progressCreate
   let progressUpdate
   let progressDelete
-
+ 
   beforeAll(async () => {
 
     jest.setTimeout(timeout)
@@ -58,5 +57,6 @@ describe('Must do a crud on Progress items', () => {
       await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterSix, elements.buttonFilter)
       await listMenu.listMenu(elements.progressList)
       await progressDelete.progressDelete()
+      
     })
 })

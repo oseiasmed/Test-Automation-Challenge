@@ -1,4 +1,4 @@
-import { waitAndClick, waitAndSelect, waitAndWrite, waitClickAndWrite } from '../../lib/helpers'
+import { waitAndClick, waitAndSelect, waitAndWrite, waitAndWriteWhitClearField, waitClickAndWrite } from '../../lib/helpers'
 let elements = require('./elementsMap')
 let name = require('../../utils/fakeName')
 let date = require('date-and-time')

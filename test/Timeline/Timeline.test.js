@@ -23,6 +23,7 @@ describe('Must a timeline filter', () => {
 	let expenseFilter
 	let guaranteeFilter
     let mainMenu
+	let timesheetFilterMenu
 	
 	beforeAll(async () => {
 		jest.setTimeout(timeout)
@@ -46,6 +47,7 @@ describe('Must a timeline filter', () => {
 	decisionFilter = new DecisionFilterPage()
 	expenseFilter = new ExpenseFilterPage()
 	guaranteeFilter = new GuaranteeFilterPage()
+	timesheetFilterMenu = new MenuPage()
 
 	it('Must filter Manual Progress', async () => {
 	
