@@ -8,7 +8,7 @@ import TimesheetDeletePanelPage from '../Timesheet/../../pages/Timesheet/Timeshe
 import { username, password, timeout } from '../Timesheet/../../config'
 let elements = require('../../pages/Base/elementsMap')
 
-describe('Must do a crud on Timesheet itens', () => {
+describe('Must do a CRUD on Timesheet items', () => {
 
     let basePage
     let mainMenu
@@ -44,12 +44,12 @@ describe('Must do a crud on Timesheet itens', () => {
     timeSheetUpdatePanel = new TimesheetUpdatePanelPage()
     timesheetDeletePanel = new TimesheetDeletePanelPage()
  
-    it('Must create a new Timesheet', async () => {
+    it('Must create a Timesheet', async () => {
         await linksMenu.linksMenu(elements.buttonNew,elements.timesheetOption)
         await timesheetCreate.timesheetCreate()
     })
 
-    it('Must be update Timesheet', async () => {
+    it('Must update a Timesheet', async () => {
         await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterThree, elements.buttonFilter)
         await timeFilter.timesheetFilter()
         await listMenu.listMenu(elements.timesheetList)
@@ -62,7 +62,7 @@ describe('Must do a crud on Timesheet itens', () => {
         await timesheetDelete.timeSheetDelete() 
     })
 
-    it('Must update Timesheet', async () => {
+    it('Must update Timesheet Panel', async () => {
   
         await linksMenu.linksMenu(elements.timesheetHoursPanel,elements.timesheetEditPanel)
     	await timeSheetUpdatePanel.timeSheetUpdatePanel() 

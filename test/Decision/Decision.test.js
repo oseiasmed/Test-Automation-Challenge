@@ -38,7 +38,7 @@ describe('Must do a crud on Decision items', () => {
 	decisionUpdate = new DecisionUpdatePage()
 	decisionDelete = new DecisionDeletePage()
 
-	it('Must create a new Decision', async () => {
+	it('Must create a Decision', async () => {
 		await linksMenu.linksMenu(elements.buttonNew,elements.decisionOption)
 		await decisionCreate.decisionCreate()
 

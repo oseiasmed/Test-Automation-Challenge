@@ -29,7 +29,7 @@ describe('Must do a crud on Values and orders items', () => {
 	linksMenu = new MenuPage()
 	valuesAndOrderUpdate = new ValuesAndOrdersUpdatePage()
 
-	it('Must be Update', async () => {
+	it('Must be Update Values and orders', async () => {
 
 		await linksMenu.linksMenu(elements.InformationLink, elements.valueAndOrdersEdit)
 		await valuesAndOrderUpdate.valuesAndOrderUpdate()

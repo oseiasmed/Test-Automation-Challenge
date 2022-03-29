@@ -40,7 +40,7 @@ describe('Must do a crud on Guarantee items', () => {
 	guaranteeDelete = new GuaranteeDeletePage()
 	guaranteeMovement = new GuaranteeMovementPage()
 
-	it('Must create a new Guarantee', async () => {
+	it('Must create a Guarantee', async () => {
 		await linksMenu.linksMenu(elements.buttonNew, elements.guaranteeOption)
 		await guaranteeCreate.guaranteeCreate()
 	})

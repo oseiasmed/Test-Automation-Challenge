@@ -5,7 +5,7 @@ import ForumNumberingAndAreaUpdatePage from '../Panel/../../pages/Panel/ForumNum
 let elements = require('../../pages/Base/elementsMap')
 import { username, password, timeout } from '../Cases/../../config'
 
-describe('Must do a crud on Cases itens', () => {
+describe('Must do a crud on Panel items', () => {
 
     let basePage
     let linksMenu
@@ -30,13 +30,13 @@ describe('Must do a crud on Cases itens', () => {
     datesAndRemarksUpdate = new DatesAndRemarksUpdatePage()
     forumNumberingAndArea = new ForumNumberingAndAreaUpdatePage()
  
-    it('Should DatesAndRemarksUpdatePage', async () => {
+    it('Must update a Dates and remarks', async () => {
         await linksMenu.linksMenu(elements.datesAndRemarksHome, elements.datesAndRemarksEdit)
         await datesAndRemarksUpdate.datesAndRemarksUpdate()
 
     })
 
-    it('Should ForumNumberingAndAreaUpdatePage', async () => {
+    it('Must update a Forum numbering and area', async () => {
     
         await linksMenu.linksMenu(elements.datesAndRemarksHome, elements.forumNumberingAndAreaEdit)
     	await forumNumberingAndArea.forumNumberingAndArea()

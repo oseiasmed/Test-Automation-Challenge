@@ -8,7 +8,7 @@ let elements = require('../../pages/Base/elementsMap')
 
 import { username, password, timeout } from '../Cases/../../config'
 
-describe('Must do a crud on Cases itens', () => {
+describe('Must do a CRUD on Schedule items', () => {
 
     let basePage
     let mainMenu
@@ -42,24 +42,24 @@ describe('Must do a crud on Cases itens', () => {
     listMenu = new MenuPage()
     linksMenu = new MenuPage()
     
-    it('Must be a Schedule Create Page', async () => {
+    it('Must create a Schedule', async () => {
         await linksMenu.linksMenu(elements.buttonNew, elements.scheduleOption)
         await scheduleCreate.scheduleCreate()
     })
 
-    it('Must be update Timesheet', async () => {
+    it('Must update a Schedule', async () => {
         await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilter)
         await listMenu.listMenu(elements.scheduleList)
         await scheduleUpdate.scheduleUpdate()
     })
 
-    it('Must be Delete Schedule', async () => {
+    it('Must Delete a Schedule', async () => {
         await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilter)
         await listMenu.listMenu(elements.scheduleList)
         await scheduleDelete.scheduleDelete()
     })
 
-    it('Must delete Schedule Panel', async () => {
+    it('Must delete Schedule on Panel', async () => {
         await linksMenu.linksMenu(elements.tasksLinkPanel,elements.tasksEditPanel)
         await scheduleDeletePanel.scheduleDeletePanel() 
 

@@ -30,25 +30,25 @@ describe('Must do search in Cases', () => {
 	closeCase = new CloseCasePage()
 	newCase = new NewCasePage()
 
-	// it('Must do search in Cases', async () => {
+	it('Should do a search on Case', async () => {
 			
-	// 	await casesSearch.casesSearch()
+		await casesSearch.casesSearch()
 
-	// })	
+	})	
 
-	// it('Must do filter in Cases', async () => {
+	it('Should filter active and closed Case', async () => {
 			
-	// 	await filterCases.filterCases()
+		await filterCases.filterCases()
 
-	// })	
+	})	
 
-	it('Must close a Cases', async () => {
+	it('Must close a Case', async () => {
 			
 		await closeCase.closeCase()
 
 	})	
 
-	it('Must be a New Case', async () => {
+	it('Must create a Case', async () => {
 			
 		await newCase.newCase()
 

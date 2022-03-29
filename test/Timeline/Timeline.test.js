@@ -84,7 +84,7 @@ describe('Must a timeline filter', () => {
 
 	})
 
-	it('Must filter Expense', async () => {
+	it('Must filter Expense', async () => { 
 	
 		await expenseFilter.expenseFilter()
 

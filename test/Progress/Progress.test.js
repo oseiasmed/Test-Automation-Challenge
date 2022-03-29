@@ -6,7 +6,7 @@ import ProgressDeletePage from '../Progress/../../pages/Progress/ProgressDeleteP
 import { username, password, timeout } from '../Progress/../../config'
 let elements = require('../../pages/Base/elementsMap')
 
-describe('Must do a crud on Progress items', () => {
+describe('Must do a CRUD on Progress items', () => {
 
   let basePage
   let mainMenu
@@ -38,7 +38,7 @@ describe('Must do a crud on Progress items', () => {
   progressUpdate = new ProgressUpdatePage()
   progressDelete = new ProgressDeletePage()
 
-  it('Must create a new Progress', async () => {
+  it('Must create a Progress', async () => {
 
     await linksMenu.linksMenu(elements.buttonNew, elements.progressOption)
     await progressCreate.progressCreate() 
