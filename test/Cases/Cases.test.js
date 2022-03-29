@@ -3,6 +3,7 @@ import MenuPage from '../Cases/../../pages/Base/MenuPage'
 //import CasesSearchPage from '../Cases/../../pages/Cases/CasesSearchPage'
 //import FilterCasesPage from '../Cases/../../pages/Cases/FilterCasesPage'
 import CloseCasePage from '../Cases/../../pages/Cases/CloseCasePage'
+import NewCasePage from '../Cases/../../pages/Cases/NewCasePage'
 
 import { username, password, timeout } from '../ValuesAndOrders/../../config'
 
@@ -13,6 +14,7 @@ describe('Must do search in Cases', () => {
 	//let casesSearch
 	//let filterCases
 	let closeCase
+	let newCase
 
 	beforeAll(async () => {
 		jest.setTimeout(timeout)
@@ -26,6 +28,7 @@ describe('Must do search in Cases', () => {
 	//casesSearch = new CasesSearchPage()
 	//filterCases = new FilterCasesPage()
 	closeCase = new CloseCasePage()
+	newCase = new NewCasePage()
 
 	// it('Must do search in Cases', async () => {
 			
@@ -42,6 +45,12 @@ describe('Must do search in Cases', () => {
 	it('Must close a Cases', async () => {
 			
 		await closeCase.closeCase()
+
+	})	
+
+	it('Must be a New Case', async () => {
+			
+		await newCase.newCase()
 
 	})	
 })
