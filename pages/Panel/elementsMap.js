@@ -7,6 +7,7 @@ export const distributionDateInput = "(//div[@class='ant-picker-input']//input)[
 export const closingForecastInput = "(//div[@class='ant-picker-input']//input)[2]"
 export const input_Input = "//input[@id='control-hooks_dtDataEntrada']"
 export const observationsRemarks ="//textarea[@placeholder='Observações']"
+//export const observationsRemarks ="//input[@id='control-hooks_dsObservacoes']"
 export const okRemarksButton = "//button[@type='submit']"
 export const forumNumberingAndAreaEdit = "(//button[@class='ant-btn']//span)[4]"
 export const justiceTypeInput = "(//input[@role='combobox'])[4]"

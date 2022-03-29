@@ -18,3 +18,4 @@ export const guaranteeObservation = "//textarea[@placeholder='Digite uma observa
 export const guaranteeButtonRadioObs = "(//label[text()='Observação']/following::input)[1]"
 export const guaranteeDeleteButtonPopUp = "//button[@class='ant-btn ant-btn-primary ant-btn-dangerous']"
 export const guaranteeMovementDate = "//input[@placeholder='Selecionar data']"
+export const paymentDate = "//input[@id='DataDeposito']"

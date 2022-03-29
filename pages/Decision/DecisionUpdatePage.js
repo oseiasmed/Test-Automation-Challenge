@@ -9,9 +9,10 @@ export default class DecisionUpdatePage {
 
         const today = new Date();
 
+        await waitAndClearField(page, elements.decisionSelectDate)
         await waitAndWrite(page, elements.decisionSelectDate, (date.format(today, 'DD/MM/YYYY')))
-        await waitAndClick(page, elements.decisionValue)
-        await waitAndWrite(page, elements.decisionValue, "5")
+        await waitAndClearField(page, elements.decisionValue)
+        await waitAndWrite(page, elements.decisionValue, "1.000")
         await waitAndSelect(page, elements.decisionLabel, elements.decisionLabelOption)
         await waitAndClearField(page, elements.decisionTextArea)
         await waitAndWrite(page, elements.decisionTextArea, name.fakeName())
