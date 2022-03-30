@@ -2,8 +2,8 @@ import BasePage from '../Cases/../../pages/Base/BasePage'
 import MenuPage from '../Cases/../../pages/Base/MenuPage'
 //import CasesSearchPage from '../Cases/../../pages/Cases/CasesSearchPage'
 //import FilterCasesPage from '../Cases/../../pages/Cases/FilterCasesPage'
-import CloseCasePage from '../Cases/../../pages/Cases/CloseCasePage'
-import NewCasePage from '../Cases/../../pages/Cases/NewCasePage'
+//import CloseCasePage from '../Cases/../../pages/Cases/CloseCasePage'
+import CaseCreatePage from '../Cases/../../pages/Cases/CaseCreatePage'
 
 import { username, password, timeout } from '../ValuesAndOrders/../../config'
 
@@ -13,8 +13,8 @@ describe('Must do search in Cases', () => {
 	let menuPage
 	//let casesSearch
 	//let filterCases
-	let closeCase
-	let newCase
+	//let closeCase
+	let caseCreate
 
 	beforeAll(async () => {
 		jest.setTimeout(timeout)
@@ -27,30 +27,30 @@ describe('Must do search in Cases', () => {
 	menuPage = new MenuPage()
 	//casesSearch = new CasesSearchPage()
 	//filterCases = new FilterCasesPage()
-	closeCase = new CloseCasePage()
-	newCase = new NewCasePage()
+	//closeCase = new CloseCasePage()
+	caseCreate = new CaseCreatePage()
 
-	it('Should do a search on Case', async () => {
+	// it('Should do a search on Case', async () => {
 			
-		await casesSearch.casesSearch()
+	// 	await casesSearch.casesSearch()
 
-	})	
+	// })	
 
-	it('Should filter active and closed Case', async () => {
+	// it('Should filter active and closed Case', async () => {
 			
-		await filterCases.filterCases()
+	// 	await filterCases.filterCases()
 
-	})	
+	// })	
 
-	it('Must close a Case', async () => {
+	// it('Must close a Case', async () => {
 			
-		await closeCase.closeCase()
+	// 	await closeCase.closeCase()
 
-	})	
+	// })	
 
 	it('Must create a Case', async () => {
 			
-		await newCase.newCase()
+		await caseCreate.caseCreate()
 
 	})	
 })
