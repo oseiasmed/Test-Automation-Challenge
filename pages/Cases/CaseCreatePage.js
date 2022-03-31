@@ -1,4 +1,4 @@
-import { waitAndClick, waitAndWrite, waitAndSelect, waitAndSelectThree } from '../../lib/helpers'
+import { waitAndClick, waitAndWrite, waitAndSelect, waitAndSelectThree, waitAndSelectFour} from '../../lib/helpers'
 let elements = require('./elementsMap')
 let name = require('../../utils/fakeName')
 let date = require('date-and-time')
@@ -12,10 +12,12 @@ export default class CaseCreatePage {
         await waitAndClick(page, elements.newCaseButton)
         await waitAndWrite(page, elements.caseNumber, "12345678910")
         await waitAndSelect(page, elements.instanceSelect, elements.instanceSelectOption)
-        await waitAndSelectThree(page, elements.statesInput, elements.statesOptions, elements.citiesOption)
-        await waitAndSelectThree(page, elements.forumInput, elements.centralForumOption, elements.centralForumOptionFirstInstance)
+        //await waitAndSelectThree(page, elements.statesInput, elements.statesOptions, elements.citiesOption)
+        //await waitAndSelectThree(page, elements.forumInput, elements.centralForumOption, elements.centralForumOptionFirstInstance)
+        //await waitAndSelectFour(page, elements.ritoHierarchyInput, elements.ritoEspecialOptionOne, elements.ritoEspecialOptioTwo, elements.ritoEspecialOptioThree)    
         await waitAndSelect(page, elements.phaseInput, elements.phaseOption)
-        await waitAndSelectThree(page, elements.ritoHierarchyInput, elements.riskEspecialOptionOne, elements.riskEspecialOptioTwo, elements.riskEspecialOptioThree)
+        await waitAndWrite(page, elements.processType, name.fakeName())
+        await waitAndSelect(page, elements.clientInput, elements.clientOption)
         await waitAndWrite(page, elements.processType, name.fakeName())
         await waitAndSelect(page, elements.customerEngagementInput, elements.customerEngagementOption)
         await waitAndClick(page, elements.newPartButton)
