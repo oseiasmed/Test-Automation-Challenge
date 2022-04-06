@@ -16,7 +16,7 @@ describe('Must do a CRUD on Progress items', () => {
   let progressCreate
   let progressUpdate
   let progressDelete
- 
+
   beforeAll(async () => {
 
     jest.setTimeout(timeout)
@@ -42,7 +42,7 @@ describe('Must do a CRUD on Progress items', () => {
 
     await linksMenu.linksMenu(elements.buttonNew, elements.progressOption)
     await progressCreate.progressCreate() 
-   
+  
   })
 
     it('Must update a Progress', async () => {
