@@ -46,5 +46,7 @@ export const forumNumberingAndAreaEdit = "(//button[@class='ant-btn']//span)[4]"
 export const buttonFilterFour = "(//button[@role='switch'])[4]"
 export const buttonFilterTen = "(//button[@role='switch'])[10]"
 export const buttonFilterEleven = "//div[9]//div[1]//div[2]//button[1]" 
-
+export const successCreateProgress = "//span[normalize-space()='Andamento criado com sucesso']"
+export const successUpdateProgress = "//span[normalize-space()='Andamento atualizado com sucesso']"
+export const successDeleteProgress = "//span[normalize-space()='Andamento excluído com sucesso.']"
 

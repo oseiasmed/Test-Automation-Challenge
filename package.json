@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --detectOpenHandles",
+    "test": "jest",
     "test:Progress": "jest ./test/Progress/Progress.test.js",
     "test:Timesheet": "jest ./test/Timesheet/Timesheet.test.js",
     "test:Decision": "jest ./test/Decision/Decision.test.js",
@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "chai": "^4.3.4",
+    "jest-expect": "0.0.1",
     "mocha": "^9.1.2",
     "prettier": "^2.1.1"
   }

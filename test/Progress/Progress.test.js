@@ -22,7 +22,7 @@ describe('Must do a CRUD on Progress items', () => {
     jest.setTimeout(timeout)
     await basePage.goToPage()
     await basePage.login(username, password)
-  
+
   })
 
   beforeEach(async function () {
@@ -41,22 +41,35 @@ describe('Must do a CRUD on Progress items', () => {
   it('Must create a Progress', async () => {
 
     await linksMenu.linksMenu(elements.buttonNew, elements.progressOption)
-    await progressCreate.progressCreate() 
-  
+    await progressCreate.progressCreate()
+
+    let [createProgress] = await page.$x(elements.successCreateProgress)
+    let progressCreateMSG = await page.evaluate(el => el.textContent, createProgress)
+    expect(progressCreateMSG).toBe('Andamento criado com sucesso')
+
   })
 
-    it('Must update a Progress', async () => {
+  it('Must update a Progress', async () => {
 
-      await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterSix, elements.buttonFilter)
-      await listMenu.listMenu(elements.progressList)
-      await progressUpdate.progressUpdate()
-    })
+    await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterSix, elements.buttonFilter)
+    await listMenu.listMenu(elements.progressList)
+    await progressUpdate.progressUpdate()
 
-    it('Must delete a Progress', async () => {
+    let [updateProgress] = await page.$x(elements.successUpdateProgress)
+    let progressUpdateMSG = await page.evaluate(el => el.textContent, updateProgress)
+    expect(progressUpdateMSG).toBe('Andamento atualizado com sucesso')
+   
+  })
 
-      await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterSix, elements.buttonFilter)
-      await listMenu.listMenu(elements.progressList)
-      await progressDelete.progressDelete()
-      
-    })
+  it('Must delete a Progress', async () => {
+
+    await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterSix, elements.buttonFilter)
+    await listMenu.listMenu(elements.progressList)
+    await progressDelete.progressDelete()
+
+    let [deleteProgress] = await page.$x(elements.successDeleteProgress)
+    let progressDeleteMSG = await page.evaluate(el => el.textContent, deleteProgress)
+    expect(progressDeleteMSG).toBe('Andamento excluído com sucesso.')
+
+  })
 })

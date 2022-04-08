@@ -52,7 +52,7 @@ describe('Must do a crud on Decision items', () => {
 
 	})
 
-	it('Must delete a Decision', async () => {
+	it('Must delete a Decision', async () => {~l
 		
 		await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilter)
         await listMenu.listMenu(elements.decisionList)

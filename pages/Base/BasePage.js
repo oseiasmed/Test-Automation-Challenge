@@ -8,6 +8,10 @@ export default class BasePage {
 	async goToPage() {
 		await page.goto('https://testing.lawsoft.com.br');
 	}
+	
+	async wait(time) {
+		await page.waitFor(time)
+	}
 
 	async login() {
 

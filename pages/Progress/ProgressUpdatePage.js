@@ -16,6 +16,7 @@ export default class ProgressUpdatePage {
         await waitAndWrite(page, elements.casesTextArea, name.fakeName())
         await waitAndSelect(page, elements.casesModelInput, elements.casesModel)
         await waitAndClick(page, elements.saveButton)
+        await page.waitForTimeout(1000)
 
 	}
 }
