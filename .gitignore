@@ -23,3 +23,4 @@ new-docs/
 puppeteer.tgz
 docs-api-json/
 docs-dist/
+.env
