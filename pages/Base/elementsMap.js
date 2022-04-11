@@ -52,4 +52,7 @@ export const successDeleteProgress = "//span[normalize-space()='Andamento exclu�
 export const successCreateDecision = "//span[normalize-space()='Decisão criada com sucesso']"
 export const successUpdateDecision = "//span[normalize-space()='Decisão atualizada com sucesso']"
 export const successDeleteDecision = "//span[normalize-space()='Decisão deletada com sucesso']"
-
+export const successCreateGuarantee = "//span[normalize-space()='Garantia inserida com sucesso.']"
+export const successUpdateGuarantee = "//span[normalize-space()='Garantia atualizada com sucesso.']"
+export const successDeleteGuarantee = "//span[normalize-space()='Garantia deletada com sucesso.']"
+export const successMovementGuarantee = "//span[normalize-space()='Movimentação inserida com sucesso.']"

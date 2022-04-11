@@ -13,6 +13,7 @@ export default class GuaranteeEditPage {
         await waitAndClearField(page, elements.guaranteeDescription)
         await waitAndWrite(page, elements.guaranteeDescription, name.fakeName())
         await waitAndClick(page, elements.guaranteeButtonSave)
+        await page.waitForTimeout(1000)
         
     }
 }

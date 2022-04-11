@@ -16,6 +16,7 @@ export default class GuaranteeMovementPage {
         await waitAndWrite(page, elements.guaranteeObservation, name.fakeName())
         await waitAndClick(page, elements.guaranteeButtonRadioObs)
         await waitAndClick(page, elements.guaranteeButtonSave)
+        await page.waitForTimeout(1000)
 
     }
 }

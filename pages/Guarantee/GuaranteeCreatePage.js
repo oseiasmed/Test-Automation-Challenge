@@ -16,5 +16,7 @@ export default class GuaranteeCreatePage {
         await waitAndSelect(page, elements.guaranteeCurrency, elements.guaranteeReal)
         await waitAndWrite(page, elements.guaranteeDescription, name.fakeName())
         await waitAndClick(page, elements.guaranteeButtonSave)
+        await page.waitForTimeout(1000)
+        
     }
 }
