@@ -22,6 +22,7 @@ export default class TimesheetUpdatePanelPage {
         await waitAndClearField(page, elements.timesheetDescription)
         await waitAndWrite(page, elements.timesheetDescription, name.fakeName())
         await waitAndClick(page, elements.timesheetButtonOk)
+        await page.waitForTimeout(1000)
 
     }
 }

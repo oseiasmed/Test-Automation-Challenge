@@ -2,7 +2,7 @@ import BasePage from '../Guarantee/../../pages/Base/BasePage'
 import MenuPage from '../Guarantee/../../pages/Base/MenuPage'
 import GuaranteeCreatePage from '../Guarantee/../../pages/Guarantee/GuaranteeCreatePage'
 import GuaranteeEditPage from '../Guarantee/../../pages/Guarantee/GuaranteeEditPage'
-//import GuaranteeDeletePage from '../Guarantee/../../pages/Guarantee/GuaranteeDeletePage'
+import GuaranteeDeletePage from '../Guarantee/../../pages/Guarantee/GuaranteeDeletePage'
 import GuaranteeMovementPage from '../Guarantee/../../pages/Guarantee/GuaranteeMovementPage'
 let elements = require('../../pages/Base/elementsMap')
 import { username, password, timeout } from '../Guarantee/../../config'
@@ -17,7 +17,7 @@ describe('Must do a crud on Guarantee items', () => {
 	let linksMenu
 	let filterMenu
 	let guaranteeEdit
-	//let guaranteeDelete
+	let guaranteeDelete
 	let guaranteeMovement
 
 	beforeAll(async () => {
@@ -38,7 +38,7 @@ describe('Must do a crud on Guarantee items', () => {
 	linksMenu = new MenuPage()
 	guaranteeCreate = new GuaranteeCreatePage()
 	guaranteeEdit = new GuaranteeEditPage()
-	//guaranteeDelete = new GuaranteeDeletePage()
+	guaranteeDelete = new GuaranteeDeletePage()
 	guaranteeMovement = new GuaranteeMovementPage()
 
 	it('Must create a Guarantee', async () => {
@@ -59,15 +59,15 @@ describe('Must do a crud on Guarantee items', () => {
 
 	})
 
-	// it('Must delete a Guarantee', async () => {
+	it('Must delete a Guarantee', async () => {
 
-	// 	await linksMenu.linksMenu(elements.InformationLink, elements.guaranteeDeleteButtonPanel)
-	// 	await guaranteeDelete.guaranteeDelete()
-	// 	let guaranteeDeleteMSG = await validateMessage(elements.successDeleteGuarantee)
-	// 	expect(guaranteeDeleteMSG).toBe('Garantia deletada com sucesso.')
-	// 	console.log(guaranteeDeleteMSG)
+		await linksMenu.linksMenu(elements.InformationLink, elements.guaranteeDeleteButtonPanel)
+		await guaranteeDelete.guaranteeDelete()
+		let guaranteeDeleteMSG = await validateMessage(elements.successDeleteGuarantee)
+		expect(guaranteeDeleteMSG).toBe('Garantia deletada com sucesso.')
+		console.log(guaranteeDeleteMSG)
 
-	// })
+	})
 
 	it('Must movement a Guarantee', async () => {
 		await linksMenu.linksMenu(elements.InformationLink, elements.guaranteeMovementButton)

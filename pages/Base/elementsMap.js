@@ -56,3 +56,8 @@ export const successCreateGuarantee = "//span[normalize-space()='Garantia inseri
 export const successUpdateGuarantee = "//span[normalize-space()='Garantia atualizada com sucesso.']"
 export const successDeleteGuarantee = "//span[normalize-space()='Garantia deletada com sucesso.']"
 export const successMovementGuarantee = "//span[normalize-space()='Movimentação inserida com sucesso.']"
+export const successCreateTimesheet = "//span[normalize-space()='Hora inserida com sucesso']"
+// export const successUpdateTimesheet = ""
+export const successDeleteTimesheet = "//span[normalize-space()='Hora deletada com sucesso']"
+export const successUpdatePanelTimesheet = "//span[normalize-space()='Hora atualizada com sucesso']"
+export const successDeletePanelTimesheet = "//span[normalize-space()='Hora deletada com sucesso']"

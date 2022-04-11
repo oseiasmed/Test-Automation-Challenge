@@ -7,6 +7,7 @@ export default class TimeSheetDeletePage {
 
         await waitAndClick(page, elements.timesheetDeleteBtn) 
         await waitAndClick(page, elements.timesheetDeleteBtnPopUp)
+        await page.waitForTimeout(1000)
 
     }
 }

@@ -23,7 +23,8 @@ export default class TimeSheetCreatePage {
 		await waitAndWrite(page, elements.timesheetDescription, name.fakeName())
 		await waitAndClick(page, elements.additionalInformationLink)
 		await waitAndSelect(page, elements.timesheetArea, elements.specialtyArea)
-        await waitAndClick(page, elements.timesheetButtonOk)	
+        await waitAndClick(page, elements.timesheetButtonOk)
+		await page.waitForTimeout(1000)	
 	
 	}
 }
