@@ -7,7 +7,7 @@ export default class ProgressCreatePage {
 
     async progressCreate() {
 
-        const today = new Date();
+        const today = new Date()
 
         await waitAndClearField(page, elements.progressDate)
         await waitAndWrite(page, elements.progressDate, (date.format(today, 'DD/MM/YYYY')))

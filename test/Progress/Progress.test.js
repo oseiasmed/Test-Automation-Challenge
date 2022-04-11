@@ -5,6 +5,7 @@ import ProgressUpdatePage from '../Progress/../../pages/Progress/ProgressUpdateP
 import ProgressDeletePage from '../Progress/../../pages/Progress/ProgressDeletePage'
 import { username, password, timeout } from '../Progress/../../config'
 let elements = require('../../pages/Base/elementsMap')
+import { validateMessage } from '../../lib/helpers'
 
 describe('Must do a CRUD on Progress items', () => {
 
@@ -42,10 +43,8 @@ describe('Must do a CRUD on Progress items', () => {
 
     await linksMenu.linksMenu(elements.buttonNew, elements.progressOption)
     await progressCreate.progressCreate()
-
-    let [createProgress] = await page.$x(elements.successCreateProgress)
-    let progressCreateMSG = await page.evaluate(el => el.textContent, createProgress)
-    expect(progressCreateMSG).toBe('Andamento criado com sucesso')
+    let progressCreateMSG = await validateMessage(elements.successCreateProgress)
+    expect(progressCreateMSG).toBe('Andamento criado com sucesso') 
 
   })
 
@@ -54,22 +53,17 @@ describe('Must do a CRUD on Progress items', () => {
     await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterSix, elements.buttonFilter)
     await listMenu.listMenu(elements.progressList)
     await progressUpdate.progressUpdate()
-
-    let [updateProgress] = await page.$x(elements.successUpdateProgress)
-    let progressUpdateMSG = await page.evaluate(el => el.textContent, updateProgress)
+    let progressUpdateMSG = await validateMessage(elements.successUpdateProgress)
     expect(progressUpdateMSG).toBe('Andamento atualizado com sucesso')
-   
+      
   })
 
   it('Must delete a Progress', async () => {
-
     await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterSix, elements.buttonFilter)
     await listMenu.listMenu(elements.progressList)
     await progressDelete.progressDelete()
-
-    let [deleteProgress] = await page.$x(elements.successDeleteProgress)
-    let progressDeleteMSG = await page.evaluate(el => el.textContent, deleteProgress)
+    let progressDeleteMSG = await validateMessage(elements.successDeleteProgress)
     expect(progressDeleteMSG).toBe('Andamento excluído com sucesso.')
-
+   
   })
 })
