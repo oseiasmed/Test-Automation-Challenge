@@ -49,4 +49,7 @@ export const buttonFilterEleven = "//div[9]//div[1]//div[2]//button[1]"
 export const successCreateProgress = "//span[normalize-space()='Andamento criado com sucesso']"
 export const successUpdateProgress = "//span[normalize-space()='Andamento atualizado com sucesso']"
 export const successDeleteProgress = "//span[normalize-space()='Andamento excluído com sucesso.']"
+export const successCreateDecision = "//span[normalize-space()='Decisão criada com sucesso']"
+export const successUpdateDecision = "//span[normalize-space()='Decisão atualizada com sucesso']"
+export const successDeleteDecision = "//span[normalize-space()='Decisão deletada com sucesso']"
 

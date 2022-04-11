@@ -17,6 +17,7 @@ export default class DecisionUpdatePage {
         await waitAndClearField(page, elements.decisionTextArea)
         await waitAndWrite(page, elements.decisionTextArea, name.fakeName())
         await waitAndClick(page, elements.decisionSaveButton)
+        await page.waitForTimeout(1000)
 
     }
 }

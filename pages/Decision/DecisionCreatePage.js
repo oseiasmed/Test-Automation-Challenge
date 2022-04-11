@@ -17,6 +17,7 @@ export default class DecisionCreatePage {
         await waitAndSelect(page, elements.decisionLabel, elements.decisionLabelOption)
         await waitAndWrite(page, elements.decisionTextArea, name.fakeName())
         await waitAndClick(page, elements.decisionSaveButton)
+        await page.waitForTimeout(1000)
 
     }
 }

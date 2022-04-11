@@ -7,6 +7,7 @@ export default class DecisionDeletePage {
 
         await waitAndClick(page, elements.decisionDeleteButton)
         await waitAndClick(page, elements.decisionDeleteBtnPopUp)
+        await page.waitForTimeout(1000)
 
     }
 }

@@ -5,6 +5,7 @@ import DecisionUpdatePage from '../Decision/../../pages/Decision/DecisionUpdateP
 import DecisionDeletePage from '../Decision/../../pages/Decision/DecisionDeletePage'
 import { username, password, timeout } from '../Decision/../../config'
 let elements = require('../../pages/Base/elementsMap')
+import { validateMessage } from '../../lib/helpers'
 
 describe('Must do a crud on Decision items', () => {
 
@@ -41,7 +42,9 @@ describe('Must do a crud on Decision items', () => {
 	it('Must create a Decision', async () => {
 		await linksMenu.linksMenu(elements.buttonNew,elements.decisionOption)
 		await decisionCreate.decisionCreate()
-
+		let decisionCreateMSG = await validateMessage(elements.successCreateDecision)
+        expect(decisionCreateMSG).toBe('Decisão criada com sucesso') 
+		
 	})
 
 	it('Must Update a Decision', async () => {
@@ -49,14 +52,18 @@ describe('Must do a crud on Decision items', () => {
 		await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilter)
         await listMenu.listMenu(elements.decisionList)
 		await decisionUpdate.decisionUpdate()
+		let decisionUpdateMSG = await validateMessage(elements.successUpdateDecision)
+        expect(decisionUpdateMSG).toBe('Decisão atualizada com sucesso') 
 
 	})
 
-	it('Must delete a Decision', async () => {~l
+	it('Must delete a Decision', async () => {
 		
 		await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilter)
         await listMenu.listMenu(elements.decisionList)
 	    await decisionDelete.decisionDelete()
+		let decisionDeleteMSG = await validateMessage(elements.successDeleteDecision)
+        expect(decisionDeleteMSG).toBe('Decisão deletada com sucesso')
 
 	})
 })
