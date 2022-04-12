@@ -17,5 +17,6 @@ export default class ProgressCreatePage {
         await waitAndWrite(page, elements.casesTextArea, name.fakeName())
         await waitAndClick(page, elements.saveButton)
         await page.waitForTimeout(1000)
+
     }
 }
