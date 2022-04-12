@@ -10,6 +10,7 @@ let elements = require('./elementsMap')
         await waitAndClick(page, elements.editButton)
         await waitAndClick(page, elements.addOrder)
         await waitAndClick(page, elements.valuesAndOrdersButtonSave)
+        await page.waitForTimeout(1000)
 
     }
 }

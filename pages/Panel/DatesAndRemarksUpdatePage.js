@@ -20,6 +20,7 @@ export default class DatesAndRemarksUpdatePage {
         await waitAndClearField(page, elements.observationsRemarks)
         await waitAndWrite(page, elements.observationsRemarks, name.fakeName())
         await waitAndClick(page, elements.okRemarksButton)
+        await page.waitForTimeout(1000)
 
     }
 }

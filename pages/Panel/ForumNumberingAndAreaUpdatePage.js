@@ -11,6 +11,7 @@ export default class ForumNumberingAndAreaUpdatePage {
         await waitAndSelect(page, elements.justiceTypeInput, elements.justiceTypeOption)
         await waitAndSelect(page, elements.faseOption, elements.archivedOption)
         await waitAndClick(page, elements.justiceTypeButtonOk)
+        await page.waitForTimeout(1000)
           
     }
 }

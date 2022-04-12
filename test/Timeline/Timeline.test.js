@@ -3,10 +3,10 @@ import MenuPage from '../Timeline/../../pages/Base/MenuPage'
 import ManualProgressFilterPage from '../Timeline/../../pages/Timeline/ManualProgressFilterPage'
 import AutomaticProgressFilterPage from '../Timeline/../../pages/Timeline/AutomaticProgressFilterPage' 
 import TimesheetFilterPage from '../Timeline/../../pages/Timeline/TimesheetFilterPage'
-//import ScheduleFilterPage from '../Timeline/../../pages/Timeline/ScheduleFilterPage'
-//import AssignmentFilterPage from '../Timeline/../../pages/Timeline/AssignmentFilterPage'
+import ScheduleFilterPage from '../Timeline/../../pages/Timeline/ScheduleFilterPage'
+import AssignmentFilterPage from '../Timeline/../../pages/Timeline/AssignmentFilterPage'
 import DecisionFilterPage from '../Timeline/../../pages/Timeline/DecisionFilterPage'
-//import ExpenseFilterPage from '../Timeline/../../pages/Timeline/ExpenseFilterPage'
+import ExpenseFilterPage from '../Timeline/../../pages/Timeline/ExpenseFilterPage'
 import GuaranteeFilterPage from '../Timeline/../../pages/Timeline/GuaranteeFilterPage'
 import { username, password, timeout } from '../Timeline/../../config'
 import { validateMessage } from '../../lib/helpers'
@@ -18,10 +18,10 @@ describe('Must a timeline filter', () => {
 	let manualProgressFilter
 	let automaticProgressFilter
 	let timesheetFilter
-	// let scheduleFilter
-	// let assignmentFilter
+	let scheduleFilter
+	let assignmentFilter
 	let decisionFilter
-	// let expenseFilter
+	let expenseFilter
 	let guaranteeFilter
     let mainMenu
 	let timesheetFilterMenu
@@ -30,12 +30,10 @@ describe('Must a timeline filter', () => {
 		jest.setTimeout(timeout)
 		await basePage.goToPage()
 		await basePage.login(username, password)
-
 	})
 
    beforeEach(async function(){
-     await mainMenu.mainMenu()
-      
+     await mainMenu.mainMenu()  
    })
 
 	basePage = new BasePage()
@@ -43,10 +41,10 @@ describe('Must a timeline filter', () => {
 	manualProgressFilter = new ManualProgressFilterPage()
 	automaticProgressFilter = new AutomaticProgressFilterPage()
 	timesheetFilter = new TimesheetFilterPage()
-	// scheduleFilter = new ScheduleFilterPage()
-	// assignmentFilter = new AssignmentFilterPage()
+	scheduleFilter = new ScheduleFilterPage()
+	assignmentFilter = new AssignmentFilterPage()
 	decisionFilter = new DecisionFilterPage()
-	// expenseFilter = new ExpenseFilterPage()
+	expenseFilter = new ExpenseFilterPage()
 	guaranteeFilter = new GuaranteeFilterPage()
 	timesheetFilterMenu = new MenuPage()
 
@@ -68,17 +66,16 @@ describe('Must a timeline filter', () => {
         expect(timesheetFilterMSG).toBe('Timesheet')	
 	})
 
-	// it('Must filter Schedule', async () => {
-		
-	// 	await scheduleFilter.scheduleFilter()
+	it('Must filter Schedule', async () => {
+		await scheduleFilter.scheduleFilter()
+		let scheduleFilterMSG = await validateMessage(elements.scheduleFilterContent)
+        expect(scheduleFilterMSG).toBe('Timesheet')
+		console.log(scheduleFilterMSG)
+	})	
 
-	// })	
-
-	// it('Must filter Assignment', async () => {
-		
-	// 	await assignmentFilter.assignmentFilter()
-		
-	// })
+	it('Must filter Assignment', async () => {
+		await assignmentFilter.assignmentFilter()	
+	})
 
 	it('Must filter Decision', async () => {
 		await decisionFilter.decisionFilter()
@@ -86,19 +83,15 @@ describe('Must a timeline filter', () => {
         expect(decisionFilterMSG).toBe('Decisão') 
 	})
 
-	// it('Must filter Expense', async () => { 
-	
-	// 	await expenseFilter.expenseFilter()
-
-	// })
+	it('Must filter Expense', async () => { 
+		await expenseFilter.expenseFilter()
+	})
 
 	it('Must filter Guarantee', async () => {
-	
 		await guaranteeFilter.guaranteeFilter()
 		let guaranteeFilterMSG = await validateMessage(elements.guaranteeFilterContent)
         expect(guaranteeFilterMSG).toBe('Garantia') 
-		console.log(guaranteeFilterMSG)
-		
+		console.log(guaranteeFilterMSG)	
 	})
 })
 
