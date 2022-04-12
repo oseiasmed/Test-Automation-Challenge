@@ -7,6 +7,7 @@ export default class ScheduleDeletePage {
 
         await waitAndClick(page, elements.scheduleDeleteButton) 
         await waitAndClick(page, elements.scheduleDeleteButtonPopUp) 
+        await page.waitForTimeout(1000)
 
     }
 }

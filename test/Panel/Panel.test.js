@@ -2,8 +2,8 @@ import BasePage from '../Panel/../../pages/Base/BasePage'
 import MenuPage from '../Panel/../../pages/Base/MenuPage'
 import DatesAndRemarksUpdatePage from '../Panel/../../pages/Panel/DatesAndRemarksUpdatePage'
 import ForumNumberingAndAreaUpdatePage from '../Panel/../../pages/Panel/ForumNumberingAndAreaUpdatePage'
-let elements = require('../../pages/Base/elementsMap')
 import { username, password, timeout } from '../Cases/../../config'
+let elements = require('../../pages/Base/elementsMap')
 
 describe('Must do a crud on Panel items', () => {
 
@@ -33,15 +33,11 @@ describe('Must do a crud on Panel items', () => {
     it('Must update a Dates and remarks', async () => {
         await linksMenu.linksMenu(elements.datesAndRemarksHome, elements.datesAndRemarksEdit)
         await datesAndRemarksUpdate.datesAndRemarksUpdate()
-
     })
 
     it('Must update a Forum numbering and area', async () => {
-    
         await linksMenu.linksMenu(elements.datesAndRemarksHome, elements.forumNumberingAndAreaEdit)
     	await forumNumberingAndArea.forumNumberingAndArea()
-
-    })
- 
+    }) 
 })
 

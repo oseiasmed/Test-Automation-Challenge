@@ -11,6 +11,7 @@ export default class ManualProgressFilterPage {
         await waitAndClick(page, elements.buttonFilterTen)
         await waitAndClick(page, elements.buttonFilterEleven)
         await waitAndClick(page, elements.buttonFilter)
+        await page.waitForTimeout(1000)
 
     }
 }

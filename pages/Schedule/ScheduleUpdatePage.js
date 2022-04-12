@@ -9,5 +9,7 @@ export default class ScheduleUpdatePage {
         await waitAndClearField(page, elements.scheduleDescription)
         await waitAndWrite(page, elements.scheduleDescription, name.fakeName())
         await waitAndClick(page, elements.scheduleButtonSave)
+        await page.waitForTimeout(1000)
+        
     }
 }

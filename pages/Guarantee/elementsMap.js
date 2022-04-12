@@ -10,7 +10,7 @@ export const guaranteeButtonSave = "//span[text()='Salvar']"
 
 export const InformationLink = "//div[text()='Informações']"
 export const guaranteeLinkEdit ="(//div[@class='ant-table-content']//table)[2]/tbody[1]/tr[2]/td[8]/div[1]/div[3]/a[1]/span[1]"
-export const guaranteeDeleteButton = "//div[@id='__next']/main[1]/main[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[3]/td[8]/div[1]/div[5]/a[1]"
+export const guaranteeDeleteButton = "/html[1]/body[1]/div[1]/main[1]/main[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[4]/td[8]/div[1]/div[5]/a[1]/span[1]/*[name()='svg'][1]/*[name()='path'][1]"
 export const guaranteeMovementValue = "//input[@id='ValorMovimentacao']"
 export const guaranteeTranferRadio = "(//input[@class='ant-radio-input'])[1]"
 export const guaranteeTranferTo = "//input[@placeholder='Transferir à']"

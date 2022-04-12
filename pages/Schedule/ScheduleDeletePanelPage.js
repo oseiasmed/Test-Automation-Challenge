@@ -7,7 +7,8 @@ export default class ScheduleDeletePanelPage {
 
        
         await waitAndClick(page,elements.scheduleDeleteButton)
-        await waitAndClick(page, elements.scheduleDeleteButtonPopUp) 
+        await waitAndClick(page, elements.scheduleDeleteButtonPopUp)
+        await page.waitForTimeout(1000) 
 
     }
 }

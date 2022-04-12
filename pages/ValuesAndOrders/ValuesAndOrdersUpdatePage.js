@@ -16,6 +16,7 @@ export default class ValuesAndOrdersUpdatePage {
         await waitAndClick(page, elements.AddOrder)
         await waitAndSelect(page, elements.OrderItem, elements.AccordingWork)
         await waitAndClick(page, elements.AddOrderButtonSave)
+        await page.waitForTimeout(1000)
 
     }
 }

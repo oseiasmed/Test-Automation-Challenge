@@ -14,5 +14,6 @@ export default class ScheduleCreatePage {
         await waitAndClick(page, elements.scheduleDescription)
         await waitAndWrite(page, elements.scheduleDescription, name.fakeName())
         await waitAndClick(page, elements.scheduleButtonSave)
+        await page.waitForTimeout(1000)
     }
 }

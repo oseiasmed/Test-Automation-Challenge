@@ -3,6 +3,7 @@ import MenuPage from '../ValuesAndOrders/../../pages/Base/MenuPage'
 import ValuesAndOrdersUpdatePage from '../ValuesAndOrders/../../pages/ValuesAndOrders/ValuesAndOrdersUpdatePage'
 import { username, password, timeout } from '../ValuesAndOrders/../../config'
 import { waitAndClick } from '../../lib/helpers'
+import { validateMessage } from '../../lib/helpers'
 let elements = require('../../pages/Base/elementsMap')
 
 describe('Must do a crud on Values and orders items', () => {
@@ -33,7 +34,8 @@ describe('Must do a crud on Values and orders items', () => {
 
 		await linksMenu.linksMenu(elements.InformationLink, elements.valueAndOrdersEdit)
 		await valuesAndOrderUpdate.valuesAndOrderUpdate()
-
+		let valuesAndOrdersUpdatelMSG = await validateMessage(elements.successUpdatevaluesAndOrders)
+        expect(valuesAndOrdersUpdatelMSG).toBe('Valores do caso atualizados com sucesso')
 	})
 })
 
