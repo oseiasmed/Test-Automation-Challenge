@@ -62,3 +62,4 @@ describe('Must do a CRUD on Progress items', () => {
     expect(progressDeleteMSG).toBe('Andamento excluído com sucesso.')
   })
 })
+

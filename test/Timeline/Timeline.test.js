@@ -68,9 +68,8 @@ describe('Must a timeline filter', () => {
 
 	it('Must filter Schedule', async () => {
 		await scheduleFilter.scheduleFilter()
-		// let scheduleFilterMSG = await validateMessage(elements.scheduleFilterContent)
-		// expect(scheduleFilterMSG).toBe('Timesheet')
-		// console.log(scheduleFilterMSG)
+		//TODO let scheduleFilterMSG = await validateMessage(elements.scheduleFilterContent)
+		//TODO expect(scheduleFilterMSG).toBe('Timesheet') 
 	})
 
 	it('Must filter Assignment', async () => {
@@ -91,7 +90,6 @@ describe('Must a timeline filter', () => {
 		await guaranteeFilter.guaranteeFilter()
 		let guaranteeFilterMSG = await validateMessage(elements.guaranteeFilterContent)
 		expect(guaranteeFilterMSG).toBe('Garantia')
-		console.log(guaranteeFilterMSG)
 	})
 })
 

@@ -3,6 +3,11 @@ let elements = require('./elementsMap')
 
 export default class MenuPage {
 
+	async singleMenu() {
+		await waitAndClick(page, elements.linkCases)
+	
+	}
+
 	async mainMenu() {
 		await waitAndClick(page, elements.linkCases)
 		await waitAndClick(page, elements.firstElementTable)
