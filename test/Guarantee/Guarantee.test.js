@@ -2,8 +2,8 @@ import BasePage from '../Guarantee/../../pages/Base/BasePage'
 import MenuPage from '../Guarantee/../../pages/Base/MenuPage'
 import GuaranteeCreatePage from '../Guarantee/../../pages/Guarantee/GuaranteeCreatePage'
 import GuaranteeEditPage from '../Guarantee/../../pages/Guarantee/GuaranteeEditPage'
-//! import GuaranteeDeletePage from '../Guarantee/../../pages/Guarantee/GuaranteeDeletePage'
-//! import GuaranteeMovementPage from '../Guarantee/../../pages/Guarantee/GuaranteeMovementPage'
+import GuaranteeDeletePage from '../Guarantee/../../pages/Guarantee/GuaranteeDeletePage'
+import GuaranteeMovementPage from '../Guarantee/../../pages/Guarantee/GuaranteeMovementPage'
 import { username, password, timeout } from '../Guarantee/../../config'
 import { validateMessage } from '../../lib/helpers'
 let elements = require('../../pages/Base/elementsMap')
@@ -17,8 +17,8 @@ describe('Must do a crud on Guarantee items', () => {
 	let linksMenu
 	let filterMenu
 	let guaranteeEdit
-	//! let guaranteeDelete
-	//! let guaranteeMovement 
+	let guaranteeDelete
+	let guaranteeMovement 
 
 	beforeAll(async () => {
 		jest.setTimeout(timeout)
@@ -38,9 +38,8 @@ describe('Must do a crud on Guarantee items', () => {
 	linksMenu = new MenuPage()
 	guaranteeCreate = new GuaranteeCreatePage()
 	guaranteeEdit = new GuaranteeEditPage()
-	
-	//! guaranteeDelete = new GuaranteeDeletePage()
-	//! guaranteeMovement = new GuaranteeMovementPage()
+	guaranteeDelete = new GuaranteeDeletePage()
+	guaranteeMovement = new GuaranteeMovementPage()
 
 	it('Must create a Guarantee', async () => {
 		await linksMenu.linksMenu(elements.buttonNew, elements.guaranteeOption)
@@ -57,21 +56,19 @@ describe('Must do a crud on Guarantee items', () => {
 		expect(guaranteeUpdateMSG).toBe('Garantia atualizada com sucesso.')
 	})
 
-	// TODO Ajustar garantia no Lawoffice Web (Não é possível excluir o 1º elemeto da Tabela)
+	// TODO - Este item necessita de ajustes pela equipe de Desenvolvimento.
+	
+	it('Must delete a Guarantee', async () => {
+		await linksMenu.linksMenu(elements.InformationLink, elements.guaranteeDeleteButtonPanel)
+		await guaranteeDelete.guaranteeDelete()
+		let guaranteeDeleteMSG = await validateMessage(elements.successDeleteGuarantee)
+		expect(guaranteeDeleteMSG).toBe('Garantia deletada com sucesso.')
+	})
 
-	// it('Must delete a Guarantee', async () => {
-	// 	await linksMenu.linksMenu(elements.InformationLink, elements.guaranteeDeleteButtonPanel)
-	// 	await guaranteeDelete.guaranteeDelete()
-	// 	let guaranteeDeleteMSG = await validateMessage(elements.successDeleteGuarantee)
-	// 	expect(guaranteeDeleteMSG).toBe('Garantia deletada com sucesso.')
-	// })
-
-	// TODO Ajustar garantia no Lawoffice Web (Fazer uma revisão em Movimentação)
-
-	// it('Must movement a Guarantee', async () => {
-	// 	await linksMenu.linksMenu(elements.InformationLink, elements.guaranteeMovementButton)
-	// 	await guaranteeMovement.guaranteeMovement()
-	// 	let guaranteeMovementMSG = await validateMessage(elements.successMovementGuarantee)
-	// 	expect(guaranteeMovementMSG).toBe('Movimentação inserida com sucesso.')
-	// })
+	it('Must movement a Guarantee', async () => {
+		await linksMenu.linksMenu(elements.InformationLink, elements.guaranteeMovementButton)
+		await guaranteeMovement.guaranteeMovement()
+		let guaranteeMovementMSG = await validateMessage(elements.successMovementGuarantee)
+		expect(guaranteeMovementMSG).toBe('Movimentação inserida com sucesso.')
+	})
 })

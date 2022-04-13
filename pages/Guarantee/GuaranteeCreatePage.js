@@ -12,7 +12,7 @@ export default class GuaranteeCreatePage {
         await waitAndSelect(page, elements.guaranteeType, elements.guaranteeItem)
         await waitAndWrite(page, elements.guaranteeTextArea, name.fakeName())
         await waitAndWrite(page, elements.guaranteeSelectDate, (date.format(today, 'DD/MM/YYYY')))
-        await waitAndWrite(page, elements.guaranteeValue, "3000")
+        await waitAndWrite(page, elements.guaranteeValue, "30000")
         await waitAndSelect(page, elements.guaranteeCurrency, elements.guaranteeReal)
         await waitAndWrite(page, elements.guaranteeDescription, name.fakeName())
         await waitAndClick(page, elements.guaranteeButtonSave)
