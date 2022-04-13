@@ -5,6 +5,8 @@ export default class FilterCasesPage{
 
     async filterCases() {
 
+        await waitAndClick(page, elements.clearCasesField)
+        await page.waitForTimeout(1000)
         await waitAndClick(page, elements.FilterCasesIcon)  
         await waitAndClick(page, elements.FilterStatusClosed)  
         await page.waitForTimeout(1000)
