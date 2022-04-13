@@ -12,7 +12,7 @@ export const okRemarksButton = "//button[@type='submit']"
 export const forumNumberingAndAreaEdit = "(//button[@class='ant-btn']//span)[4]"
 export const justiceTypeInput = "(//input[@role='combobox'])[4]"
 export const justiceTypeOption = "(//div[@class='ant-select-item-option-content'])[2]"
-export const justiceTypeButtonOk = "//button[@type='submit']"
+export const justiceTypeButtonOk = "//span[normalize-space()='Salvar']"
 export const justiceTypeTitle ="(//label[text()='Título']/following::input)[1]"
 export const informationLink = "//div[text()='Informações']"
 export const editButton = "//span[text()='Editar']"
@@ -44,6 +44,9 @@ export const archivedOption = "//div[text()='Arquivado']"
 export const dateAndCitation = "//input[@id='control-hooks_dtDataCitacao']"
 export const  valuesAndOrdersButtonSave = "//span[text()='Salvar']"
 
+export const ritoInput = "//input[@id='control-hooks_idRito']"
+export const incidentesOption = "//li[@title='Incidentes']"
+export const incidentesgenericosOption = "//li[@title='Incidentes Genéricos (Cível, Trabalhista e Criminal)']"
 
 
 

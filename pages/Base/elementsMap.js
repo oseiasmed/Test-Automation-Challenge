@@ -76,3 +76,4 @@ export const closeCaseContent = "//span[normalize-space()='Caso encerrado com su
 export const casesTitleLink = "//td[@class='ant-table-cell']//mark[1]"
 export const casesTitle = "//input[@placeholder='Buscar caso']"
 export const clearCasesField = "//span[@class='anticon anticon-close-circle ant-input-clear-icon']"
+export const datesAndRemarksContent = "//span[normalize-space()='Datas e observações editadas com sucesso']"
