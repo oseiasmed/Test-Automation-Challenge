@@ -11,8 +11,23 @@ export default class ProgressCreatePage {
 
         await waitAndClearField(page, elements.progressDate)
         await waitAndWrite(page, elements.progressDate, (date.format(today, 'DD/MM/YYYY')))
-        await waitAndSelect(page, elements.progressClassificationInput, elements.progressClassification)
-        await waitAndSelect(page, elements.casesModelInput, elements.casesModel)
+
+        // TODO Random select option [Start Method]
+
+        var items = [page, elements.followUpOption, elements.manualTimeOption, elements.processUpdateOption, elements.processPushOption]
+        var item = items[Math.floor(Math.random() * items.length)]
+        await waitAndSelect(page, elements.progressClassificationInput, item)
+
+        // TODO Random select option [End Method]
+
+        // ? Random select option [Start Method]
+
+        var newItems = [page, elements.undefinedOption, elements.diligenceOption, elements.modelOption]
+        var newItem = newItems[Math.floor(Math.random() * newItems.length)]
+        await waitAndSelect(page, elements.casesModelInput, newItem)
+
+        // ? Random select option [End Method]
+
         await waitAndClearField(page, elements.casesTextArea)
         await waitAndWrite(page, elements.casesTextArea, name.fakeName())
         await waitAndClick(page, elements.saveButton)
