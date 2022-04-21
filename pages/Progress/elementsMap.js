@@ -16,7 +16,10 @@ export const processUpdateOption =  "//div[text()='Atualização do processo']"
 export const processPushOption = "//div[text()='Push de Andamentos']"                 
 export const undefinedOption = "//div[text()='Não definido']"
 export const diligenceOption = "//div[text()='Diligência']"
-export const modelOption = "//div[text()='modelo']"           
+export const modelOption = "//div[text()='modelo']" 
+
+
+  
 
 
 
