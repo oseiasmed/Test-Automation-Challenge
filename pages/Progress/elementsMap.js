@@ -10,16 +10,7 @@ export const progressList = "(//b[text()='Andamento manual'])[1]"
 export const progressDeleteBtn = "//span[normalize-space()='Excluir']"
 export const saveButton = "//span[text()='Salvar']"
 export const timesheetDeleteBtnPopUp = "(//span[text()='Excluir'])[2]"
-export const upOp = "//div[text()='ACOMPANHAMENTO']"
-export const timeOp = "//div[text()='Andamento manual']"
-export const dateOp =  "//div[text()='Atualização do processo']"                 
-export const pushOp = "//div[text()='Push de Andamentos']"                 
-export const undOp = "//div[text()='Não definido']"
-export const dilOp = "//div[text()='Diligência']"
-export const modelOp = "//div[text()='modelo']" 
 
-
-  
 
 
 
