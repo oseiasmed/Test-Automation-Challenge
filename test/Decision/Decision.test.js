@@ -17,6 +17,7 @@ describe('Must do a crud on Decision items', () => {
 	let decisionCreate
 	let decisionUpdate
 	let decisionDelete
+	let menu
 
 	beforeAll(async () => {
 		jest.setTimeout(timeout)
@@ -38,17 +39,18 @@ describe('Must do a crud on Decision items', () => {
 	decisionCreate = new DecisionCreatePage()
 	decisionUpdate = new DecisionUpdatePage()
 	decisionDelete = new DecisionDeletePage()
+	menu = new MenuPage()
 
 	it('Must create a Decision', async () => {
-		await linksMenu.linksMenu(elements.buttonNew, elements.decisionOption)
+		await menu.menu(elements.buttonNew, elements.decisionOption)
 		await decisionCreate.decisionCreate()
 		let decisionCreateMSG = await validateMessage(elements.successCreateDecision)
 		expect(decisionCreateMSG).toBe('Decisão criada com sucesso')
 	})
 
 	it('Must Update a Decision', async () => {
-		await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilter)
-		await listMenu.listMenu(elements.decisionList)
+		
+		await menu.menu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilter,elements.decisionList)
 		await decisionUpdate.decisionUpdate()
 		let decisionUpdateMSG = await validateMessage(elements.successUpdateDecision)
 		expect(decisionUpdateMSG).toBe('Decisão atualizada com sucesso')

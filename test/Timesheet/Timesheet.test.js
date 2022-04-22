@@ -3,8 +3,8 @@ import MenuPage from '../Timesheet/../../pages/Base/MenuPage'
 import TimeSheetCreatePage from '../Timesheet/../../pages/Timesheet/TimeSheetCreatePage'
 import TimeSheetUpdatePage from '../Timesheet/../../pages/Timesheet/TimesheetUpdatePage'
 import TimeSheetDeletePage from '../Timesheet/../../pages/Timesheet/TimesheetDeletePage'
-import TimesheetUpdatePanelPage from '../Timesheet/../../pages/Timesheet/TimesheetUpdatePanelPage'
-import TimesheetDeletePanelPage from '../Timesheet/../../pages/Timesheet/TimesheetDeletePanelPage'
+// import TimesheetUpdatePanelPage from '../Timesheet/../../pages/Timesheet/TimesheetUpdatePanelPage'
+// import TimesheetDeletePanelPage from '../Timesheet/../../pages/Timesheet/TimesheetDeletePanelPage'
 import { username, password, timeout } from '../Timesheet/../../config'
 import { validateMessage } from '../../lib/helpers'
 let elements = require('../../pages/Base/elementsMap')
@@ -19,8 +19,8 @@ describe('Must do a CRUD on Timesheet items', () => {
     let timesheetCreate
     let timesheetUpdate
     let timesheetDelete
-    let timeSheetUpdatePanel
-    let timesheetDeletePanel
+    // let timeSheetUpdatePanel
+    // let timesheetDeletePanel
     let timeFilter
 
     beforeAll(async () => {
@@ -42,8 +42,8 @@ describe('Must do a CRUD on Timesheet items', () => {
     timesheetCreate = new TimeSheetCreatePage()
     timesheetUpdate = new TimeSheetUpdatePage()
     timesheetDelete = new TimeSheetDeletePage()
-    timeSheetUpdatePanel = new TimesheetUpdatePanelPage()
-    timesheetDeletePanel = new TimesheetDeletePanelPage()
+    // timeSheetUpdatePanel = new TimesheetUpdatePanelPage()
+    // timesheetDeletePanel = new TimesheetDeletePanelPage()
 
     it('Must create a Timesheet', async () => {
         await linksMenu.linksMenu(elements.buttonNew, elements.timesheetOption)
@@ -68,17 +68,17 @@ describe('Must do a CRUD on Timesheet items', () => {
         expect(timesheetDeleteMSG).toBe('Hora deletada com sucesso')
     })
 
-    it('Must update Timesheet Panel', async () => {
-        await linksMenu.linksMenu(elements.timesheetHoursPanel, elements.timesheetEditPanel)
-        await timeSheetUpdatePanel.timeSheetUpdatePanel()
-        let timesheetUpdatePanelMSG = await validateMessage(elements.successUpdatePanelTimesheet)
-        expect(timesheetUpdatePanelMSG).toBe('Hora atualizada com sucesso')
-    })
+    // it('Must update Timesheet Panel', async () => {
+    //     await linksMenu.linksMenu(elements.timesheetHoursPanel, elements.timesheetEditPanel)
+    //     await timeSheetUpdatePanel.timeSheetUpdatePanel()
+    //     let timesheetUpdatePanelMSG = await validateMessage(elements.successUpdatePanelTimesheet)
+    //     expect(timesheetUpdatePanelMSG).toBe('Hora atualizada com sucesso')
+    // })
 
-    it('Must delete Timesheet Panel ', async () => {
-        await linksMenu.linksMenu(elements.timesheetHoursPanel, elements.timesheetEditPanel)
-        await timesheetDeletePanel.timesheetDeletePanel()
-        let timesheetDeletePanelMSG = await validateMessage(elements.successDeletePanelTimesheet)
-        expect(timesheetDeletePanelMSG).toBe('Hora deletada com sucesso')
-    })
+    // it('Must delete Timesheet Panel ', async () => {
+    //     await linksMenu.linksMenu(elements.timesheetHoursPanel, elements.timesheetEditPanel)
+    //     await timesheetDeletePanel.timesheetDeletePanel()
+    //     let timesheetDeletePanelMSG = await validateMessage(elements.successDeletePanelTimesheet)
+    //     expect(timesheetDeletePanelMSG).toBe('Hora deletada com sucesso')
+    // })
 })

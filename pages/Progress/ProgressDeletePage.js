@@ -1,12 +1,11 @@
-// import { waitAndClick } from '../../lib/helpers'
-// let elements = require('./elementsMap')
-// export default class ProgressDeletePage {
+import { click, clicS } from '../../lib/helpers'
+let elements = require('./elementsMap')
+export default class ProgressDeletePage {
 
-//     async progressDelete() {
+    async progressDelete() {
 
-//         await waitAndClick(page, elements.progressDeleteBtn)
-//         await waitAndClick(page, elements.timesheetDeleteBtnPopUp)
-//         await page.waitForTimeout(1000)
+        await click(page, elements.progressDeleteBtn)
+        await clicS(page, elements.timesheetDeleteBtnPopUp)
 
-//     }
-// }
+    }
+}

@@ -1,13 +1,12 @@
-import { waitAndClick } from '../../lib/helpers'
+import { clicS, click } from '../../lib/helpers'
 let elements = require('./elementsMap')
 
 export default class TimeSheetDeletePage {
 
     async timeSheetDelete() {
 
-        await waitAndClick(page, elements.timesheetDeleteBtn) 
-        await waitAndClick(page, elements.timesheetDeleteBtnPopUp)
-        await page.waitForTimeout(1000)
-
+        await click(page, elements.timesheetDeleteBtn) 
+        await clicS(page, elements.timesheetDeleteBtnPopUp)
+     
     }
 }

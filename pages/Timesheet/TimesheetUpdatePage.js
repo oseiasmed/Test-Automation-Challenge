@@ -1,4 +1,4 @@
-import { waitAndClearField, waitAndClick, waitAndWrite, waitAndSelect } from '../../lib/helpers'
+import { click, clicS, select, write } from '../../lib/helpers'
 let elements = require('./elementsMap')
 let name = require('../../utils/fakeName')
 let date = require('date-and-time')
@@ -9,21 +9,16 @@ export default class TimeSheetUpdatePage {
 
 		let now = new Date() 
         
-		await waitAndSelect(page, elements.professionalInput, elements.professional)
-	    await waitAndClearField(page, elements.timesheetDateInput)
-		await waitAndWrite(page, elements.timesheetDateInput, (date.format(now, 'DD/MM/YYYY')))
-		await waitAndClearField(page, elements.timesheetHourInput)
-		await waitAndWrite(page, elements.timesheetHourInput, (date.format(now, 'HH:mm')))
-		await waitAndClick(page, elements.nowButtonOk)
-		await waitAndSelect(page, elements.clientInput, elements.client)
-		await waitAndSelect(page,elements.timesheetCase, elements.timesheetCaseOption)
-		await waitAndSelect(page, elements.timesheetClassificationInput, elements.legalInput)
-		await waitAndClearField(page, elements.titleInput)
-		await waitAndWrite(page, elements.titleInput, name.fakeName())
-		await waitAndClearField(page, elements.timesheetDescription)
-		await waitAndWrite(page, elements.timesheetDescription, name.fakeName())
-		await waitAndClick(page, elements.timesheetButtonOk)
-		await page.waitForTimeout(1000)
+		await select(page, elements.professionalInput, elements.professional)
+        await write(page, elements.timesheetDateInput, (date.format(now, 'DD/MM/YYYY')))
+	    await write(page, elements.timesheetHourInput, (date.format(now, 'HH:mm')))
+		await click(page, elements.nowButtonOk)
+		await select(page, elements.clientInput, elements.client)
+		await select(page,elements.timesheetCase, elements.timesheetCaseOption)
+		await select(page, elements.timesheetClassificationInput, elements.legalInput)
+		await write(page, elements.titleInput, name.fakeName())
+	    await write(page, elements.timesheetDescription, name.fakeName())
+		await clicS(page, elements.timesheetButtonSave)
 
 	}
 }

@@ -1,4 +1,4 @@
-import { waitAndClearField, waitAndClick, waitAndSelect, waitAndWrite, waitAndWriteWhitClearField, waitClickAndWrite } from '../../lib/helpers'
+import { write, clicS, select } from '../../lib/helpers'
 let elements = require('./elementsMap')
 let name = require('../../utils/fakeName')
 let date = require('date-and-time')
@@ -9,15 +9,12 @@ export default class DecisionCreatePage {
 
         const today = new Date();
 
-        await waitAndClearField(page, elements.decisionSelectDate)
-        await waitAndWrite(page, elements.decisionSelectDate, (date.format(today, 'DD/MM/YYYY')))
-        // await waitAndClick(page, elements.decisionValue)
-        await waitAndClearField(page, elements.decisionValue)
-        await waitAndWrite(page, elements.decisionValue, "1000")
-        await waitAndSelect(page, elements.decisionLabel, elements.decisionLabelOption)
-        await waitAndWrite(page, elements.decisionTextArea, name.fakeName())
-        await waitAndClick(page, elements.decisionSaveButton)
-        await page.waitForTimeout(1000)
+      
+        await write(page, elements.decisionSelectDate, (date.format(today, 'DD/MM/YYYY')))
+        await write(page, elements.decisionValue, "1000")
+        await select(page, elements.decisionLabel, elements.decisionLabelOption)
+        await write(page, elements.decisionTextArea, name.fakeName())
+        await clicS(page, elements.decisionSaveButton)
 
     }
 }

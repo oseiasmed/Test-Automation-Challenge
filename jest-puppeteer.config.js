@@ -4,7 +4,6 @@ module.exports = {
 		headless: false,
 		"slowMo":50,
 		defaultViewport: null,
-		args: ['--start-maximized'] 
-		
+		args: ['--start-maximized'] 	
 	},		
 }
