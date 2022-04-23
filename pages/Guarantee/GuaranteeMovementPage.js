@@ -1,4 +1,4 @@
-import { waitAndClick, waitAndWrite } from '../../lib/helpers'
+import { clicS, click, write } from '../../lib/helpers'
 let elements = require('./elementsMap')
 let date = require('date-and-time')
 let name = require('../../utils/fakeName')
@@ -9,14 +9,13 @@ export default class GuaranteeMovementPage {
 
         const today= new Date();
 
-        await waitAndWrite(page, elements.guaranteeMovementValue, "1")
-        await waitAndClick(page, elements.guaranteeTranferRadio)
-        await waitAndWrite(page, elements.guaranteeMovementDate, (date.format(today, 'DD/MM/YYYY')))
-        await waitAndWrite(page, elements.guaranteeTranferTo, name.fakeName())
-        await waitAndWrite(page, elements.guaranteeObservation, name.fakeName())
-        await waitAndClick(page, elements.guaranteeButtonRadioObs)
-        await waitAndClick(page, elements.guaranteeButtonSave)
-        await page.waitForTimeout(1000)
-
+        await write(page, elements.guaranteeMovementValue, "1")
+        await click(page, elements.guaranteeTranferRadio)
+        await write(page, elements.guaranteeMovementDate, (date.format(today, 'DD/MM/YYYY')))
+        await write(page, elements.guaranteeTranferTo, name.fakeName())
+        await write(page, elements.guaranteeObservation, name.fakeName())
+        await click(page, elements.guaranteeButtonRadioObs)
+        await clicS(page, elements.guaranteeButtonSave)
+      
     }
 }

@@ -1,14 +1,12 @@
-import { waitAndClick, waitAndDoubleClick } from '../../lib/helpers'
+import { clicS, click } from '../../lib/helpers'
 let elements = require('./elementsMap')
 
 export default class ScheduleDeletePanelPage {
 
     async scheduleDeletePanel() {
 
-       
-        await waitAndClick(page,elements.scheduleDeleteButton)
-        await waitAndClick(page, elements.scheduleDeleteButtonPopUp)
-        await page.waitForTimeout(1000) 
-
+        await click(page,elements.scheduleDeleteButton)
+        await clicS(page, elements.scheduleDeleteButtonPopUp)
+      
     }
 }

@@ -1,18 +1,16 @@
-import { waitAndClick, waitAndSelect } from '../../lib/helpers'
+import { click, clicS, select } from '../../lib/helpers'
 let elements = require('./elementsMap')
 
 export default class CasesClosePage {
 
     async closeCase() {
 
-        await page.waitForTimeout(2000)
-        await waitAndClick(page, elements.selectACase)
-        await waitAndClick(page, elements.closeButton)
-        await waitAndClick(page, elements.closeButtonContinue)
-        await waitAndSelect(page, elements.casesCloseDate, elements.casesCloseTodayBtn)
-        await waitAndSelect(page, elements.reasonCasesInput, elements.reasonCasesOption)
-        await waitAndClick(page, elements.casesButtonDelete)
-        await page.waitForTimeout(1000)
-
+        await click(page, elements.selectACase)
+        await click(page, elements.closeButton)
+        await click(page, elements.closeButtonContinue)
+        await select(page, elements.casesCloseDate, elements.casesCloseTodayBtn)
+        await select(page, elements.reasonCasesInput, elements.reasonCasesOption)
+        await clicS(page, elements.casesButtonDelete)
+      
     }
 }

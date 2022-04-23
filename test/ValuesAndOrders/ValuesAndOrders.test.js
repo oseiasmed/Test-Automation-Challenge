@@ -2,7 +2,6 @@ import BasePage from '../ValuesAndOrders/../../pages/Base/BasePage'
 import MenuPage from '../ValuesAndOrders/../../pages/Base/MenuPage'
 import ValuesAndOrdersUpdatePage from '../ValuesAndOrders/../../pages/ValuesAndOrders/ValuesAndOrdersUpdatePage'
 import { username, password, timeout } from '../ValuesAndOrders/../../config'
-import { waitAndClick } from '../../lib/helpers'
 import { validateMessage } from '../../lib/helpers'
 let elements = require('../../pages/Base/elementsMap')
 
@@ -10,7 +9,7 @@ describe('Must do a crud on Values and orders items', () => {
 
 	let basePage
 	let mainMenu
-	let linksMenu
+	let menu
 	let valuesAndOrderUpdate
 
 	beforeAll(async () => {
@@ -27,12 +26,12 @@ describe('Must do a crud on Values and orders items', () => {
 
 	basePage = new BasePage()
 	mainMenu = new MenuPage()
-	linksMenu = new MenuPage()
+	menu = new MenuPage()
 	valuesAndOrderUpdate = new ValuesAndOrdersUpdatePage()
 
 	it('Must be Update Values and orders', async () => {
 
-		await linksMenu.linksMenu(elements.InformationLink, elements.valueAndOrdersEdit)
+		await menu.menu(elements.InformationLink, elements.valueAndOrdersEdit)
 		await valuesAndOrderUpdate.valuesAndOrderUpdate()
 		let valuesAndOrdersUpdatelMSG = await validateMessage(elements.successUpdatevaluesAndOrders)
         expect(valuesAndOrdersUpdatelMSG).toBe('Valores do caso atualizados com sucesso')

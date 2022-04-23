@@ -1,4 +1,4 @@
-import { waitAndClick, waitAndSelect, waitAndWrite } from '../../lib/helpers'
+import { clicS, click, select, write } from '../../lib/helpers'
 let elements = require('./elementsMap')
 let name = require('../../utils/fakeName')
 
@@ -6,14 +6,14 @@ export default class ScheduleCreatePage {
 
     async scheduleCreate() {
 
-        await waitAndSelect(page, elements.inputType, elements.inputTypeOption)
-        await waitAndClick(page, elements.freeTextCheckbox)
-        await waitAndWrite(page, elements.billingTitleInput,"Agenda")
-        await waitAndSelect(page, elements.scheduleRemember, elements.scheduleRememberTime)
-        await waitAndSelect(page, elements.scheduleParts, elements.schedulePartsOption)
-        await waitAndClick(page, elements.scheduleDescription)
-        await waitAndWrite(page, elements.scheduleDescription, name.fakeName())
-        await waitAndClick(page, elements.scheduleButtonSave)
-        await page.waitForTimeout(1000)
+        await select(page, elements.inputType, elements.inputTypeOption)
+        await click(page, elements.freeTextCheckbox)
+        await write(page, elements.billingTitleInput,"Agenda")
+        await select(page, elements.scheduleRemember, elements.scheduleRememberTime)
+        await select(page, elements.scheduleParts, elements.schedulePartsOption)
+        await click(page, elements.scheduleDescription)
+        await write(page, elements.scheduleDescription, name.fakeName())
+        await clicS(page, elements.scheduleButtonSave)
+    
     }
 }

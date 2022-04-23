@@ -13,8 +13,7 @@ let elements = require('../../pages/Base/elementsMap')
 describe('Must do search in Cases', () => {
 
 	let basePage
-	let singleMenu
-	let linksMenu
+	let menu
 	let mainMenu
 	let casesSearch
 	let filterCases
@@ -35,8 +34,7 @@ describe('Must do search in Cases', () => {
 	  })
 
 	basePage = new BasePage()
-	singleMenu = new MenuPage()
-	linksMenu = new MenuPage()
+	menu = new MenuPage()
 	mainMenu = new MenuPage()
 	casesSearch = new CasesSearchPage()
 	filterCases = new CasesFilterPage()
@@ -53,32 +51,31 @@ describe('Must do search in Cases', () => {
 	})
 
 	it('Should filter active and closed Case', async () => {
-		await singleMenu.singleMenu()
+		await menu.menu(elements.linkCases)
 		await filterCases.filterCases()
 		let filterCasesClosedMSG = await validateMessage(elements.titleOfClosedCases)
         expect(filterCasesClosedMSG ).toBe('Casos encerrados')
 	})
 
 	it('Must create a Case', async () => {
-        await singleMenu.singleMenu()
+        await menu.menu(elements.linkCases)
 		await caseCreate.caseCreate()
 	})
 
 	it('Must close a Case', async () => {
-		await singleMenu.singleMenu()
+		await menu.menu(elements.linkCases)
 		await closeCase.closeCase()
 		let closeCaseMSG = await validateMessage(elements.closeCaseContent)
         expect(closeCaseMSG).toBe('Caso encerrado com sucesso')
 	})
 
 	it('Must create Details Cases', async () => {
-		await mainMenu.mainMenu()
-		await linksMenu.linksMenu(elements.InformationLink, elements.detailsPartsBtn)
+		await menu.menu(elements.linkCases,elements.firstElementTable,elements.InformationLink, elements.detailsPartsBtn)
 		await casesDetails.casesDetails()
 	})
 
 	it('Must add a new Part', async () => {
-		await mainMenu.mainMenu()
+		await menu.menu(elements.linkCases,elements.firstElementTable)
 		await casesAddPart.casesAddPart()
 	})
 })

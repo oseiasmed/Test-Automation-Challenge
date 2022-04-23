@@ -12,9 +12,7 @@ describe('Must do a CRUD on Schedule items', () => {
 
     let basePage
     let mainMenu
-    let listMenu
-    let linksMenu
-    let filterMenu
+    let menu
     let scheduleCreate
     let scheduleUpdate
     let scheduleDelete
@@ -37,34 +35,30 @@ describe('Must do a CRUD on Schedule items', () => {
     scheduleDelete = new scheduleDeletePage()
     scheduleDeletePanel = new ScheduleDeletePanelPage()
     mainMenu = new MenuPage()
-    filterMenu = new MenuPage()
-    listMenu = new MenuPage()
-    linksMenu = new MenuPage()
-    
+    menu = new MenuPage()
+  
     it('Must create a Schedule', async () => {
-        await linksMenu.linksMenu(elements.buttonNew, elements.scheduleOption)
+        await menu.menu(elements.buttonNew, elements.scheduleOption)
         await scheduleCreate.scheduleCreate()
         let scheduleCreateMSG = await validateMessage(elements.successCreateSchedule)
         expect(scheduleCreateMSG).toBe('Evento cadastrado com sucesso.')  
     })
 
     it('Must update a Schedule', async () => {
-        await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilter)
-        await listMenu.listMenu(elements.scheduleList)
+        await menu.menu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilter, elements.scheduleList)
         await scheduleUpdate.scheduleUpdate()
         let scheduleUpdateMSG = await validateMessage(elements.successUpdateSchedule) 
     })
 
     it('Must Delete a Schedule', async () => {
-        await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilter)
-        await listMenu.listMenu(elements.scheduleList)
+        await menu.menu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilter, elements.scheduleList)
         await scheduleDelete.scheduleDelete()
         let scheduleDeleteMSG = await validateMessage(elements.successDeleteSchedule)
         expect(scheduleDeleteMSG).toBe('Evento excluído com sucesso.')  
     })
 
     it('Must delete Schedule on Panel', async () => {
-        await linksMenu.linksMenu(elements.tasksLinkPanel,elements.tasksEditPanel)
+        await menu.menu(elements.tasksLinkPanel,elements.tasksEditPanel)
         await scheduleDeletePanel.scheduleDeletePanel() 
         let scheduleDeletePanelMSG = await validateMessage(elements.successDeletePanelSchedule)
         expect(scheduleDeletePanelMSG).toBe('Evento excluído com sucesso.')

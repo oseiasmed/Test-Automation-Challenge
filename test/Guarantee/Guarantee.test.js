@@ -12,10 +12,8 @@ describe('Must do a crud on Guarantee items', () => {
 
 	let basePage
 	let guaranteeCreate
+	let menu
 	let mainMenu
-	let listMenu
-	let linksMenu
-	let filterMenu
 	let guaranteeEdit
 	let guaranteeDelete
 	let guaranteeMovement 
@@ -33,24 +31,21 @@ describe('Must do a crud on Guarantee items', () => {
 
 	basePage = new BasePage()
 	mainMenu = new MenuPage()
-	filterMenu = new MenuPage()
-	listMenu = new MenuPage()
-	linksMenu = new MenuPage()
+	menu = new MenuPage()
 	guaranteeCreate = new GuaranteeCreatePage()
 	guaranteeEdit = new GuaranteeEditPage()
 	guaranteeDelete = new GuaranteeDeletePage()
 	guaranteeMovement = new GuaranteeMovementPage()
 
 	it('Must create a Guarantee', async () => {
-		await linksMenu.linksMenu(elements.buttonNew, elements.guaranteeOption)
+		await menu.menu(elements.buttonNew, elements.guaranteeOption)
 		await guaranteeCreate.guaranteeCreate()
 		let guaranteeCreateMSG = await validateMessage(elements.successCreateGuarantee)
 		expect(guaranteeCreateMSG).toBe('Garantia inserida com sucesso.')
 	})
 
 	it('Must update a Guarantee', async () => {
-		await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterGuarantee, elements.buttonFilter)
-		await listMenu.listMenu(elements.guaranteeList)
+		await menu.menu(elements.timelineFilter, elements.buttonFilterGuarantee, elements.buttonFilter, elements.guaranteeList)
 		await guaranteeEdit.guaranteeEdit()
 		let guaranteeUpdateMSG = await validateMessage(elements.successUpdateGuarantee)
 		expect(guaranteeUpdateMSG).toBe('Garantia atualizada com sucesso.')
@@ -59,14 +54,14 @@ describe('Must do a crud on Guarantee items', () => {
 	// TODO - Este item necessita de ajustes pela equipe de Desenvolvimento.
 	
 	it('Must delete a Guarantee', async () => {
-		await linksMenu.linksMenu(elements.InformationLink, elements.guaranteeDeleteButtonPanel)
+		await menu.menu(elements.InformationLink, elements.guaranteeDeleteButtonPanel)
 		await guaranteeDelete.guaranteeDelete()
 		let guaranteeDeleteMSG = await validateMessage(elements.successDeleteGuarantee)
 		expect(guaranteeDeleteMSG).toBe('Garantia deletada com sucesso.')
 	})
 
 	it('Must movement a Guarantee', async () => {
-		await linksMenu.linksMenu(elements.InformationLink, elements.guaranteeMovementButton)
+		await menu.menu(elements.InformationLink, elements.guaranteeMovementButton)
 		await guaranteeMovement.guaranteeMovement()
 		let guaranteeMovementMSG = await validateMessage(elements.successMovementGuarantee)
 		expect(guaranteeMovementMSG).toBe('Movimentação inserida com sucesso.')

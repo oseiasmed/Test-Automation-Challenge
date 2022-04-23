@@ -10,14 +10,11 @@ let elements = require('../../pages/Base/elementsMap')
 describe('Must do a crud on Decision items', () => {
 
 	let basePage
+	let menu
 	let mainMenu
-	let linksMenu
-	let listMenu
-	let filterMenu
 	let decisionCreate
 	let decisionUpdate
 	let decisionDelete
-	let menu
 
 	beforeAll(async () => {
 		jest.setTimeout(timeout)
@@ -32,8 +29,6 @@ describe('Must do a crud on Decision items', () => {
 	})
 
 	basePage = new BasePage()
-	linksMenu = new MenuPage()
-	listMenu = new MenuPage()
 	mainMenu = new MenuPage()
 	filterMenu = new MenuPage()
 	decisionCreate = new DecisionCreatePage()
@@ -57,9 +52,8 @@ describe('Must do a crud on Decision items', () => {
 	})
 
 	it('Must delete a Decision', async () => {
-		await filterMenu.filterMenu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilter)
-		await listMenu.listMenu(elements.decisionList)
-		await decisionDelete.decisionDelete()
+		await menu.menu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilter, elements.decisionList)
+	    await decisionDelete.decisionDelete()
 		let decisionDeleteMSG = await validateMessage(elements.successDeleteDecision)
 		expect(decisionDeleteMSG).toBe('Decisão deletada com sucesso')
 	})

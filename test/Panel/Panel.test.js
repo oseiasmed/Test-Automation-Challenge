@@ -11,6 +11,7 @@ describe('Must do a crud on Panel items', () => {
     let basePage
     let linksMenu
     let mainMenu
+    let menu
     let datesAndRemarksUpdate
     let forumNumberingAndArea
     
@@ -26,20 +27,20 @@ describe('Must do a crud on Panel items', () => {
     })
 
     basePage = new BasePage()
-    linksMenu = new MenuPage()
     mainMenu = new MenuPage()
+    menu = new MenuPage()
     datesAndRemarksUpdate = new DatesAndRemarksUpdatePage()
     forumNumberingAndArea = new ForumNumberingAndAreaUpdatePage()
  
     it('Must update a Dates and remarks', async () => {
-        await linksMenu.linksMenu(elements.datesAndRemarksHome, elements.datesAndRemarksEdit)
+        await menu.menu(elements.datesAndRemarksHome, elements.datesAndRemarksEdit)
         await datesAndRemarksUpdate.datesAndRemarksUpdate()
         let datesAndRemarksUpdateMSG = await validateMessage(elements.datesAndRemarksContent)
         expect(datesAndRemarksUpdateMSG).toBe('Datas e observações editadas com sucesso')  
     })
 
     it('Must update a Forum numbering and area', async () => {
-        await linksMenu.linksMenu(elements.datesAndRemarksHome, elements.forumNumberingAndAreaEdit)
+        await menu.menu(elements.datesAndRemarksHome, elements.forumNumberingAndAreaEdit)
     	await forumNumberingAndArea.forumNumberingAndArea()
     }) 
 })
