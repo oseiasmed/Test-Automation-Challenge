@@ -1,21 +1,20 @@
-import { clicS, click, write } from '../../lib/helpers'
+import { clicS, click, write, select } from '../../lib/helpers'
 let elements = require('./elementsMap')
-let date = require('date-and-time')
 let name = require('../../utils/fakeName')
 
 export default class GuaranteeMovementPage {
 
     async guaranteeMovement() {
 
-        const today= new Date();
+        const valueMovNumber = (Math.floor(Math.random() * 3)).toString()
 
-        await write(page, elements.guaranteeMovementValue, "1")
+        await write(page, elements.guaranteeMovementValue, valueMovNumber)
         await click(page, elements.guaranteeTranferRadio)
-        await write(page, elements.guaranteeMovementDate, (date.format(today, 'DD/MM/YYYY')))
+        await select(page, elements.guaranteeMovementDate,elements.guaMovToday)
         await write(page, elements.guaranteeTranferTo, name.fakeName())
         await write(page, elements.guaranteeObservation, name.fakeName())
         await click(page, elements.guaranteeButtonRadioObs)
         await clicS(page, elements.guaranteeButtonSave)
-      
+
     }
 }

@@ -16,9 +16,6 @@ export default class BasePage {
 
 		await waitAndWrite(page, authUser, username)
 		await click(page, authUserButton)
-		await waitAndWrite(page, authPassword, "")
-		await waitAndWrite(page, authPassword, "")
-		await waitAndWrite(page, authPassword, "")
 		await waitAndWrite(page, authPassword, password)
 		await click(page, authButton)
 		await click(page, authCheck)

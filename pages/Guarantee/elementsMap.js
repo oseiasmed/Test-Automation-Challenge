@@ -19,3 +19,5 @@ export const guaranteeButtonRadioObs = "(//label[text()='Observação']/followin
 export const guaranteeDeleteButtonPopUp = "//span[text()='Excluir']"
 export const guaranteeMovementDate = "//input[@placeholder='Selecionar data']"
 export const paymentDate = "//input[@id='DataDeposito']"
+export const today_picker_btn = "//div[@class='ant-picker-footer']//a[1]"
+export const guaMovToday = "//div[@class='ant-picker-footer']//a[1]"

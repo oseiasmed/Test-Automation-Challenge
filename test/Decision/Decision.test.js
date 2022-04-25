@@ -10,8 +10,8 @@ let elements = require('../../pages/Base/elementsMap')
 describe('Must do a crud on Decision items', () => {
 
 	let basePage
-	let menu
 	let mainMenu
+	let menu
 	let decisionCreate
 	let decisionUpdate
 	let decisionDelete
@@ -30,12 +30,11 @@ describe('Must do a crud on Decision items', () => {
 
 	basePage = new BasePage()
 	mainMenu = new MenuPage()
-	filterMenu = new MenuPage()
+    menu = new MenuPage()
 	decisionCreate = new DecisionCreatePage()
 	decisionUpdate = new DecisionUpdatePage()
 	decisionDelete = new DecisionDeletePage()
-	menu = new MenuPage()
-
+	
 	it('Must create a Decision', async () => {
 		await menu.menu(elements.buttonNew, elements.decisionOption)
 		await decisionCreate.decisionCreate()
@@ -45,14 +44,14 @@ describe('Must do a crud on Decision items', () => {
 
 	it('Must Update a Decision', async () => {
 		
-		await menu.menu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilter,elements.decisionList)
+		await menu.menu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilterFour, elements.buttonFilterTen, elements.buttonFilterEleven, elements.buttonFilter,elements.decisionList)
 		await decisionUpdate.decisionUpdate()
 		let decisionUpdateMSG = await validateMessage(elements.successUpdateDecision)
 		expect(decisionUpdateMSG).toBe('Decisão atualizada com sucesso')
 	})
 
 	it('Must delete a Decision', async () => {
-		await menu.menu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilter, elements.decisionList)
+		await menu.menu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilterFour, elements.buttonFilterTen, elements.buttonFilterEleven, elements.buttonFilter,elements.decisionList)
 	    await decisionDelete.decisionDelete()
 		let decisionDeleteMSG = await validateMessage(elements.successDeleteDecision)
 		expect(decisionDeleteMSG).toBe('Decisão deletada com sucesso')

@@ -53,7 +53,7 @@ export const successUpdateGuarantee = "//span[normalize-space()='Garantia atuali
 export const successDeleteGuarantee = "//span[normalize-space()='Garantia deletada com sucesso.']"
 export const successMovementGuarantee = "//span[normalize-space()='Movimentação inserida com sucesso.']"
 export const successCreateTimesheet = "//span[normalize-space()='Hora inserida com sucesso']"
-export const successUpdateTimesheet = "//div[@class='ant-message-custom-content ant-message-success']"
+export const successUpdateTimesheet = "//span[normalize-space()='Hora atualizada com sucesso']"
 export const successDeleteTimesheet = "//span[normalize-space()='Hora deletada com sucesso']"
 export const successUpdatePanelTimesheet = "//span[normalize-space()='Hora atualizada com sucesso']"
 export const successDeletePanelTimesheet = "//span[normalize-space()='Hora deletada com sucesso']"
@@ -79,3 +79,4 @@ export const clearCasesField = "//span[@class='anticon anticon-close-circle ant-
 export const datesAndRemarksContent = "//span[normalize-space()='Datas e observações editadas com sucesso']"
 export const detailsPartsBtn = "(//div[@class='ant-table-content']//table)[3]"
 export const newPartButton = "//span[normalize-space()='Nova parte']"
+export const buttonFilterEight = "(//button[@role='switch'])[8]" 

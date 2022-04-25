@@ -25,6 +25,7 @@ export const DateEdit = "(//label[text()='Data']/following::input)[1]"
 export const Today = "//div[@class='ant-picker-footer']//a[1]"
 export const timesheetDeleteBtnPopUp = "(//span[text()='Excluir'])[2]"
 export const timesheetButtonSave = "//span[text()='Salvar']"
+export const checkFreeText = "//input[@type='checkbox']"
 
 
 

@@ -1,11 +1,11 @@
-import { clicS, randomlySelect, select, write } from '../../lib/helpers'
+import { randomlySelect, write, select, clicS } from '../../lib/helpers'
 let elements = require('./elementsMap')
 let name = require('../../utils/fakeName')
 import { receiveGuaranteeOne } from './usefulVariables'
 
-export default class GuaranteeCreatePage {
+export default class GuaranteeUpdatePage{
 
-    async guaranteeCreate() {
+    async guaranteeUpdate() {
 
         const value_number = (Math.floor(Math.random() * 3000000)).toString()
 
