@@ -9,6 +9,7 @@ export default class TimeSheetUpdatePage {
 
 		let now = new Date() 
         
+		await page.waitForTimeout(1000)
 		await select(page, elements.professionalInput, elements.professional)
         await write(page, elements.timesheetDateInput, (date.format(now, 'DD/MM/YYYY')))
 	    await write(page, elements.timesheetHourInput, (date.format(now, 'HH:mm')))

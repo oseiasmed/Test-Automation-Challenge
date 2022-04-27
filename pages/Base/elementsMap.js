@@ -80,3 +80,6 @@ export const datesAndRemarksContent = "//span[normalize-space()='Datas e observa
 export const detailsPartsBtn = "(//div[@class='ant-table-content']//table)[3]"
 export const newPartButton = "//span[normalize-space()='Nova parte']"
 export const buttonFilterEight = "(//button[@role='switch'])[8]" 
+export const buttonFilterTwo = "(//button[@role='switch'])[2]"
+export const doNotDel = "//span[text()='Não é possível excluir essa garantia, pois ela já possui movimentações']"
+export const newCaseButton = "//span[text()='Novo caso']"

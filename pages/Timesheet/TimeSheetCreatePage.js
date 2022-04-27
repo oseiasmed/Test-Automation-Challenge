@@ -1,7 +1,8 @@
-import { clicS, click, write, select } from '../../lib/helpers'
+import { clicS, click, write, select, randomlySelect } from '../../lib/helpers'
 let elements = require('./elementsMap')
 let name = require('../../utils/fakeName')
 let date = require('date-and-time')
+import { receiveTimesheetOne } from './usefulVariables'
 
 export default class TimeSheetCreatePage {
 
@@ -9,11 +10,14 @@ export default class TimeSheetCreatePage {
 
 		let now = new Date() 
 
-		await select(page, elements.professionalInput, elements.professional)
+		await page.waitForTimeout(1000)
+		await randomlySelect(page, elements.professionalInput, receiveTimesheetOne)
 		await write(page, elements.timesheetDateInput, (date.format(now, 'DD/MM/YYYY')))
 		await write(page, elements.timesheetHourInput, (date.format(now, 'HH:mm')))
 		await click(page, elements.nowButtonOk)
 		await select(page, elements.clientInput, elements.client)
+		await select(page, elements.clientInput, elements.client)
+	
 		await select(page,elements.timesheetCase, elements.timesheetCaseOption)
 		await select(page, elements.timesheetClassificationInput, elements.legalInput)
 		await click(page, elements.freeField)
@@ -22,6 +26,6 @@ export default class TimeSheetCreatePage {
 		await click(page, elements.additionalInformationLink)
 		await select(page, elements.timesheetArea, elements.specialtyArea)
         await clicS(page, elements.timesheetButtonOk)
-	
+
 	}
 }

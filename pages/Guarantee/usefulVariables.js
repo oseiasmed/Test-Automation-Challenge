@@ -1,5 +1,4 @@
-const guaranteeLabelOption = ["//div[text()='Penhora']",
-"//div[text()='Depósito Recursal']"]
+const guaranteeLabelOption = ["//div[text()='Penhora']","//div[text()='Depósito Recursal']"]
 
 for(let i = 0; i < guaranteeLabelOption.length; i = i + 1 ) {
   

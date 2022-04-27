@@ -1,4 +1,4 @@
-import { clicS, click } from '../../lib/helpers'
+import { clicS, click, validateMessage } from '../../lib/helpers'
 let elements = require('./elementsMap')
 
 export default class GuaranteeDeletePage {
@@ -7,6 +7,5 @@ export default class GuaranteeDeletePage {
 
         await click(page, elements.guaranteeDeleteButton)  
         await clicS(page, elements.guaranteeDeleteButtonPopUp)
-
     }
 }

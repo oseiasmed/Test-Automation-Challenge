@@ -44,14 +44,14 @@ describe('Must do a crud on Decision items', () => {
 
 	it('Must Update a Decision', async () => {
 		
-		await menu.menu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilterFour, elements.buttonFilterTen, elements.buttonFilterEleven, elements.buttonFilter,elements.decisionList)
+		await menu.menu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilterFour, elements.buttonFilterEleven,elements.buttonFilterTen, elements.buttonFilter,elements.decisionList)
 		await decisionUpdate.decisionUpdate()
 		let decisionUpdateMSG = await validateMessage(elements.successUpdateDecision)
 		expect(decisionUpdateMSG).toBe('Decisão atualizada com sucesso')
 	})
 
 	it('Must delete a Decision', async () => {
-		await menu.menu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilterFour, elements.buttonFilterTen, elements.buttonFilterEleven, elements.buttonFilter,elements.decisionList)
+		await menu.menu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilterFour, elements.buttonFilterEleven, elements.buttonFilterTen, elements.buttonFilter,elements.decisionList)
 	    await decisionDelete.decisionDelete()
 		let decisionDeleteMSG = await validateMessage(elements.successDeleteDecision)
 		expect(decisionDeleteMSG).toBe('Decisão deletada com sucesso')

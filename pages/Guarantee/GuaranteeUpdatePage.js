@@ -1,4 +1,4 @@
-import { randomlySelect, write, select, clicS } from '../../lib/helpers'
+import { clicS, randomlySelect, select, write } from '../../lib/helpers'
 let elements = require('./elementsMap')
 let name = require('../../utils/fakeName')
 import { receiveGuaranteeOne } from './usefulVariables'
@@ -7,8 +7,9 @@ export default class GuaranteeUpdatePage{
 
     async guaranteeUpdate() {
 
-        const value_number = (Math.floor(Math.random() * 3000000)).toString()
-
+        const value_number = (Math.floor(Math.random() * 30000)).toString()
+        
+        await page.waitForTimeout(1000)
         await randomlySelect(page, elements.guaranteeType, receiveGuaranteeOne)
         await write(page, elements.guaranteeTextArea, name.fakeName())
         await select(page, elements.guaranteeSelectDate, elements.today_picker_btn)

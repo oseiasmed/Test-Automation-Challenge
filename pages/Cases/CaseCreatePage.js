@@ -1,34 +1,39 @@
-import { click, write,select, waitAndSelectThree, clicS } from '../../lib/helpers'
+import { write, click, select, clicS, randomlySelect, waitAndSelectThree } from '../../lib/helpers'
 let elements = require('./elementsMap')
 let name = require('../../utils/fakeName')
 let date = require('date-and-time')
+import { receiveCasesOne, receiveCasesTwo, receiveCasesThree, receiveCasesFour, receiveCasesFive } from '../Cases/usefulVariables'
 
 export default class CaseCreatePage {
 
     async caseCreate() {
 
         const today = new Date();
-
-        await click(page, elements.newCaseButton)
-        await write(page, elements.caseNumber, "12345678910")
-        await select(page, elements.instanceSelect, elements.instanceSelectOption)
-        //await waitAndSelectThree(page, elements.statesInput, elements.statesOptions, elements.citiesOption)
-        //await waitAndSelectThree(page, elements.forumInput, elements.centralForumOption, elements.centralForumOptionFirstInstance)
-        //await waitAndSelectFour(page, elements.ritoHierarchyInput, elements.ritoEspecialOptionOne, elements.ritoEspecialOptioTwo, elements.ritoEspecialOptioThree)    
-        await select(page, elements.phaseInput, elements.phaseOption)
+         
+        const CasesValueOneNum = (Math.floor(Math.random() * 30000)).toString()
+        const CasesValueTwoNum = (Math.floor(Math.random() * 30000)).toString()
+        const CasesValueThreeNum = (Math.floor(Math.random() * 30000)).toString()
+        const case_number = (Math.floor(Math.random() * 3000000)).toString()
+        await write(page, elements.caseNumber, case_number)
+        await randomlySelect(page, elements.justiceType,receiveCasesOne)
+        await randomlySelect(page, elements.instanceSelect, receiveCasesTwo)
+        await randomlySelect(page, elements.phaseInput, receiveCasesThree )
         await write(page, elements.processType, name.fakeName())
         await select(page, elements.clientInput, elements.clientOption)
         await write(page, elements.processType, name.fakeName())
-        await select(page, elements.customerEngagementInput, elements.customerEngagementOption)
-        await click(page, elements.newPartButton)
-        await write(page, elements.distributionDateInput, (date.format(today, 'DD/MM/YYYY')))
-        await write(page, elements.entryDateInput, (date.format(today, 'DD/MM/YYYY')))
-        await write(page, elements.citationDateInput, (date.format(today, 'DD/MM/YYYY')))
+        await randomlySelect(page, elements.customerEngagementInput, receiveCasesFour)
+        await click(page, elements.newPartBtn)
+        await write(page, elements.newPartNameInput, "Antônio João Jacinto Junior")
+        await click(page, elements.mainPoleCheck)
+        await click(page, elements.savePartInForm)
+        await select(page, elements.distributionDateInput, elements.todayOneBtn)
+        await select(page, elements.entryDateInput, elements.todayTwoBtn)
+        await select(page, elements.citationDateInput, elements.todayThreeBtn)
         await select(page, elements.currencySpecialInput, elements.currencySpecialBRLOption)
         await waitAndSelectThree(page, elements.riskEspecialInput, elements.successSpecialInput, elements.successSpecialOption)
-        await write(page, elements.causeValue, "10000")
-        await write(page, elements.predictedValue, "10000")
-        await write(page, elements.contingencyValue, "10000")
+        await write(page, elements.causeValue, CasesValueOneNum)
+        await write(page, elements.predictedValue, CasesValueTwoNum)
+        await write(page, elements.contingencyValue, CasesValueThreeNum)
         await select(page, elements.responsibleSpecialInput, elements.responsibleSpecialOption)
         await select(page, elements.co_responsibleSpecialInput, elements.co_responsibleSpecialInputOption)
         await select(page, elements.areaSpecialInpput, elements.areaSpecialInpputOption)

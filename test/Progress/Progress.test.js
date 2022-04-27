@@ -15,7 +15,7 @@ describe('Must do a CRUD on Progress items', () => {
   let progressCreate
   let progressUpdate
   let progressDelete
- 
+
   beforeAll(async () => {
 
     jest.setTimeout(timeout)
@@ -41,18 +41,18 @@ describe('Must do a CRUD on Progress items', () => {
     await progressCreate.progressCreate()
     let progressCreateMSG = await validateMessage(elements.successCreateProgress)
     expect(progressCreateMSG).toBe('Andamento criado com sucesso')
-
+  
   })
 
   it('Must update a Progress', async () => {
-    await menu.menu(elements.timelineFilter, elements.buttonFilterSix, elements.buttonFilter, elements.progressList)
+    await menu.menu(elements.timelineFilter, elements.buttonFilterFour, elements.buttonFilterSix, elements.buttonFilterEleven, elements.buttonFilterTen, elements.buttonFilter, elements.progressList)
     await progressUpdate.progressUpdate()
     let progressUpdateMSG = await validateMessage(elements.successUpdateProgress)
     expect(progressUpdateMSG).toBe('Andamento atualizado com sucesso')
   })
 
   it('Must delete a Progress', async () => {
-    await menu.menu(elements.timelineFilter, elements.buttonFilterSix, elements.buttonFilter, elements.progressList)
+    await menu.menu(elements.timelineFilter, elements.buttonFilterFour, elements.buttonFilterSix, elements.buttonFilterEleven,elements.buttonFilterTen, elements.buttonFilter, elements.progressList)
     await progressDelete.progressDelete()
     let progressDeleteMSG = await validateMessage(elements.successDeleteProgress)
     expect(progressDeleteMSG).toBe('Andamento excluído com sucesso.')
