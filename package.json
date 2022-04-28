@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --detectOpenHandles",
     "test:Progress": "jest ./test/Progress/Progress.test.js",
     "test:Timesheet": "jest ./test/Timesheet/Timesheet.test.js",
     "test:Decision": "jest ./test/Decision/Decision.test.js",
@@ -13,7 +13,7 @@
     "test:ValuesAndOrders": "jest ./test/ValuesAndOrders/ValuesAndOrders.test.js",
     "test:Schedule": "jest ./test/Schedule/Schedule.test.js",
     "test:Timeline": "jest ./test/Timeline/Timeline.test.js",
-    "test:Cases": "jest ./test/Cases/Cases.test.js"
+    "test:Cases": "jest ./test/Cases/Cases.test.js --detectOpenHandles"
   },
   "keywords": [],
   "author": "",
@@ -25,7 +25,7 @@
     "date-and-time": "^2.0.1",
     "dotenv": "^16.0.0",
     "faker-br": "^0.4.1",
-    "jest": "^26.4.2",
+    "jest": "^26.6.3",
     "jest-puppeteer": "^4.4.0",
     "project-name-generator": "^2.1.9",
     "puppeteer": "^5.2.1",

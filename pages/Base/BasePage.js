@@ -1,5 +1,5 @@
 import { authUser, authPassword, authUserButton, authButton, authContinue, authCheck } from './elementsMap'
-import { click, waitAndWrite} from '../../lib/helpers'
+import { click, writeS } from '../../lib/helpers'
 import { password, username } from '../../config'
 
 export default class BasePage {
@@ -14,9 +14,9 @@ export default class BasePage {
 
 	async login() {
 
-		await waitAndWrite(page, authUser, username)
+		await writeS(page, authUser, username)
 		await click(page, authUserButton)
-		await waitAndWrite(page, authPassword, password)
+		await writeS(page, authPassword, password)
 		await click(page, authButton)
 		await click(page, authCheck)
 		await click(page, authContinue)
