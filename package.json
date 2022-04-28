@@ -24,6 +24,7 @@
     "babel-jest": "^26.3.0",
     "date-and-time": "^2.0.1",
     "dotenv": "^16.0.0",
+    "faker-br": "^0.4.1",
     "jest": "^26.4.2",
     "jest-puppeteer": "^4.4.0",
     "project-name-generator": "^2.1.9",

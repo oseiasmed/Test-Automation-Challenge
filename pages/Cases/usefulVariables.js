@@ -82,7 +82,6 @@ for(let i = 0; i < ranCasesSix.length; i = i + 1 ) {
    var ranCasesExpSix = ranCasesSix[i] 
     
 }
-
 export const receiveCasesSix = ranCasesExpSix
 
 const ranCasesSeven = ["Antônio João Jacinto Junior"]
@@ -94,4 +93,15 @@ for(let i = 0; i < ranCasesSeven.length; i = i + 1 ) {
 }
 
 export const receiveCasesSeven = ranCasesExpSeven
+
+const ranCasesEight = ["Ada Maria Carvalho Macêdo",
+   "João Alves Batista",
+   "Everaldo Gomes Couto"]
+
+for(let i = 0; i < ranCasesEight.length; i = i + 1 ) {
+  
+   var ranCasesExpEight = ranCasesEight[i] 
+    
+}
+export const receiveCasesEight = ranCasesExpEight
 
