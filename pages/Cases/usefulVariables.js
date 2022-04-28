@@ -56,7 +56,7 @@ for(let i = 0; i < ranCasesFour.length; i = i + 1 ) {
     
 }
 
-export const  receiveCasesFour = ranCasesExpFour
+export const receiveCasesFour = ranCasesExpFour
 
 const ranCasesFive = [
 "//div[text()='Ativo']",
@@ -84,4 +84,14 @@ for(let i = 0; i < ranCasesSix.length; i = i + 1 ) {
 }
 
 export const receiveCasesSix = ranCasesExpSix
+
+const ranCasesSeven = ["Antônio João Jacinto Junior"]
+
+for(let i = 0; i < ranCasesSeven.length; i = i + 1 ) {
+  
+   var ranCasesExpSeven = ranCasesSeven[i] 
+    
+}
+
+export const receiveCasesSeven = ranCasesExpSeven
 

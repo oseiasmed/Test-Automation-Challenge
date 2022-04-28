@@ -58,6 +58,8 @@ describe('Must do search in Cases', () => {
 	it('Must create a Case', async () => {
         await menu.menu(elements.linkCases, elements.newCaseButton)
 		await caseCreate.caseCreate()
+		//let casesCreateMSG = await validateMessage(elements.caseSuccessMessage)
+        //expect(casesCreateMSG).toBe('Reencaminhando para os detalhes do caso...')
 	})
 
 	// it('Must close a Case', async () => {
