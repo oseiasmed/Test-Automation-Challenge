@@ -2,7 +2,7 @@ import { clicS, click, write, select, randomlySelect } from '../../lib/helpers'
 let elements = require('./elementsMap')
 let name = require('../../utils/fakeName')
 let date = require('date-and-time')
-import { receiveTimesheetOne } from './usefulVariables'
+import { receiveTimesheetOne } from './AdditionalMethods'
 
 export default class TimeSheetCreatePage {
 

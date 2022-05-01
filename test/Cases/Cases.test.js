@@ -2,7 +2,7 @@ import BasePage from '../Cases/../../pages/Base/BasePage'
 import MenuPage from '../Cases/../../pages/Base/MenuPage'
 // import CasesSearchPage from '../Cases/../../pages/Cases/CasesSearchPage'
 // import CasesFilterPage from '../Cases/../../pages/Cases/CasesFilterPage'
-//import CaseCreatePage from '../Cases/../../pages/Cases/CaseCreatePage'
+import CaseCreatePage from '../Cases/../../pages/Cases/CaseCreatePage'
 // import CasesClosePage from '../Cases/../../pages/Cases/CasesClosePage'
 // import CasesDetailsCreatePage  from '../Cases/../../pages/Cases/CasesDetailsCreatePage'
 import CasesAddPartPage from '../Cases/../../pages/Cases/CasesAddPartPage'
@@ -16,7 +16,7 @@ describe('Must do search in Cases', () => {
 	let menu
     // let casesSearch
 	// let filterCases
-	//let caseCreate
+	let caseCreate
 	// let closeCase
 	// let casesDetails
 	let casesAddPart
@@ -32,7 +32,7 @@ describe('Must do search in Cases', () => {
 	menu = new MenuPage()
     //casesSearch = new CasesSearchPage()
 	//filterCases = new CasesFilterPage()
-	//caseCreate = new CaseCreatePage()
+	caseCreate = new CaseCreatePage()
 	// closeCase = new CasesClosePage()
 	// casesDetails = new CasesDetailsCreatePage()
     casesAddPart = new CasesAddPartPage()
@@ -51,12 +51,10 @@ describe('Must do search in Cases', () => {
     //     expect(filterCasesClosedMSG ).toBe('Casos encerrados')
 	// })
 
-	// it('Must create a Case', async () => {
-    //     await menu.menu(elements.linkCases, elements.newCaseButton)
-	// 	await caseCreate.caseCreate()
-	// 	//let casesCreateMSG = await validateMessage(elements.caseSuccessMessage)
-    //     //expect(casesCreateMSG).toBe('Reencaminhando para os detalhes do caso...')
-	// })
+	it('Must create a Case', async () => {
+        await menu.menu(elements.linkCases, elements.newCaseButton)
+		await caseCreate.caseCreate()
+	})
 
 	// it('Must close a Case', async () => {
 	// 	await menu.menu(elements.linkCases)
@@ -72,8 +70,7 @@ describe('Must do search in Cases', () => {
 
 	it('Must add a new Part', async () => {
 		await menu.menu(elements.linkCases, elements.newCaseButton)
-		await casesAddPart.casesAddPart()
-		//partsEditIcon
+		await casesAddPart.casesAddPart()	
 	})
 })
 

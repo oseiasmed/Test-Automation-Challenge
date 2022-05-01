@@ -1,7 +1,7 @@
 import { write, select, clicS, randomlySelect, waitAndSelectThree } from '../../lib/helpers'
 let elements = require('./elementsMap')
 let name = require('../../utils/fakeName')
-import { receiveCasesOne, receiveCasesTwo, receiveCasesThree, receiveCasesFour } from '../Cases/usefulVariables'
+import { receiveCasesOne, receiveCasesTwo, receiveCasesThree, receiveCasesFive } from '../Cases/usefulVariables'
 
 export default class CaseCreatePage {
 
@@ -15,7 +15,7 @@ export default class CaseCreatePage {
         await write(page, elements.processType, name.fakeName())
         await select(page, elements.clientInput, elements.clientOption)
         await write(page, elements.processType, name.fakeName())
-        await randomlySelect(page, elements.customerEngagementInput, receiveCasesFour)
+        await randomlySelect(page, elements.customerEngagementInput, receiveCasesFive)
         await select(page, elements.distributionDateInput, elements.todayOneBtn)
         await select(page, elements.entryDateInput, elements.todayTwoBtn)
         await select(page, elements.citationDateInput, elements.todayThreeBtn)

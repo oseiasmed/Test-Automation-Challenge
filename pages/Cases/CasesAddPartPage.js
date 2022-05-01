@@ -1,7 +1,7 @@
 let elements = require('./elementsMap')
 const faker = require('faker-br')
 import { click, write, randomlySelect, scrolling, scrollingBack } from '../../lib/helpers'
-import { receiveCasesFour, receiveCasesSix } from '../Cases/usefulVariables'
+import { receiveCasesFive, receiveCasesFour } from '../Cases/usefulVariables'
 
 export default class CasesAddPartPage {
 
@@ -15,13 +15,13 @@ export default class CasesAddPartPage {
         await page.waitForTimeout(1000)
         await scrolling(page, 'table')
         await page.waitForTimeout(1000)
-        await randomlySelect(page, elements.poleType, receiveCasesFour)
+        await randomlySelect(page, elements.poleType, receiveCasesFive)
         await page.waitForTimeout(1000)
-        await randomlySelect(page, elements.kindOfPerson, receiveCasesSix)
+        await randomlySelect(page, elements.kindOfPerson, receiveCasesFour)
         await click(page, elements.savePartInForm)
         await page.waitForTimeout(1000)
         await scrollingBack(page, 'table')
-        await page.waitForTimeout(1000)
+        await page.waitForTimeout(3000)  
 
     }
 }

@@ -1,5 +1,6 @@
-const TimesheetLabelOption = [
-"//div[text()='Adriana Cruz de Jesus']",
+// ? Method 1
+
+const ranTimesheetOne = ["//div[text()='Adriana Cruz de Jesus']",
 "//div[text()='Alessandra Lee Flores Vilela']",
 "//div[text()='Alexandre Carneiro Rios das Neves']",
 "//div[text()='Ana Carolina Souza Correia']",
@@ -34,13 +35,7 @@ const TimesheetLabelOption = [
 "//div[text()='Renato Diniz da Silva Neto']",
 "//div[text()='Ricardo Leal Conceição Belmonte']",
 "//div[text()='THANOS DA SILVA']",
-"//div[text()='Vania Rapold Valois Menezes']"
-]
+"//div[text()='Vania Rapold Valois Menezes']"]
+let ranTimesheetExpOne = ranTimesheetOne[Math.floor(Math.random() * ranTimesheetOne.length)]
 
-for(let i = 0; i < TimesheetLabelOption.length; i = i + 1 ) {
-  
-   var ranTimesheetOne = TimesheetLabelOption[i] 
-    
-}
-
-export const  receiveTimesheetOne = ranTimesheetOne
+export const receiveTimesheetOne = ranTimesheetExpOne
