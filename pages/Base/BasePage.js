@@ -1,4 +1,4 @@
-import { authUser, authPassword, authUserButton, authButton, authContinue, authCheck } from './elementsMap'
+import { authUser, authPassword, authUserButton, authButton, authContinue, authCheck } from '../../lib/elementsMap'
 import { click, waitAndWrite} from '../../lib/helpers'
 import { password, username } from '../../config'
 

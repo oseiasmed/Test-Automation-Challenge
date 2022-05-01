@@ -1,5 +1,5 @@
 import { click } from '../../lib/helpers'
-let elements = require('./elementsMap')
+let elements = require('../../lib/elementsMap')
 
 export default class AutomaticProgressFilterPage {
 

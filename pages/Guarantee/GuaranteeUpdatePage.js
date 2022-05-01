@@ -1,5 +1,5 @@
 import { clicS, randomlySelect, select, write } from '../../lib/helpers'
-let elements = require('./elementsMap')
+let elements = require('../../lib/elementsMap')
 let name = require('../../utils/fakeName')
 import { receiveGuaranteeOne } from './usefulVariables'
 

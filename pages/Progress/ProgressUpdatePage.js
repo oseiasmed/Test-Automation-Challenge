@@ -1,6 +1,5 @@
-import { write, clicS, randomlySelect } from '../../lib/helpers'
-import { receiveProgressOne, receiveProgressTwo } from './AdditionalMethods'
-let elements = require('./elementsMap')
+import { write, clicS, randomlySelect, receiveProgressOne, receiveProgressTwo } from '../../lib/helpers'
+let elements = require('../../lib/elementsMap')
 let name = require('../../utils/fakeName');
 let date = require('date-and-time');
 

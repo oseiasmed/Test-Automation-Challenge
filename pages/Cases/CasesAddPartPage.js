@@ -1,7 +1,6 @@
 let elements = require('./elementsMap')
 const faker = require('faker-br')
-import { click, write, randomlySelect, scrolling, scrollingBack } from '../../lib/helpers'
-import { receiveCasesFive, receiveCasesFour } from '../Cases/usefulVariables'
+import { click, write, randomlySelect, scrolling, scrollingBack, receiveCasesFive, receiveCasesFour } from '../../lib/helpers'
 
 export default class CasesAddPartPage {
 

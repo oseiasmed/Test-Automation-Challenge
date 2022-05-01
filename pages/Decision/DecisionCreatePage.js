@@ -1,8 +1,7 @@
-import { write, randomlySelect, clicS } from '../../lib/helpers'
-let elements = require('./elementsMap')
+import { write, randomlySelect, clicS, receiveDecisionOne} from '../../lib/helpers'
+let elements = require('../../lib/elementsMap')
 let name = require('../../utils/fakeName')
 let date = require('date-and-time')
-import { receiveDecisionOne } from './usefulVariables'
 
 export default class DecisionCreatePage {
 

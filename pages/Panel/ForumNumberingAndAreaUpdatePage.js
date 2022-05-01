@@ -1,5 +1,5 @@
 import { clicS, write } from '../../lib/helpers'
-let elements = require('./elementsMap')
+let elements = require('../../lib/elementsMap')
 let name = require('../../utils/fakeName')
 
 export default class ForumNumberingAndAreaUpdatePage {
