@@ -1,5 +1,5 @@
 import { select, click, write, clicS } from '../../lib/helpers'
-let elements = require('./elementsMap')
+let elements = require('../../lib/elementsMap')
 let name = require('../../utils/fakeName')
 let date = require('date-and-time')
 //import { randomlySelectOP } from './usefulVariables'
@@ -11,7 +11,6 @@ export default class TimesheetUpdatePanelPage {
         let now = new Date()
 
         await select(page, elements.professionalInput, elements.professional)
-        //await randomlySelect(page, elements.professionalInput, randomlySelectOP)
         await select(page, elements.DateEdit, elements.Today)
         await write(page, elements.timesheetHourInput, (date.format(now, 'HH:mm')))
         await click(page, elements.nowButtonOk)

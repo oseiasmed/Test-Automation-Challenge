@@ -1,5 +1,4 @@
-import { waitAndClick, waitAndWrite } from '../../lib/helpers'
-let elements = require('./elementsMap')
+let elements = require('../../lib/elementsMap')
 let date = require('date-and-time')
 
 export default class CasesDetailsCreatePage {

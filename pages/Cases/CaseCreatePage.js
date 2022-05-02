@@ -1,5 +1,5 @@
 import { write, select, clicS, randomlySelect, waitAndSelectThree, receiveCasesOne, receiveCasesTwo, receiveCasesThree, receiveCasesFive } from '../../lib/helpers'
-let elements = require('./elementsMap')
+let elements = require('../../lib/elementsMap')
 let name = require('../../utils/fakeName')
 
 export default class CaseCreatePage {
