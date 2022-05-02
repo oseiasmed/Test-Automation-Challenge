@@ -1,5 +1,5 @@
 import { click, clicS, select, write } from '../../lib/helpers'
-let elements = require('../../lib/elementsMap')
+let elements = require('../../elements_maps/values_and_orders/values_and_orders_elements')
 
 export default class ValuesAndOrdersUpdatePage {
 

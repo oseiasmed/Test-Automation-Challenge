@@ -1,4 +1,4 @@
-let elements = require('../../lib/elementsMap')
+let elements = require('../../elements_maps/cases/cases_elements')
 const faker = require('faker-br')
 import { click, write, randomlySelect, scrolling, scrollingBack, receiveCasesFive, receiveCasesFour } from '../../lib/helpers'
 

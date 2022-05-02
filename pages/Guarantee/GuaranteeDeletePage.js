@@ -1,5 +1,5 @@
 import { clicS, click, validateMessage } from '../../lib/helpers'
-let elements = require('../../lib/elementsMap')
+let elements = require('../../elements_maps/guarantee/guarantee_elements')
 
 export default class GuaranteeDeletePage {
 

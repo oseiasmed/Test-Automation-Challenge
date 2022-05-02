@@ -1,5 +1,5 @@
 import { clicS, click } from '../../lib/helpers'
-let elements = require('../../lib/elementsMap')
+let elements = require('../../elements_maps/schedule/schedule_elements')
 
 export default class ScheduleDeletePage {
 

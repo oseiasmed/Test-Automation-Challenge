@@ -1,5 +1,5 @@
 import { select, click, write, clicS } from '../../lib/helpers'
-let elements = require('../../lib/elementsMap')
+let elements = require('../../elements_maps/timesheet/timesheet_elements')
 let name = require('../../utils/fakeName')
 let date = require('date-and-time')
 //import { randomlySelectOP } from './usefulVariables'

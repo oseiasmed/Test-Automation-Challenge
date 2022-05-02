@@ -7,7 +7,7 @@ import TimesheetUpdatePanelPage from '../Timesheet/../../pages/Timesheet/Timeshe
 import TimesheetDeletePanelPage from '../Timesheet/../../pages/Timesheet/TimesheetDeletePanelPage'
 import { username, password, timeout } from '../Timesheet/../../config'
 import { validateMessage } from '../../lib/helpers'
-let elements = require('../../lib/elementsMap')
+let elements = require('../../elements_maps/timesheet/timesheet_elements')
 
 describe('Must do a CRUD on Timesheet items', () => {
 

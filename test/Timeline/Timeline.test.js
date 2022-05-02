@@ -10,7 +10,7 @@ import ExpenseFilterPage from '../Timeline/../../pages/Timeline/ExpenseFilterPag
 import GuaranteeFilterPage from '../Timeline/../../pages/Timeline/GuaranteeFilterPage'
 import { username, password, timeout } from '../Timeline/../../config'
 import { validateMessage } from '../../lib/helpers'
-let elements = require('../../lib/elementsMap')
+let elements = require('../../elements_maps/timeline/timeline_elements')
 
 describe('Must a timeline filter', () => {
 

@@ -1,5 +1,5 @@
 import { clicS, click, write, select, randomlySelect, receiveTimesheetOne } from '../../lib/helpers'
-let elements = require('../../lib/elementsMap')
+let elements = require('../../elements_maps/timesheet/timesheet_elements')
 let name = require('../../utils/fakeName')
 let date = require('date-and-time')
 

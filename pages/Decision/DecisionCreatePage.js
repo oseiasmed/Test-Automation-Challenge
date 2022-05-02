@@ -1,5 +1,5 @@
 import { write, randomlySelect, clicS, receiveDecisionOne} from '../../lib/helpers'
-let elements = require('../../lib/elementsMap')
+let elements = require('../../elements_maps/decision/decision_elements')
 let name = require('../../utils/fakeName')
 let date = require('date-and-time')
 

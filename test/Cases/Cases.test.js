@@ -8,7 +8,7 @@ import CasesDetailsCreatePage  from '../Cases/../../pages/Cases/CasesDetailsCrea
 import CasesAddPartPage from '../Cases/../../pages/Cases/CasesAddPartPage'
 import { username, password, timeout } from '../ValuesAndOrders/../../config'
 import { getValue, validateMessage } from '../../lib/helpers'
-let elements = require('../../lib/elementsMap')
+let elements = require('../../elements_maps/cases/cases_elements')
 
 describe('Must do search in Cases', () => {
 
@@ -21,8 +21,7 @@ describe('Must do search in Cases', () => {
 	let casesDetails
 	let casesAddPart
 	
-
-	beforeAll(async () => {
+    beforeAll(async () => {
 		jest.setTimeout(timeout)
 		await basePage.goToPage()
 		await basePage.login(username, password)

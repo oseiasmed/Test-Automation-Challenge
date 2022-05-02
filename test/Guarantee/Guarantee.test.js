@@ -6,7 +6,7 @@ import GuaranteeDeletePage from '../Guarantee/../../pages/Guarantee/GuaranteeDel
 import GuaranteeMovementPage from '../Guarantee/../../pages/Guarantee/GuaranteeMovementPage'
 import { username, password, timeout } from '../Guarantee/../../config'
 import { validateMessage } from '../../lib/helpers'
-let elements = require('../../lib/elementsMap')
+let elements = require('../../elements_maps/guarantee/guarantee_elements')
 
 describe('Must do a crud on Guarantee items', () => {
 

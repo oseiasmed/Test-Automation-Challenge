@@ -1,5 +1,5 @@
 import { click, clicS } from '../../lib/helpers'
-let elements = require('../../lib/elementsMap')
+let elements = require('../../elements_maps/cases/cases_elements')
 
 export default class FilterCasesPage{  
 

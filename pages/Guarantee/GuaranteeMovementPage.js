@@ -1,5 +1,5 @@
 import { clicS, click, write, select } from '../../lib/helpers'
-let elements = require('../../lib/elementsMap')
+let elements = require('../../elements_maps/guarantee/guarantee_elements')
 let name = require('../../utils/fakeName')
 
 export default class GuaranteeMovementPage {

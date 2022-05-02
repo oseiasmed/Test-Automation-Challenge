@@ -1,5 +1,5 @@
 import { write, clicS, randomlySelect, receiveProgressOne, receiveProgressTwo } from '../../lib/helpers'
-let elements = require('../../lib/elementsMap')
+let elements = require('../../elements_maps/progress/progress_elements')
 let name = require('../../utils/fakeName');
 let date = require('date-and-time');
 
