@@ -5,7 +5,7 @@ import DecisionUpdatePage from '../Decision/../../pages/Decision/DecisionUpdateP
 import DecisionDeletePage from '../Decision/../../pages/Decision/DecisionDeletePage'
 import { username, password, timeout } from '../Decision/../../config'
 import { validateMessage } from '../../lib/helpers'
-let elements = require('../../pages/Base/elementsMap')
+let elements = require('../../lib/elementsMap')
 
 describe('Must do a crud on Decision items', () => {
 

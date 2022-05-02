@@ -3,7 +3,7 @@ import MenuPage from '../ValuesAndOrders/../../pages/Base/MenuPage'
 import ValuesAndOrdersUpdatePage from '../ValuesAndOrders/../../pages/ValuesAndOrders/ValuesAndOrdersUpdatePage'
 import { username, password, timeout } from '../ValuesAndOrders/../../config'
 import { validateMessage } from '../../lib/helpers'
-let elements = require('../../pages/Base/elementsMap')
+let elements = require('../../lib/elementsMap')
 
 describe('Must do a crud on Values and orders items', () => {
 

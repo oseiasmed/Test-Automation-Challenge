@@ -3,10 +3,10 @@ import MenuPage from '../Guarantee/../../pages/Base/MenuPage'
 import GuaranteeCreatePage from '../Guarantee/../../pages/Guarantee/GuaranteeCreatePage'
 import GuaranteeUpdatePage from '../Guarantee/../../pages/Guarantee/GuaranteeUpdatePage'
 import GuaranteeDeletePage from '../Guarantee/../../pages/Guarantee/GuaranteeDeletePage'
-//import GuaranteeMovementPage from '../Guarantee/../../pages/Guarantee/GuaranteeMovementPage'
+import GuaranteeMovementPage from '../Guarantee/../../pages/Guarantee/GuaranteeMovementPage'
 import { username, password, timeout } from '../Guarantee/../../config'
 import { validateMessage } from '../../lib/helpers'
-let elements = require('../../pages/Base/elementsMap')
+let elements = require('../../lib/elementsMap')
 
 describe('Must do a crud on Guarantee items', () => {
 
@@ -16,7 +16,7 @@ describe('Must do a crud on Guarantee items', () => {
 	let mainMenu
 	let guaranteeUpdate
 	let guaranteeDelete
-	//let guaranteeMovement 
+	let guaranteeMovement 
 
 	beforeAll(async () => {
 		jest.setTimeout(timeout)
@@ -35,7 +35,7 @@ describe('Must do a crud on Guarantee items', () => {
 	guaranteeCreate = new GuaranteeCreatePage()
 	guaranteeUpdate = new GuaranteeUpdatePage()
 	guaranteeDelete = new GuaranteeDeletePage()
-	//guaranteeMovement = new GuaranteeMovementPage()
+	guaranteeMovement = new GuaranteeMovementPage()
 
 	it('Must create a Guarantee', async () => {
 		await menu.menu(elements.buttonNew, elements.guaranteeOption)
@@ -66,10 +66,10 @@ describe('Must do a crud on Guarantee items', () => {
 		}
 	})
 
-	// it('Must movement a Guarantee', async () => {
-	// 	await menu.menu(elements.InformationLink, elements.guaranteeMovementButton)
-	// 	await guaranteeMovement.guaranteeMovement()
-	// 	let guaranteeMovementMSG = await validateMessage(elements.successMovementGuarantee)
-	// 	expect(guaranteeMovementMSG).toBe('Movimentação inserida com sucesso.')
-	// })
+	it('Must movement a Guarantee', async () => {
+		await menu.menu(elements.InformationLink, elements.guaranteeMovementButton)
+		await guaranteeMovement.guaranteeMovement()
+		let guaranteeMovementMSG = await validateMessage(elements.successMovementGuarantee)
+		expect(guaranteeMovementMSG).toBe('Movimentação inserida com sucesso.')
+	})
 })

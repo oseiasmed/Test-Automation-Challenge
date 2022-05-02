@@ -5,7 +5,7 @@ import ProgressUpdatePage from '../Progress/../../pages/Progress/ProgressUpdateP
 import ProgressDeletePage from '../Progress/../../pages/Progress/ProgressDeletePage'
 import { username, password, timeout } from '../Progress/../../config'
 import { validateMessage } from '../../lib/helpers'
-let elements = require('../../pages/Base/elementsMap')
+let elements = require('../../lib/elementsMap')
 
 describe('Must do a CRUD on Progress items', () => {
 

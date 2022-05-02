@@ -4,7 +4,7 @@ import DatesAndRemarksUpdatePage from '../Panel/../../pages/Panel/DatesAndRemark
 import ForumNumberingAndAreaUpdatePage from '../Panel/../../pages/Panel/ForumNumberingAndAreaUpdatePage'
 import { username, password, timeout } from '../Cases/../../config'
 import { validateMessage } from '../../lib/helpers'
-let elements = require('../../pages/Base/elementsMap')
+let elements = require('../../lib/elementsMap')
 
 describe('Must do a crud on Panel items', () => {
 

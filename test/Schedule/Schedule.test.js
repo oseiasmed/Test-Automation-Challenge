@@ -6,7 +6,7 @@ import scheduleDeletePage from '../Schedule/../../pages/Schedule/ScheduleDeleteP
 import ScheduleDeletePanelPage from '../Schedule/../../pages/Schedule/ScheduleDeletePanelPage'
 import { username, password, timeout } from '../Cases/../../config'
 import { validateMessage } from '../../lib/helpers'
-let elements = require('../../pages/Base/elementsMap')
+let elements = require('../../lib/elementsMap')
 
 describe('Must do a CRUD on Schedule items', () => {
 
