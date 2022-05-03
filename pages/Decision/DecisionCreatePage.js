@@ -11,6 +11,7 @@ export default class DecisionCreatePage {
         const today = new Date()
         const decisionValueNum = (Math.floor(Math.random() * 30000)).toString()
         await write(page, elements.decisionSelectDate, (date.format(today, 'DD/MM/YYYY')))
+        await page.waitForTimeout(3000)
         await write(page, elements.decisionValue, decisionValueNum)
         await randomlySelect(page, elements.decisionLabel, receiveDecisionOne)
         await write(page, elements.decisionTextArea, name.fakeName())

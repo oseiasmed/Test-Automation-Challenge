@@ -1,6 +1,6 @@
 // TODO Timesheet and Update Cases Page Xpaths
 
-export const professionalInput = "//input[@id='control-hooks_IDFuncionario']"
+export const professionalInput = "(//input)[1]"
 export const timesheetDateInput = "//input[@id='control-hooks_DataExecucao']"
 export const timesheetHourInput = "//input[@placeholder='Tempo']"
 export const nowButtonOk = "//button[@type='button']//span[contains(text(),'Ok')]"

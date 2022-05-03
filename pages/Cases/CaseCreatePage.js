@@ -25,15 +25,12 @@ export default class CaseCreatePage {
         await write(page, elements.causeValue, CasesValueIn )
         await write(page, elements.predictedValue, CasesValueIn )
         await write(page, elements.contingencyValue, CasesValueIn )
-        await page.waitForTimeout(1000)
         await randomlySelect(page, elements.responsibleSpecialInput, receiveUniversalList)
         await page.waitForTimeout(1000)
         await select(page, elements.co_responsibleSpecialInput, elements.co_responsibleSpecialInputOption)
         await page.waitForTimeout(1000)
         await randomlySelect(page, elements.areaSpecialInpput, receiveCasesSeven)
-        await page.waitForTimeout(1000)
         await write(page, elements.observationTextArea, name.fakeName())
-        await page.waitForTimeout(1000)
         await clicS(page, elements.registerCaseButton)
 
     }

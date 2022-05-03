@@ -61,13 +61,13 @@ export const FilterStatusClosed = "//input[@value='closed']"
 
 // TODO Cases Filter Page Xpaths
 
-export const casesTitle = "(//td[@class='ant-table-cell']//a)[10]"
+export const casesTitle = "//table//tr[10]/td[3]"
 export const casesSearchInput = "//input[@placeholder='Buscar caso']"
 export const casesSearchButton = "//button[@type='button']//span[@aria-label='search']//*[name()='svg']"
 
 // TODO Cases Test Page Xpaths
 
-export const casesTitleLink = "//td[@class='ant-table-cell']//mark[1]"
+export const casesTitleLink = "//table//tr[10]/td[4]"
 export const titleOfClosedCases = "//h1[text()='Casos encerrados']"
 export const newCaseButton = "//span[text()='Novo caso']"
 export const InformationLink = "//div[text()='Informações']"

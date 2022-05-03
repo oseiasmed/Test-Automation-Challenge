@@ -6,7 +6,7 @@ export default class ScheduleDeletePage {
     async scheduleDelete() {
 
         await click(page, elements.scheduleDeleteButton) 
-        await clicS(page, elements.scheduleDeleteButtonPopUp) 
+        await clicS(page, elements.scheduleDeleteButtonPopUp)
 
     }
 }

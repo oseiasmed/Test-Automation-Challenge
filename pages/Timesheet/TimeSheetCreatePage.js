@@ -1,4 +1,5 @@
-import { clicS, click, write, select, randomlySelect, receiveTimesheetOne } from '../../lib/helpers'
+import { clicS, click, write, select, randomlySelect } from '../../lib/helpers'
+import { receiveUniversalList } from '../../lib/random_methods'
 let elements = require('../../elements_maps/timesheet/timesheet_elements')
 let name = require('../../utils/fakeName')
 let date = require('date-and-time')
@@ -9,8 +10,7 @@ export default class TimeSheetCreatePage {
 
 		let now = new Date() 
 
-		await page.waitForTimeout(1000)
-		await randomlySelect(page, elements.professionalInput, receiveTimesheetOne)
+		await randomlySelect(page, elements.professionalInput, receiveUniversalList)
 		await write(page, elements.timesheetDateInput, (date.format(now, 'DD/MM/YYYY')))
 		await write(page, elements.timesheetHourInput, (date.format(now, 'HH:mm')))
 		await click(page, elements.nowButtonOk)

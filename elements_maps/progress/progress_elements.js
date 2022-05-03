@@ -2,8 +2,8 @@
 // TODO Create and Update Progress Page Xpaths
 
 export const progressDate = "//input[@id='DataCompetencia']"
-export const classIn = "(//div[contains(@class,'ant-select ant-select-single')]//div)[1]"
-export const modelIn = "//span[text()='Não definido']"
+export const classIn = "(//input)[2]"
+export const modelIn = "(//input)[3]"
 export const casesTextArea = "//textarea[@class='ant-input']"
 export const saveButton = "//span[text()='Salvar']"
 

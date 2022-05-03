@@ -11,8 +11,9 @@ export default class ProgressCreatePage {
         const today = new Date()
 
         await write(page, elements.progressDate, (date.format(today, 'DD/MM/YYYY')))
+        await page.waitForTimeout(1000)
         await randomlySelect(page, elements.classIn, receiveProgressOne)
-        await page.waitForTimeout(3000)
+        await page.waitForTimeout(1000)
         await randomlySelect(page, elements.modelIn, receiveProgressTwo)
         await write(page, elements.casesTextArea, name.fakeName())
         await clicS(page, elements.saveButton)
