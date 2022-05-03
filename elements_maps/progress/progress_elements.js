@@ -3,7 +3,7 @@
 
 export const progressDate = "//input[@id='DataCompetencia']"
 export const classIn = "(//div[contains(@class,'ant-select ant-select-single')]//div)[1]"
-export const modelIn = "//label[text()='Modelo']/following::input"
+export const modelIn = "//span[text()='Não definido']"
 export const casesTextArea = "//textarea[@class='ant-input']"
 export const saveButton = "//span[text()='Salvar']"
 

@@ -1,8 +1,8 @@
-import { write, randomlySelect, clicS} from '../../lib/helpers'
+import { write, randomlySelect, clicS } from '../../lib/helpers'
+import { receiveDecisionOne } from '../../lib/random_methods'
 let elements = require('../../elements_maps/decision/decision_elements')
 let name = require('../../utils/fakeName')
 let date = require('date-and-time')
-import { receiveDecisionOne } from './usefulVariables'
 
 export default class DecisionUpdatePage {
 

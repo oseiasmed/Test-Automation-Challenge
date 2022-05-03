@@ -1,4 +1,5 @@
-import { clicS, randomlySelect, select, write, receiveGuaranteeOne } from '../../lib/helpers'
+import { clicS, randomlySelect, select, write } from '../../lib/helpers'
+import { receiveGuaranteeOne } from '../../lib/random_methods'
 let elements = require('../../elements_maps/guarantee/guarantee_elements')
 let name = require('../../utils/fakeName')
 

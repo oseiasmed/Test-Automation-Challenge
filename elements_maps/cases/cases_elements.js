@@ -22,12 +22,14 @@ export const causeValue= "//input[@id='valorCausa']"
 export const predictedValue = "//input[@id='valorExpectativaApuracao']"
 export const contingencyValue = "//input[@id='valorContingencia']"
 export const responsibleSpecialInput = "//input[@id='idResponsavel']"
-export const co_responsibleSpecialInput = "(//div[@class='ant-select-selector']//div)[1]"
+export const co_responsibleSpecialInput = "//input[@id='coResponsaveis']"
 export const co_responsibleSpecialInputOption = "(//div[text()='Alexandre Carneiro Rios das Neves'])[2]"
 export const areaSpecialInpput = "//input[@id='idArea']"
 export const areaSpecialInpputOption = "//div[text()='Administração']"
 export const observationTextArea = "//textarea[@class='ant-input']"
 export const registerCaseButton = "//span[text()='Cadastrar caso']"
+export const distributionDateInput = "//input[@id='dataDistribuicao']"
+export const responsibleSpecialOption = "//div[text()='Adriana Cruz de Jesus']"
 
 // TODO Add Part Page Xpaths
 

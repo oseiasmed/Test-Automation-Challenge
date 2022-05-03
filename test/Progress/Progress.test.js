@@ -49,6 +49,7 @@ describe('Must do a CRUD on Progress items', () => {
     await progressUpdate.progressUpdate()
     let progressUpdateMSG = await validateMessage(elements.successUpdateProgress)
     expect(progressUpdateMSG).toBe('Andamento atualizado com sucesso')
+
   })
 
   it('Must delete a Progress', async () => {
@@ -56,6 +57,7 @@ describe('Must do a CRUD on Progress items', () => {
     await progressDelete.progressDelete()
     let progressDeleteMSG = await validateMessage(elements.successDeleteProgress)
     expect(progressDeleteMSG).toBe('Andamento excluído com sucesso.')
+    
   })
 })
 

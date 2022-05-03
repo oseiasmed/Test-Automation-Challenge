@@ -1,11 +1,10 @@
 // TODO Create and Update Schedule Page Xpaths
 
 export const inputType = "//input[@id='Tipo']"
-export const inputTypeOption = "//div[text()='Prazo']"
 export const freeTextCheckbox = "//span[@class='ant-checkbox']//input[1]"
+export const scheduleStartTime = "//input[@id='HoraInicio']"
 export const billingTitleInput = "(//label[text()='Título']/following::input)[1]"
 export const scheduleRemember = "(//label[text()='Lembrete']/following::input)[1]"
-export const scheduleRememberTime = "//div[text()='15 minutos']"
 export const scheduleParts = "(//div[@class='ant-select-selector']//div)[1]"
 export const schedulePartsOption = "//div[text()='Adriana Cruz de Jesus']"
 export const scheduleDescription = "//textarea[@id='Observacao']"

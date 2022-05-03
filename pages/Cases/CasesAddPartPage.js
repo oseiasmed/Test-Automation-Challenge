@@ -1,6 +1,7 @@
+import { click, write, randomlySelect, scrolling, scrollingBack } from '../../lib/helpers'
+import { receiveCasesFive, receiveCasesFour } from '../../lib/random_methods'
 let elements = require('../../elements_maps/cases/cases_elements')
 const faker = require('faker-br')
-import { click, write, randomlySelect, scrolling, scrollingBack, receiveCasesFive, receiveCasesFour } from '../../lib/helpers'
 
 export default class CasesAddPartPage {
 
@@ -9,7 +10,7 @@ export default class CasesAddPartPage {
         await page.waitForTimeout(1000)
         await click(page, elements.newPartBtn)
         await write(page, elements.newPartNameInput, faker.name.firstName() + " " + faker.name.lastName())
-        await page.waitForTimeout(1000)
+        await page.waitForTimeout(2000)
         await click(page, elements.newPartNameAdd)
         await page.waitForTimeout(1000)
         await scrolling(page, 'table')
