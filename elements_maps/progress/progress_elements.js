@@ -6,6 +6,7 @@ export const classIn = "(//input)[2]"
 export const modelIn = "(//input)[3]"
 export const casesTextArea = "//textarea[@class='ant-input']"
 export const saveButton = "//span[text()='Salvar']"
+export const inputChek = "//input[@type='checkbox']"
 
 // TODO Delete Progress Page Xpaths
 
@@ -15,9 +16,9 @@ export const progressDeleteBtnPopUp = "(//span[text()='Excluir'])[2]"
 // TODO Progress Test Page Xpaths 
 
 export const progressOption = "(//li[@class='ant-dropdown-menu-item']//span)[2]"
-export const successCreateProgress = "//span[normalize-space()='Andamento criado com sucesso']"
+export const successCreateProgress = "//span[normalize-space()='Andamento salvo com sucesso']"
 export const successUpdateProgress = "//span[normalize-space()='Andamento atualizado com sucesso']"
-export const successDeleteProgress = "//span[normalize-space()='Andamento excluído com sucesso.']"
+export const successDeleteProgress = "//span[normalize-space()='Andamento excluído com sucesso']"
 export const progressList = "(//b[text()='Andamento manual'])[1]"
 
 // TODO Complement Xpaths

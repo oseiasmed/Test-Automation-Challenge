@@ -8,21 +8,25 @@ export default class TimeSheetCreatePage {
 
 	async timesheetCreate() {
 
-		let now = new Date() 
+		let now = new Date()
 
+		await page.waitForTimeout(2000)
 		await randomlySelect(page, elements.professionalInput, receiveUniversalList)
 		await write(page, elements.timesheetDateInput, (date.format(now, 'DD/MM/YYYY')))
 		await write(page, elements.timesheetHourInput, (date.format(now, 'HH:mm')))
 		await click(page, elements.nowButtonOk)
 		await select(page, elements.clientInput, elements.client)
-		await select(page,elements.timesheetCase, elements.timesheetCaseOption)
+		await select(page, elements.timesheetCase, elements.timesheetCaseOption)
 		await select(page, elements.timesheetClassificationInput, elements.legalInput)
 		await click(page, elements.freeField)
+		// var txt = await page.evaluate(() =>
+		// 	[...document.querySelectorAll('.rc-virtual-list-holder-inner')].map(({ innerText }) => innerText))
+		// console.log(txt)
 		await write(page, elements.titleInput, name.fakeName())
 		await write(page, elements.timesheetDescription, name.fakeName())
 		await click(page, elements.additionalInformationLink)
 		await select(page, elements.timesheetArea, elements.specialtyArea)
-        await clicS(page, elements.timesheetButtonOk)
+		await clicS(page, elements.timesheetButtonOk)
 
 	}
 }

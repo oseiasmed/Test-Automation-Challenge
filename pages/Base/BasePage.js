@@ -21,5 +21,6 @@ export default class BasePage {
 		await click(page, authCheck)
 		await click(page, authContinue)
 
-	}
+	}	
 }
+

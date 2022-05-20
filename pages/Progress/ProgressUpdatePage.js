@@ -1,4 +1,4 @@
-import { write, clicS, randomlySelect } from '../../lib/helpers'
+import { write, clicS, randomlySelect, click } from '../../lib/helpers'
 //import { receiveProgressOne, receiveProgressTwo } from '../../lib/random_methods'
 let elements = require('../../elements_maps/progress/progress_elements')
 let name = require('../../utils/fakeName');
@@ -16,6 +16,19 @@ export default class ProgressUpdatePage {
         // await page.waitForTimeout(1000)
         // await randomlySelect(page, elements.modelIn, receiveProgressTwo)
         await write(page, elements.casesTextArea, name.fakeName())
+        
+        // ? Method to randomly click on internal 
+        // ? usage progress option
+
+        const internalProgressCheck = [0, 1]
+        let checked = internalProgressCheck[Math.floor(Math.random() * internalProgressCheck.length)]
+
+        if (checked == 1) {
+
+            await click(page, elements.inputChek)
+
+        }
+
         await clicS(page, elements.saveButton)
 
     }

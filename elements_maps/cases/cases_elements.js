@@ -51,8 +51,6 @@ export const reasonCasesInput = "//label[text()='Motivo do encerramento']/follow
 export const reasonCasesOption = "//div[text()='Acordo']"
 export const casesButtonDelete = "//span[text()='Encerrar']"
 
-// TODO Cases Datails Create Page Xpaths
-
 // TODO Cases Filter Page Xpaths
 
 export const clearCasesField = "//span[@class='anticon anticon-close-circle ant-input-clear-icon']"

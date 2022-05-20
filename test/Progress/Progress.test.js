@@ -5,14 +5,15 @@ import ProgressUpdatePage from '../Progress/../../pages/Progress/ProgressUpdateP
 import ProgressDeletePage from '../Progress/../../pages/Progress/ProgressDeletePage'
 import { username, password, timeout } from '../Progress/../../config'
 import { validateMessage } from '../../lib/helpers'
+//import { receiveprogressMenu } from '../../lib/random_methods'
 let elements = require('../../elements_maps/progress/progress_elements')
 
 describe('Must do a CRUD on Progress items', () => {
 
   let basePage
   let mainMenu
-  let menu
   let progressCreate
+  let menu
   let progressUpdate
   let progressDelete
 
@@ -35,13 +36,13 @@ describe('Must do a CRUD on Progress items', () => {
   progressUpdate = new ProgressUpdatePage()
   progressDelete = new ProgressDeletePage()
   menu = new MenuPage()
-
+ 
   it('Must create a Progress', async () => {
-    await menu.menu(elements.buttonNew, elements.progressOption)
+    await menu.menu(elements.buttonNew, elements.progressOption) 
     await progressCreate.progressCreate()
     let progressCreateMSG = await validateMessage(elements.successCreateProgress)
-    expect(progressCreateMSG).toBe('Andamento criado com sucesso')
-  
+    expect(progressCreateMSG).toBe('Andamento salvo com sucesso')
+
   })
 
   it('Must update a Progress', async () => {
@@ -56,8 +57,8 @@ describe('Must do a CRUD on Progress items', () => {
     await menu.menu(elements.timelineFilter, elements.buttonFilterFour, elements.buttonFilterSix, elements.buttonFilterEleven,elements.buttonFilterTen, elements.buttonFilter, elements.progressList)
     await progressDelete.progressDelete()
     let progressDeleteMSG = await validateMessage(elements.successDeleteProgress)
-    expect(progressDeleteMSG).toBe('Andamento excluído com sucesso.')
-    
+    expect(progressDeleteMSG).toBe('Andamento excluído com sucesso')
+
   })
 })
 

@@ -10,6 +10,25 @@ export default class ScheduleCreatePage {
         await page.waitForTimeout(1000)
         await randomlySelect(page, elements.inputType, receiveScheduleTwo)
         await click(page, elements.freeTextCheckbox)
+        await page.waitForTimeout(1000)
+
+        // let texts = await page.evaluate(() => {
+        //     let data = []
+        //     let elements = document.querySelectorAll('.rc-virtual-list-holder-inner')
+        //     for (var element of elements)
+        //         data.push(element.textContent)
+        //     return data
+        // })
+
+        // for(let i = 0; i < texts.length; i++){
+        //     const currentNode = texts[i]
+        //     console.log(`//div[text()='${currentNode}']`)
+           
+        //   }
+
+        //  const texts = await page.evaluate(() =>
+        //  [...document.querySelectorAll('.rc-virtual-list-holder-inner')].map(({ textContent }) => textContent ))
+        //  console.log(`//div[text()='${texts}']`)
         await write(page, elements.billingTitleInput, "Agenda")
         await page.waitForTimeout(1000)
         await randomlySelect(page, elements.scheduleRemember, receiveScheduleThree )
