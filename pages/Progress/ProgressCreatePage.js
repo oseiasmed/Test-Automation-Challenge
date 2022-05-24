@@ -31,10 +31,18 @@ export default class ProgressCreatePage {
 
         }
 
-        console.log(checked)
-
         await clicS(page, elements.saveButton)
-        await page.waitForTimeout(1000)
+        await page.waitForTimeout(2000)
+
+        // const texts = await page.evaluate(() => {
+
+        //     const text = document.querySelector(".ant-message-success").textContent
+
+        //     return text
+
+        // })
+    
+        // console.log(texts)
 
     }
 }

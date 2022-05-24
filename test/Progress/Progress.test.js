@@ -5,15 +5,14 @@ import ProgressUpdatePage from '../Progress/../../pages/Progress/ProgressUpdateP
 import ProgressDeletePage from '../Progress/../../pages/Progress/ProgressDeletePage'
 import { username, password, timeout } from '../Progress/../../config'
 import { validateMessage } from '../../lib/helpers'
-//import { receiveprogressMenu } from '../../lib/random_methods'
 let elements = require('../../elements_maps/progress/progress_elements')
 
 describe('Must do a CRUD on Progress items', () => {
 
   let basePage
+  let menu
   let mainMenu
   let progressCreate
-  let menu
   let progressUpdate
   let progressDelete
 
@@ -31,34 +30,57 @@ describe('Must do a CRUD on Progress items', () => {
   })
 
   basePage = new BasePage()
+  menu = new MenuPage()
   mainMenu = new MenuPage()
   progressCreate = new ProgressCreatePage()
   progressUpdate = new ProgressUpdatePage()
   progressDelete = new ProgressDeletePage()
-  menu = new MenuPage()
- 
+  
+
   it('Must create a Progress', async () => {
-    await menu.menu(elements.buttonNew, elements.progressOption) 
+    await menu.menu(elements.buttonNew, elements.progressOption)
     await progressCreate.progressCreate()
-    let progressCreateMSG = await validateMessage(elements.successCreateProgress)
-    expect(progressCreateMSG).toBe('Andamento salvo com sucesso')
+    const progress_Suc_MSG = await page.evaluate(() => {
+      const pro_Create_Ok = document.querySelector(".ant-message-success").textContent
+      return pro_Create_Ok
+      
+    })
+    
+    let progressCreateMSG = await validateMessage(`//span[normalize-space()='${progress_Suc_MSG}']`)
+    expect(progressCreateMSG).toBe(progress_Suc_MSG)
 
   })
 
   it('Must update a Progress', async () => {
     await menu.menu(elements.timelineFilter, elements.buttonFilterFour, elements.buttonFilterSix, elements.buttonFilterEleven, elements.buttonFilterTen, elements.buttonFilter, elements.progressList)
     await progressUpdate.progressUpdate()
-    let progressUpdateMSG = await validateMessage(elements.successUpdateProgress)
-    expect(progressUpdateMSG).toBe('Andamento atualizado com sucesso')
 
+    const progress_Up_MSG = await page.evaluate(() => {
+      const pro_Up_Ok = document.querySelector(".ant-message-success").textContent
+      return pro_Up_Ok
+      
+    })
+    
+    let progressUpdateMSG = await validateMessage(`//span[normalize-space()='${progress_Up_MSG}']`)
+    expect(progressUpdateMSG).toBe(progress_Up_MSG)
+    
   })
 
   it('Must delete a Progress', async () => {
     await menu.menu(elements.timelineFilter, elements.buttonFilterFour, elements.buttonFilterSix, elements.buttonFilterEleven,elements.buttonFilterTen, elements.buttonFilter, elements.progressList)
     await progressDelete.progressDelete()
-    let progressDeleteMSG = await validateMessage(elements.successDeleteProgress)
-    expect(progressDeleteMSG).toBe('Andamento excluído com sucesso')
+
+    const progress_Del_MSG = await page.evaluate(() => {
+      const pro_Del_Ok = document.querySelector(".ant-message-success").textContent
+      return pro_Del_Ok
+      
+    })
+    
+    let progressDeleteMSG = await validateMessage(`//span[normalize-space()='${progress_Del_MSG}']`)
+    expect(progressDeleteMSG).toBe(progress_Del_MSG)
 
   })
 })
+
+
 

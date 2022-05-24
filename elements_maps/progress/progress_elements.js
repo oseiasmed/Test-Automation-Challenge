@@ -16,9 +16,6 @@ export const progressDeleteBtnPopUp = "(//span[text()='Excluir'])[2]"
 // TODO Progress Test Page Xpaths 
 
 export const progressOption = "(//li[@class='ant-dropdown-menu-item']//span)[2]"
-export const successCreateProgress = "//span[normalize-space()='Andamento salvo com sucesso']"
-export const successUpdateProgress = "//span[normalize-space()='Andamento atualizado com sucesso']"
-export const successDeleteProgress = "//span[normalize-space()='Andamento excluído com sucesso']"
 export const progressList = "(//b[text()='Andamento manual'])[1]"
 
 // TODO Complement Xpaths
