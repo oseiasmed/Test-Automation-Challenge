@@ -5,7 +5,7 @@ export default class GuaranteeDeletePage {
 
     async guaranteeDelete() {
 
-        await click(page, elements.guaranteeDeleteButton)  
+        await click(page,"//span[@class='anticon anticon-delete']")  
         await clicS(page, elements.guaranteeDeleteButtonPopUp)
     }
 }

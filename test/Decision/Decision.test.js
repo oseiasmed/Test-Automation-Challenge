@@ -38,23 +38,44 @@ describe('Must do a crud on Decision items', () => {
 	it('Must create a Decision', async () => {
 		await menu.menu(elements.buttonNew, elements.decisionOption)
 		await decisionCreate.decisionCreate()
-		let decisionCreateMSG = await validateMessage(elements.successCreateDecision)
-		expect(decisionCreateMSG).toBe('Decisão criada com sucesso')
+        
+		const decision_Suc_MSG = await page.evaluate(() => {
+			const dec_Create_Ok = document.querySelector(".ant-message-success").textContent
+			return dec_Create_Ok
+			
+		  })
+		
+		let decisionCreateMSG = await validateMessage(`//span[normalize-space()='${decision_Suc_MSG}']`)
+		expect(decisionCreateMSG).toBe(decision_Suc_MSG)
 	})
 
 	it('Must Update a Decision', async () => {
 		
 		await menu.menu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilterFour, elements.buttonFilterEleven,elements.buttonFilterTen, elements.buttonFilter,elements.decisionList)
 		await decisionUpdate.decisionUpdate()
-		let decisionUpdateMSG = await validateMessage(elements.successUpdateDecision)
-		expect(decisionUpdateMSG).toBe('Decisão atualizada com sucesso')
+
+		const decision_Up_MSG = await page.evaluate(() => {
+			const dec_Up_Ok = document.querySelector(".ant-message-success").textContent
+			return dec_Up_Ok
+			
+		  })
+        
+		let decisionUpdateMSG = await validateMessage(`//span[normalize-space()='${decision_Up_MSG}']`)
+		expect(decisionUpdateMSG).toBe(decision_Up_MSG)
 	})
 
 	it('Must delete a Decision', async () => {
 		await menu.menu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilterFour, elements.buttonFilterEleven, elements.buttonFilterTen, elements.buttonFilter,elements.decisionList)
 	    await decisionDelete.decisionDelete()
-		let decisionDeleteMSG = await validateMessage(elements.successDeleteDecision)
-		expect(decisionDeleteMSG).toBe('Decisão deletada com sucesso')
+       
+		const decision_Del_MSG = await page.evaluate(() => {
+			const dec_Del_Ok = document.querySelector(".ant-message-success").textContent
+			return dec_Del_Ok
+			
+		  })
+        
+		let decisionDeleteMSG = await validateMessage(`//span[normalize-space()='${decision_Del_MSG}']`)
+		expect(decisionDeleteMSG).toBe(decision_Del_MSG)
 	})
 })
 

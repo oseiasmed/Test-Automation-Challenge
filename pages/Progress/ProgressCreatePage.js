@@ -9,7 +9,11 @@ export default class ProgressCreatePage {
     async progressCreate() {
 
         const today = new Date()
+        
+        const is_disabled = await page.evaluate(() => document.querySelector('button[disabled]') !== null)
 
+        console.log(is_disabled)
+        
         await write(page, elements.progressDate, (date.format(today, 'DD/MM/YYYY')))
         await page.waitForTimeout(1000)
         await randomlySelect(page, elements.classIn, receiveProgressOne)
@@ -33,16 +37,6 @@ export default class ProgressCreatePage {
 
         await clicS(page, elements.saveButton)
         await page.waitForTimeout(2000)
-
-        // const texts = await page.evaluate(() => {
-
-        //     const text = document.querySelector(".ant-message-success").textContent
-
-        //     return text
-
-        // })
-    
-        // console.log(texts)
 
     }
 }

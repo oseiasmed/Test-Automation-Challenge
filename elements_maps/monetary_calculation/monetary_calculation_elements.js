@@ -95,3 +95,6 @@ export const monetaryCalcDtOther = "//input[@id='radio-form-monetary-calc-defaul
 export const monetaryCalcInPickerDate = "//input[@id='datePicker-form-monetary-calc-defaultInterestDate'"
 
 //? Capitalização composta
+
+export const InformationLink = "//div[text()='Informações']"
+export const monetary_calculation_btn = "//span[text()='Cálculo monetário']"

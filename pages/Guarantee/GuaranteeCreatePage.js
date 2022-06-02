@@ -8,7 +8,6 @@ export default class GuaranteeCreatePage {
     async guaranteeCreate() {
 
         const value_number = (Math.floor(Math.random() * 30000)).toString()
-
         await randomlySelect(page, elements.guaranteeType, receiveGuaranteeOne)
         await write(page, elements.guaranteeTextArea, name.fakeName())
         await select(page, elements.guaranteeSelectDate, elements.today_picker_btn)

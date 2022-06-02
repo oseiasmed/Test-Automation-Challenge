@@ -33,7 +33,7 @@ export const successDeleteGuarantee = "//span[normalize-space()='Garantia deleta
 export const guaranteeMovementButton = "//span[@class='anticon anticon-file-add']"
 export const successMovementGuarantee = "//span[normalize-space()='Movimentação inserida com sucesso.']"
 export const guaranteeOption = "//span[text()='Garantia']"
-export const successCreateGuarantee = "//span[normalize-space()='Garantia inserida com sucesso.']"
+export const successCreateGuarantee = "//span[normalize-space()='Garantia criada com sucesso']"
 
 // TODO Complement Xpaths
 

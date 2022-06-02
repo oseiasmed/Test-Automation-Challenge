@@ -1,24 +1,21 @@
 import { write, clicS, randomlySelect, click } from '../../lib/helpers'
-//import { receiveProgressOne, receiveProgressTwo } from '../../lib/random_methods'
+import { receiveProgressOne, receiveProgressTwo } from '../../lib/random_methods'
 let elements = require('../../elements_maps/progress/progress_elements')
-let name = require('../../utils/fakeName');
-let date = require('date-and-time');
+let name = require('../../utils/fakeName')
+let date = require('date-and-time')
 
 export default class ProgressUpdatePage {
 
     async progressUpdate() {
 
         const today = new Date()
-
-        await write(page, elements.progressDate, (date.format(today, 'DD/MM/YYYY')))
-        // await page.waitForTimeout(1000)
-        //await randomlySelect(page, elements.classIn, receiveProgressOne)
-        // await page.waitForTimeout(1000)
-        // await randomlySelect(page, elements.modelIn, receiveProgressTwo)
-        await write(page, elements.casesTextArea, name.fakeName())
         
-        // ? Method to randomly click on internal 
-        // ? usage progress option
+        await write(page, elements.progressDate, (date.format(today, 'DD/MM/YYYY')))
+        await page.waitForTimeout(1000)
+        await randomlySelect(page, elements.classIn, receiveProgressOne)
+        await page.waitForTimeout(1000)
+        await randomlySelect(page, elements.modelIn, receiveProgressTwo)
+        await write(page, elements.casesTextArea, name.fakeName())
 
         const internalProgressCheck = [0, 1]
         let checked = internalProgressCheck[Math.floor(Math.random() * internalProgressCheck.length)]
