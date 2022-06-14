@@ -23,7 +23,23 @@ export const progressList = "(//b[text()='Andamento manual'])[1]"
 export const timelineFilter = "//span[@aria-label='filter']//*[name()='svg']"
 export const buttonFilterFour = "(//button[@role='switch'])[4]"
 export const buttonFilterSix = "(//button[@role='switch'])[6]"
-export const buttonFilterTen = "(//button[@role='switch'])[10]" 
-export const buttonFilterEleven = "//div[9]//div[1]//div[2]//button[1]" 
+export const buttonFilterTen = "(//button[@role='switch'])[10]"
+export const buttonFilterEleven = "//div[9]//div[1]//div[2]//button[1]"
 export const buttonFilter = "//span[text()='Filtrar']"
 export const buttonNew = "//button[@class='ant-btn ant-btn-primary ant-dropdown-trigger']"
+
+export async function grabPrimeMinisters() {
+    await page.evaluate(() => {
+
+        var primeministers = []
+        var containers = document.querySelector(".rc-virtual-list-holder-inner")
+        var pms = containers.querySelectorAll("div.ant-select-item-option-content")
+        pms.forEach((element) => {
+
+            primeministers.push(element.innerText)
+
+        })
+
+        return primeministers
+    })
+}

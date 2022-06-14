@@ -1,11 +1,11 @@
 import { authUser, authPassword, authUserButton, authButton, authContinue, authCheck } from '../../elements_maps/base_page/base_page_elements'
-import { click, waitAndWrite} from '../../lib/helpers'
+import { click, waitAndWrite } from '../../lib/helpers'
 import { password, username } from '../../config'
 
 export default class BasePage {
 
 	async goToPage() {
-		await page.goto('https://testing.lawsoft.com.br');
+		await page.goto('https://testing.lawsoft.com.br')
 	}
 
 	async wait(time) {
@@ -21,6 +21,7 @@ export default class BasePage {
 		await click(page, authCheck)
 		await click(page, authContinue)
 
-	}	
+	}
+	
 }
 

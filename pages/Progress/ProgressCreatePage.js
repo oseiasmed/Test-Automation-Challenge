@@ -9,22 +9,29 @@ export default class ProgressCreatePage {
     async progressCreate() {
 
         const today = new Date()
-        
-        const is_disabled = await page.evaluate(() => document.querySelector('button[disabled]') !== null)
 
-        console.log(is_disabled)
-        
         await write(page, elements.progressDate, (date.format(today, 'DD/MM/YYYY')))
         await page.waitForTimeout(1000)
         await randomlySelect(page, elements.classIn, receiveProgressOne)
-        await page.waitForTimeout(1000)
+
+        // var grabPrimeMinisters = await page.evaluate(() => {
+
+        //     const primeministers = []
+        //     const containers = document.querySelector(".rc-virtual-list-holder-inner")
+        //     const pms = containers.querySelectorAll("div.ant-select-item-option-content")
+        //     pms.forEach((element) => {
+        //         primeministers.push(element.innerText)
+        //     })
+        //     return primeministers
+        // })
+
+        //var ranPro = grabPrimeMinisters[Math.floor(Math.random() * grabPrimeMinisters.length)]
+        //await click(page, `//div[text()='${ranPro}']`)
+
         await randomlySelect(page, elements.modelIn, receiveProgressTwo)
         await page.waitForTimeout(1000)
         await write(page, elements.casesTextArea, name.fakeName())
         await page.waitForTimeout(1000)
-
-        // ? Method to randomly click on internal 
-        // ? usage progress option
 
         const internalProgressCheck = [0, 1]
         let checked = internalProgressCheck[Math.floor(Math.random() * internalProgressCheck.length)]
@@ -36,7 +43,6 @@ export default class ProgressCreatePage {
         }
 
         await clicS(page, elements.saveButton)
-        await page.waitForTimeout(2000)
 
     }
 }

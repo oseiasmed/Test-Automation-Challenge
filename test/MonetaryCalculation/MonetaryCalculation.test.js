@@ -11,7 +11,7 @@ describe('Must do a CRUD on Monetary Calculation items', () => {
   let menu
   let mainMenu
   let monetaryCalculationCreate
- 
+
 
   beforeAll(async () => {
 
@@ -27,25 +27,16 @@ describe('Must do a CRUD on Monetary Calculation items', () => {
   })
 
   basePage = new BasePage()
-  menu = new MenuPage()
   mainMenu = new MenuPage()
+  menu = new MenuPage()
   monetaryCalculationCreate = new MonetaryCalculationCreatePage()
-  
+
   it('Must create a Monetary Calculation', async () => {
-   
+
     await menu.menu(elements.InformationLink, elements.monetary_calculation_btn)
-    //await progressCreate.progressCreate()
+    await monetaryCalculationCreate.monetaryCalculation()
 
-    // const progress_Suc_MSG = await page.evaluate(() => {
-    //   const pro_Create_Ok = document.querySelector(".ant-message-success").textContent
-    //   return pro_Create_Ok
-
-    })
-  
-  //   let progressCreateMSG = await validateMessage(`//span[normalize-space()='${progress_Suc_MSG}']`)
-  //   expect(progressCreateMSG).toBe(progress_Suc_MSG)
-
-  // })
+  })
 })
 
 
