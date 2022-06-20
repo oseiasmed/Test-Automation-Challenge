@@ -1,30 +1,35 @@
 import { write, randomlySelect, click } from '../../lib/helpers'
-import { receiveMonetCalcOne, receiveMonetCalcTwo } from '../../lib/random_methods'
+import { receiveMonetCalcOne, receiveMonetCalcThree } from '../../lib/random_methods'
 let elements = require('../../elements_maps/monetary_calculation/monetary_calculation_elements')
 let name = require('../../utils/fakeName')
-// let date = require('date-and-time')
 
 export default class MonetaryCalculationCreatePage {
 
     async monetaryCalculation() {
 
-        // const today = new Date()
+        //? Session One Start
 
         await write(page, elements.monetaryCalcTitle, name.fakeName())
+        await page.waitForTimeout(1000)
         await randomlySelect(page, elements.monetaryCalcTemplates, receiveMonetCalcOne)
-
-        var internaCheck = [0,1]
-
-        var checked = internaCheck[Math.floor(Math.random() * internaCheck.length)]
-        console.log(checked)
-
-        if (checked == 1) {
-
-            await click(page, elements.monetaryCalcMainCalc)
-
-        }
-
+        await page.waitForTimeout(1000)
+        await click(page, elements.monetaryCalcInitialDateDistribution)
+        await page.waitForTimeout(1000)
+        await click(page, elements.monetaryCalcInitialDateDistribution)
+        await page.waitForTimeout(1000)
+        await randomlySelect(page, elements.monetaryCalcIndexes, receiveMonetCalcThree)
         await page.waitForTimeout(2000)
+        //await click(page,"radioGroup-form-monetary-calc-compensatoryInterestDate-distribution")
+        await write(page, elements.calcCompensatoryInterestFee,"10")
+        await page.waitForTimeout(2000)
+        await click(page, elements.monetaryCalcDistribution)
+        await page.waitForTimeout(2000)
+        //await click(page, "radio-form-monetary-calc-defaultInterestDate-distribution")
+        await page.waitForTimeout(2000)
+        await click(page, elements.monthTax)
+        await page.waitForTimeout(2000)
+        await click(page, elements.succumbenceFixed)
+        await page.waitForTimeout(2000)
+        await write(page, elements.succumbenceFixedText, "10")
     }
-
 }

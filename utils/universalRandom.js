@@ -1,18 +1,20 @@
-async function universalRandom(page) {
+module.exports = {
 
-    await page.evaluate(() => {
+    universalRandom: async function (page) {
 
-        var primeministers = []
-        var containers = document.querySelector(".rc-virtual-list-holder-inner")
-        var pms = containers.querySelectorAll("div.ant-select-item-option-content")
-        pms.forEach((element) => {
+        await page.evaluate(() => {
 
-            primeministers.push(element.innerText)
+            var primeministers = []
+            var containers = document.querySelector(".rc-virtual-list-holder-inner")
+            var pms = containers.querySelectorAll("div.ant-select-item-option-content")
+            pms.forEach((element) => {
 
+                primeministers.push(element.innerText)
+
+            })
+
+            return primeministers
         })
-
-        return primeministers
-    })
+    }
 }
-
-export var ranPro = universalRandom[Math.floor(Math.random() * universalRandom.length)]
+//export var ranPro = universalRandom[Math.floor(Math.random() * universalRandom.length)]

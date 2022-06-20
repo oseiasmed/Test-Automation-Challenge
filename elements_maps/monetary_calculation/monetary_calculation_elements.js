@@ -24,6 +24,7 @@ export const monetaryCalcChooseFinalDate = "//input[@id='radio-form-monetary-cal
 
 export const monetaryCalcSpecificFinalDate = "//input[@id='datepicker-form-monetary-calc-specificFinalDate']"
 
+
 //? Utilizar data de distribuição:
 
 export const monetaryCalcInitialDateDistribution = "//input[@id='radio-form-monetary-calc-initialCorrectonDate-distribution']"
@@ -39,7 +40,8 @@ export const monetaryCalcDateOther = "//input[@id='radio-form-monetary-calc-init
 //? Datapiker da data:
 
 export const datePickerCorrectonDate = "//input[@id='datePicker-form-monetary-calc-initialCorrectonDate']"
-
+                  
+export const pickerToday = "//div[@class='ant-picker-footer']//a[1]"
 //? Índice de atualização:
 
 export const monetaryCalcIndexes = "//input[@id='select-form-monetary-calc-indexes']"
@@ -50,6 +52,7 @@ export const monetaryCalcIndexes = "//input[@id='select-form-monetary-calc-index
 
 export const monetaryCalcDateDistribution = "//input[@id='[radioGroup-form-monetary-calc-compensatoryInterestDate-distribution']"
 
+                                                        
 //? Utilizar data de citação
 
 export const monetaryCalcDateCitation = "//input[@id='radioGroup-form-monetary-calc-compensatoryInterestDate-citation']"
@@ -94,7 +97,13 @@ export const monetaryCalcDtOther = "//input[@id='radio-form-monetary-calc-defaul
 
 export const monetaryCalcInPickerDate = "//input[@id='datePicker-form-monetary-calc-defaultInterestDate'"
 
+export const monthTax = "inputNumber-form-monetary-calc-defaultInterestFee"
+
 //? Capitalização composta
 
 export const InformationLink = "//div[text()='Informações']"
 export const monetary_calculation_btn = "//span[text()='Cálculo monetário']"
+
+export const succumbenceFixed ="radio-form-monetary-calc-succumbence-fixed"
+
+export const succumbenceFixedText = "inputNumber-form-monetary-calc-succumbence-fixed"
