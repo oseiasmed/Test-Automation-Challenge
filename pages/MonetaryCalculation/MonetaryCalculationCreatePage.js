@@ -31,5 +31,6 @@ export default class MonetaryCalculationCreatePage {
         await click(page, elements.succumbenceFixed)
         await page.waitForTimeout(2000)
         await write(page, elements.succumbenceFixedText, "10")
+        await click(page, elements.saveMBtn)
     }
 }

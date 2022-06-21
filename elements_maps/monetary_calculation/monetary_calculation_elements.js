@@ -107,3 +107,5 @@ export const monetary_calculation_btn = "//span[text()='Cálculo monetário']"
 export const succumbenceFixed ="radio-form-monetary-calc-succumbence-fixed"
 
 export const succumbenceFixedText = "inputNumber-form-monetary-calc-succumbence-fixed"
+
+export const saveMBtn = "//span[text()='Salvar e calcular']"
