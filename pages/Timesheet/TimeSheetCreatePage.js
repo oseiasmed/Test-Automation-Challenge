@@ -1,5 +1,4 @@
 import { clicS, click, write, select, randomlySelect } from '../../lib/helpers'
-import { receiveUniversalList } from '../../lib/random_methods'
 let elements = require('../../elements_maps/timesheet/timesheet_elements')
 let name = require('../../utils/fakeName')
 let date = require('date-and-time')
@@ -10,22 +9,17 @@ export default class TimeSheetCreatePage {
 
 		let now = new Date()
 
-		await page.waitForTimeout(2000)
-		await randomlySelect(page, elements.professionalInput, receiveUniversalList)
+		await select(page, elements.professionalInput,"//div[text()='Michele Bastos Lima']")
 		await write(page, elements.timesheetDateInput, (date.format(now, 'DD/MM/YYYY')))
 		await write(page, elements.timesheetHourInput, (date.format(now, 'HH:mm')))
 		await click(page, elements.nowButtonOk)
 		await select(page, elements.clientInput, elements.client)
-		await select(page, elements.timesheetCase, elements.timesheetCaseOption)
+		//await select(page, elements.timesheetCase, "//div[text()='6231 - Aciole Prado da Silva']")
+		//await select(page, elements.timesheetArea, elements.specialtyArea)
 		await select(page, elements.timesheetClassificationInput, elements.legalInput)
 		await click(page, elements.freeField)
-		// var txt = await page.evaluate(() =>
-		// 	[...document.querySelectorAll('.rc-virtual-list-holder-inner')].map(({ innerText }) => innerText))
-		// console.log(txt)
 		await write(page, elements.titleInput, name.fakeName())
 		await write(page, elements.timesheetDescription, name.fakeName())
-		await click(page, elements.additionalInformationLink)
-		await select(page, elements.timesheetArea, elements.specialtyArea)
 		await clicS(page, elements.timesheetButtonOk)
 
 	}

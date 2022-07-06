@@ -14,7 +14,8 @@
     "test:ValuesAndOrders": "jest ./test/ValuesAndOrders/ValuesAndOrders.test.js",
     "test:Schedule": "jest ./test/Schedule/Schedule.test.js",
     "test:Timeline": "jest ./test/Timeline/Timeline.test.js",
-    "test:Cases": "jest ./test/Cases/Cases.test.js"
+    "test:Cases": "jest ./test/Cases/Cases.test.js",
+    "test:ComplementaryData": "jest ./test/ComplementaryData/ComplementaryData.test.js"
   },
   "keywords": [],
   "author": "",
