@@ -29,9 +29,9 @@ export const guaranteeButtonRadioObs = "(//label[text()='Observação']/followin
 
 export const guaranteeDeleteButtonPanel = "//span[contains(@class, 'anticon anticon-delete')]"
 export const doNotDel = "//span[text()='Não é possível excluir essa garantia, pois ela já possui movimentações']"
-export const successDeleteGuarantee = "//span[normalize-space()='Garantia deletada com sucesso.']"
+export const successDeleteGuarantee = "//span[normalize-space()='Garantia excluída com sucesso']"
 export const guaranteeMovementButton = "//span[@class='anticon anticon-file-add']"
-export const successMovementGuarantee = "//span[normalize-space()='Movimentação inserida com sucesso.']"
+export const successMovementGuarantee = "//span[normalize-space()='Movimentação criada com sucesso']"
 export const guaranteeOption = "//span[text()='Garantia']"
 export const successCreateGuarantee = "//span[normalize-space()='Garantia criada com sucesso']"
 
@@ -50,4 +50,4 @@ export const buttonFilterTen = "(//button[@role='switch'])[10]"
 export const buttonFilterEleven = "//div[9]//div[1]//div[2]//button[1]" 
 export const buttonFilter = "//span[text()='Filtrar']"
 export const buttonNew = "//button[@class='ant-btn ant-btn-primary ant-dropdown-trigger']"
-export const successUpdateGuarantee = "//span[normalize-space()='Garantia atualizada com sucesso.']"
+export const successUpdateGuarantee = "//span[normalize-space()='Garantia atualizada com sucesso']"

@@ -1,6 +1,6 @@
 import BasePage from '../Panel/../../pages/Base/BasePage'
 import MenuPage from '../Panel/../../pages/Base/MenuPage'
-import DatesAndRemarksUpdatePage from '../Panel/../../pages/Panel/DatesAndRemarksUpdatePage'
+//import DatesAndRemarksUpdatePage from '../Panel/../../pages/Panel/DatesAndRemarksUpdatePage'
 import ForumNumberingAndAreaUpdatePage from '../Panel/../../pages/Panel/ForumNumberingAndAreaUpdatePage'
 import { username, password, timeout } from '../Cases/../../config'
 import { validateMessage } from '../../lib/helpers'
@@ -9,10 +9,9 @@ let elements = require('../../elements_maps/panel/panel_elements')
 describe('Must do a crud on Panel items', () => {
 
     let basePage
-    let linksMenu
     let mainMenu
     let menu
-    let datesAndRemarksUpdate
+    //let datesAndRemarksUpdate
     let forumNumberingAndArea
     
     beforeAll(async () => {
@@ -29,18 +28,24 @@ describe('Must do a crud on Panel items', () => {
     basePage = new BasePage()
     mainMenu = new MenuPage()
     menu = new MenuPage()
-    datesAndRemarksUpdate = new DatesAndRemarksUpdatePage()
+    //datesAndRemarksUpdate = new DatesAndRemarksUpdatePage()
     forumNumberingAndArea = new ForumNumberingAndAreaUpdatePage()
  
     it('Must update a Dates and remarks', async () => {
         await menu.menu(elements.datesAndRemarksHome, elements.datesAndRemarksEdit)
         await datesAndRemarksUpdate.datesAndRemarksUpdate()
-        let datesAndRemarksUpdateMSG = await validateMessage(elements.datesAndRemarksContent)
-        expect(datesAndRemarksUpdateMSG).toBe('Datas e observações editadas com sucesso')  
+        
+        const panel_rem_Up_MSG = await page.evaluate(() => {
+			const panel_rem_Up_Ok = document.querySelector(".ant-message-success").textContent
+			return panel_rem_Up_Ok
+	  
+		  })
+
+        expect(panel_rem_Up_MSG).toBe('Datas e observações atualizadas com sucesso')  
     })
 
-    it('Must update a Forum numbering and area', async () => {
-        await menu.menu(elements.datesAndRemarksHome, elements.forumNumberingAndAreaEdit)
-    	await forumNumberingAndArea.forumNumberingAndArea()
-    }) 
+    // it('Must update a Forum numbering and area', async () => {
+    //     await menu.menu(elements.datesAndRemarksHome, elements.forumNumberingAndAreaEdit)
+    // 	await forumNumberingAndArea.forumNumberingAndArea()
+    // }) 
 })

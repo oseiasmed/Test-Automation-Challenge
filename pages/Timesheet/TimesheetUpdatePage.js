@@ -15,8 +15,6 @@ export default class TimeSheetUpdatePage {
 		await click(page, elements.nowButtonOk)
 		await select(page, elements.clientInput, elements.client)
 		await select(page, elements.timesheetClassificationInput, elements.legalInput)
-		await click(page, elements.freeField)
-		await write(page, elements.titleInput, name.fakeName())
 		await write(page, elements.timesheetDescription, name.fakeName())
 		await clicS(page, elements.timeUpBtnSave)
 

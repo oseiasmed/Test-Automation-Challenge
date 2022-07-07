@@ -12,8 +12,8 @@ export const justiceTypeButtonOk = "//span[normalize-space()='Salvar']"
 // TODO Panel Test Page Xpaths
 
 export const datesAndRemarksHome = "//div[text()='Home']"
-export const datesAndRemarksEdit = "(//button[@class='ant-btn'])[1]"
-export const datesAndRemarksContent = "//span[normalize-space()='Datas e observações editadas com sucesso']"
+export const datesAndRemarksEdit = "//div[@class='ant-card-extra']//div[2]//button[1]//span[2]"
+export const datesAndRemarksContent = "//span[normalize-space()='Datas e observações atualizadas com sucesso']"
 export const forumNumberingAndAreaEdit = "(//button[@class='ant-btn']//span)[4]"
 
 // TODO Complement Xpaths
