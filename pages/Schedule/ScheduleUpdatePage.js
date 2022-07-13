@@ -8,7 +8,24 @@ export default class ScheduleUpdatePage {
     async scheduleUpdate() {
 
         await page.waitForTimeout(1000)
-        await randomlySelect(page, elements.scheduleRemember, receiveScheduleThree )
+        await randomlySelect(page, elements.inputType, receiveScheduleTwo)
+
+        const internalScheduleCheck = [0, 1]
+        let checkedSche = internalScheduleCheck[Math.floor(Math.random() * internalScheduleCheck.length)]
+
+        if (checkedSche == 1) {
+            await page.waitForTimeout(2000)
+            await randomlySelect(page, elements.billingTitleInput, receiveSheTitle)
+        } else {
+
+            await click(page, elements.freeTextCheckbox)
+            await page.waitForTimeout(1000)
+            await write(page, elements.billingTitleInput, "Agenda")
+
+        }
+
+        await page.waitForTimeout(1000)
+        await randomlySelect(page, elements.scheduleRemember, receiveScheduleThree)
         await page.waitForTimeout(2000)
         await randomlySelect(page, elements.scheduleParts, receiveUniversalList)
         await write(page, elements.scheduleDescription, name.fakeName())

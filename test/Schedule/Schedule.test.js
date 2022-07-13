@@ -1,11 +1,11 @@
 import BasePage from '../Schedule/../../pages/Base/BasePage'
 import MenuPage from '../Schedule/../../pages/Base/MenuPage'
 import ScheduleCreatePage from '../Schedule/../../pages/Schedule/ScheduleCreatePage'
-// import ScheduleUpdatePage from '../Schedule/../../pages/Schedule/ScheduleUpdatePage'
+import ScheduleUpdatePage from '../Schedule/../../pages/Schedule/ScheduleUpdatePage'
 // import scheduleDeletePage from '../Schedule/../../pages/Schedule/ScheduleDeletePage'
 // import ScheduleDeletePanelPage from '../Schedule/../../pages/Schedule/ScheduleDeletePanelPage'
 import { username, password, timeout } from '../Cases/../../config'
-import { validateMessage } from '../../lib/helpers'
+//import { randomlySelect, click } from '../Schedule/../../lib/helpers'
 let elements = require('../../elements_maps/schedule/schedule_elements')
 
 describe('Must do a CRUD on Schedule items', () => {
@@ -14,7 +14,7 @@ describe('Must do a CRUD on Schedule items', () => {
     let mainMenu
     let menu
     let scheduleCreate
-    // let scheduleUpdate
+    let scheduleUpdate
     // let scheduleDelete
     // let scheduleDeletePanel
 
@@ -31,26 +31,31 @@ describe('Must do a CRUD on Schedule items', () => {
 
     basePage = new BasePage()
     scheduleCreate = new ScheduleCreatePage()
-    // scheduleUpdate = new ScheduleUpdatePage()
+    scheduleUpdate = new ScheduleUpdatePage()
     // scheduleDelete = new scheduleDeletePage()
     // scheduleDeletePanel = new ScheduleDeletePanelPage()
     mainMenu = new MenuPage()
     menu = new MenuPage()
-  
+
     it('Must create a Schedule', async () => {
         await menu.menu(elements.buttonNew, elements.scheduleOption)
         await scheduleCreate.scheduleCreate()
-        //let scheduleCreateMSG = await validateMessage(elements.successCreateSchedule)
-        //expect(scheduleCreateMSG).toBe('Evento criado com sucesso')  
+
+        const sche_New_Pan_MSG = await page.evaluate(() => {
+            const sche_New_Pan_Ok = document.querySelector(".ant-message-success").textContent
+            return sche_New_Pan_Ok
+
+        })
+
+        expect(sche_New_Pan_MSG).toBe('Evento criado com sucesso')
     })
 
-    // it('Must update a Schedule', async () => {
-    //     await menu.menu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilterSix, elements.buttonFilterTen, elements.buttonFilterEleven, elements.buttonFilter, elements.scheduleList)
-    //     await scheduleUpdate.scheduleUpdate()
-    //     let scheduleUpdateMSG = await validateMessage(elements.successUpdateSchedule) 
-    //     expect(scheduleUpdateMSG).toBe('Evento atualizado com sucesso')
-        
-    // })
+    it('Must update a Schedule', async () => {
+        await menu.menu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilterSix, elements.buttonFilterTen, elements.buttonFilterEleven, elements.buttonFilter, elements.scheduleList)
+        await scheduleUpdate.scheduleUpdate()
+        //let scheduleUpdateMSG = await validateMessage(elements.successUpdateSchedule) 
+        //expect(scheduleUpdateMSG).toBe('Evento atualizado com sucesso')
+    })
 
     // it('Must Delete a Schedule', async () => {
     //     await menu.menu(elements.timelineFilter, elements.buttonFilterOne, elements.buttonFilterSix, elements.buttonFilterTen, elements.buttonFilterEleven, elements.buttonFilter, elements.scheduleList)

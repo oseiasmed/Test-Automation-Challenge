@@ -13,11 +13,9 @@ export default class ValuesAndOrdersUpdatePage {
         await write(page, elements.valueOfTheCase, orderValueNum)
         await write(page, elements.expectedValue, orderValueNum)
         await write(page, elements.ContingenceValue, orderValueNum)
-        await click(page, elements.AddOrder)
-        await page.waitForTimeout(3000)
-        await randomlySelect(page, elements.OrderItem, receiveValuesOne)
+        //await click(page, elements.AddOrder)
+        //await randomlySelect(page, elements.OrderItem, receiveValuesOne)
         await clicS(page, elements.AddOrderButtonSave)
         await page.waitForTimeout(1000)
-
     }
 }

@@ -33,8 +33,16 @@ describe('Must do a crud on Values and orders items', () => {
 
 		await menu.menu(elements.InformationLink, elements.valueAndOrdersEdit)
 		await valuesAndOrderUpdate.valuesAndOrderUpdate()
-		let valuesAndOrdersUpdatelMSG = await validateMessage(elements.successUpdatevaluesAndOrders)
-        expect(valuesAndOrdersUpdatelMSG).toBe('Valores do caso atualizados com sucesso')
+		//let valuesAndOrdersUpdatelMSG = await validateMessage(elements.successUpdatevaluesAndOrders)
+
+		const values_Create_MSG = await page.evaluate(() => {
+			const values_Create__Ok = document.querySelector(".ant-message-success").textContent
+			return values_Create__Ok
+
+		})
+
+		expect(values_Create_MSG).toBe('Pedidos do caso atualizados com sucesso')
+
 	})
 })
 

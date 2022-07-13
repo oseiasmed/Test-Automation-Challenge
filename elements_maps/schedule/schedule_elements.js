@@ -19,7 +19,7 @@ export const scheduleDeleteButtonPopUp = "(//span[text()='Excluir'])[2]"
 
 export const scheduleOption = "//span[text()='Agenda']"
 export const successCreateSchedule = "//span[text()='Evento criado com sucesso']"
-export const scheduleList = "//b[normalize-space()='Prazo - Agenda']"
+export const scheduleList = "(//b[text()='Compromisso - Agenda'])[1]"
 export const successUpdateSchedule = "//span[text()='Evento atualizado com sucesso']"
 export const successDeleteSchedule = "//span[text()='Evento excluído com sucesso']"
 export const tasksLinkPanel = "(//div[text()='Tarefas'])[1]"
