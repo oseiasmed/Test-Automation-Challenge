@@ -6,6 +6,7 @@ export const authPassword = "//input[@id='i0118']"
 export const authButton = "//input[@id='idSIButton9']"
 export const authCheck = "//input[@id='KmsiCheckboxField']"
 export const authContinue = "//input[@id='idSIButton9']"
+export const listCasesLink = "//a[@id='link-to-case-list-page']"
 
 // TODO Menu Page Page Xpaths
 

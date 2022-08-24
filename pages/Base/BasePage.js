@@ -5,7 +5,7 @@ import { password, username } from '../../config'
 export default class BasePage {
 
 	async goToPage() {
-		await page.goto('https://testing.lawsoft.com.br')
+		await page.goto('https://testing.looplex.com/cases')
 	}
 
 	async wait(time) {
@@ -21,7 +21,6 @@ export default class BasePage {
 		await click(page, authCheck)
 		await click(page, authContinue)
 
-	}
-	
+	}	
 }
 

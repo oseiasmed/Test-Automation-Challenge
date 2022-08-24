@@ -7,6 +7,8 @@ export const modelIn = "//input[@id='IdAndamentoTemplate']"
 export const casesTextArea = "//textarea[@class='ant-input']"
 export const saveButton = "//span[text()='Salvar']"
 export const inputChek = "//input[@type='checkbox']"
+export const linkCases = "(//a[@href='/cases'])[1]"
+export const firstElementTable = "(//td[@class='ant-table-cell']//a)[1]"
 
 // TODO Delete Progress Page Xpaths
 
@@ -17,6 +19,7 @@ export const progressDeleteBtnPopUp = "(//span[text()='Excluir'])[2]"
 
 export const progressOption = "(//li[@class='ant-dropdown-menu-item']//span)[2]"
 export const progressList = "(//b[text()='Andamento manual'])[1]"
+export const listCasesLink = "//a[@id='link-to-case-list-page']"
 
 // TODO Complement Xpaths
 

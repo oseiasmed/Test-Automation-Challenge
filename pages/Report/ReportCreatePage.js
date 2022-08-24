@@ -5,7 +5,7 @@ let name = require('../../utils/fakeName')
 let date = require('date-and-time')
 export default class ProgressCreatePage {
 
-    async progressCreate() {
+    async reportCreate() {
 
         const today = new Date()
 

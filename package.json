@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest",
     "test:Progress": "jest ./test/Progress/Progress.test.js",
+    "test:Report": "jest ./test/Report/Report.test.js",
     "test:MonetaryCalculation": "jest ./test/MonetaryCalculation/MonetaryCalculation.test.js",
     "test:Timesheet": "jest ./test/Timesheet/Timesheet.test.js",
     "test:Decision": "jest ./test/Decision/Decision.test.js",
