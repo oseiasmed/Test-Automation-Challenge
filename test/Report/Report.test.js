@@ -1,20 +1,16 @@
-import BasePage from '../Progress/../../pages/Base/BasePage'
-import MenuPage from '../Progress/../../pages/Base/MenuPage'
-import ProgressCreatePage from '../Progress/../../pages/Progress/ProgressCreatePage'
-//import ProgressUpdatePage from '../Progress/../../pages/Progress/ProgressUpdatePage'
-//import ProgressDeletePage from '../Progress/../../pages/Progress/ProgressDeletePage'
-import { username, password, timeout } from '../Progress/../../config'
-//import { validateMessage } from '../../lib/helpers'
-let elements = require('../../elements_maps/progress/progress_elements')
+import BasePage from '../Report/../../pages/Base/BasePage'
+import MenuPage from '../Report/../../pages/Base/MenuPage'
+import ReportCreatePage from '../Report/../../pages/Report/ReportCreatePage'
+import { username, password, timeout } from '../Report/../../config'
+
+let elements = require('../../elements_maps/report/report_elements')
 
 describe('Must do a CRUD on Progress items', () => {
 
   let basePage
   let menu
   let mainMenu
-  let progressCreate
-  //let progressUpdate
-  //let progressDelete
+  let reportCreate
 
   beforeAll(async () => {
 
@@ -32,56 +28,25 @@ describe('Must do a CRUD on Progress items', () => {
   basePage = new BasePage()
   menu = new MenuPage()
   mainMenu = new MenuPage()
-  progressCreate = new ProgressCreatePage()
-  //progressUpdate = new ProgressUpdatePage()
-  //progressDelete = new ProgressDeletePage()
+  reportCreate = new ReportCreatePage()
 
-  it('Must create a Progress', async () => {
+  it('Must create a Report', async () => {
 
-    // await page.waitForTimeout(2000)
-    await menu.menu(elements.buttonNew, elements.progressOption)
-    await progressCreate.progressCreate()
+    await page.waitForTimeout(2000)
+    await menu.menu(elements.reportButton)
+    await reportCreate.reportCreate()
 
-    const progress_Suc_MSG = await page.evaluate(() => {
-      const pro_Create_Ok = document.querySelector(".ant-message-success").textContent
-      return pro_Create_Ok
+    // const progress_Suc_MSG = await page.evaluate(() => {
+    //   const pro_Create_Ok = document.querySelector(".ant-message-success").textContent
+    //   return pro_Create_Ok
 
-    })
+    // })
 
     //let progressCreateMSG = await validateMessage(`//span[normalize-space()='${progress_Suc_MSG}']`)
-    expect(progress_Suc_MSG).toBe("Andamento criado com sucesso")
+    //expect(progress_Suc_MSG).toBe("Andamento criado com sucesso")
 
   })
 
-  // it('Must update a Progress', async () => {
-  //   await menu.menu(elements.linkCases, elements.listCasesLink, elements.firstElementTable, elements.timelineFilter, elements.buttonFilterFour, elements.buttonFilterSix, elements.buttonFilterEleven, elements.buttonFilterTen, elements.buttonFilter, elements.progressList)
-  //   await progressUpdate.progressUpdate()
-
-  //   const progress_Up_MSG = await page.evaluate(() => {
-  //     const pro_Up_Ok = document.querySelector(".ant-message-success").textContent
-  //     return pro_Up_Ok
-
-  //   })
-
-  //   //let progressUpdateMSG = await validateMessage(`//span[normalize-space()='${progress_Up_MSG}']`)
-  //   expect(progress_Up_MSG).toBe("Andamento atualizado com sucesso")
-
-  // })
-
-  // it('Must delete a Progress', async () => {
-  //   await menu.menu(elements.linkCases, elements.listCasesLink, elements.firstElementTable, elements.timelineFilter, elements.buttonFilterFour, elements.buttonFilterSix, elements.buttonFilterEleven, elements.buttonFilterTen, elements.buttonFilter, elements.progressList)
-  //   await progressDelete.progressDelete()
-
-  //   const progress_Del_MSG = await page.evaluate(() => {
-  //     const pro_Del_Ok = document.querySelector(".ant-message-success").textContent
-  //     return pro_Del_Ok
-
-  //   })
-
-  //   let progressDeleteMSG = await validateMessage(`//span[normalize-space()='${progress_Del_MSG}']`)
-  //   expect(progressDeleteMSG).toBe(progress_Del_MSG)
-
-  // })
 })
 
 

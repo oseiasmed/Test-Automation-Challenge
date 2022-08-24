@@ -13,13 +13,12 @@ export default class MenuPage {
 
 	async mainMenu() {
 	  
-		//await click(page, elements.linkCases)
 		await page.waitForTimeout(1000)
 	    await click(page, elements.listCasesLink)
 		await page.waitForTimeout(1000)
 		await click(page, elements.listCasesLink)
 		await page.waitForTimeout(3000)
-	    await click(page, elements.firstElementTable)
-		await page.waitForTimeout(1000)
+	    //await click(page, elements.firstElementTable)
+		//await page.waitForTimeout(1000)
 	}
 }
