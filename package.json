@@ -1,22 +1,10 @@
 {
-  "name": "lawoffice-web",
+  "name": "Web",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "test:Progress": "jest ./test/Progress/Progress.test.js",
-    "test:Report": "jest ./test/Report/Report.test.js",
-    "test:MonetaryCalculation": "jest ./test/MonetaryCalculation/MonetaryCalculation.test.js",
-    "test:Timesheet": "jest ./test/Timesheet/Timesheet.test.js",
-    "test:Decision": "jest ./test/Decision/Decision.test.js",
-    "test:Guarantee": "jest ./test/Guarantee/Guarantee.test.js",
-    "test:Panel": "jest ./test/Panel/Panel.test.js",
-    "test:ValuesAndOrders": "jest ./test/ValuesAndOrders/ValuesAndOrders.test.js",
-    "test:Schedule": "jest ./test/Schedule/Schedule.test.js",
-    "test:Timeline": "jest ./test/Timeline/Timeline.test.js",
-    "test:Cases": "jest ./test/Cases/Cases.test.js",
-    "test:ComplementaryData": "jest ./test/ComplementaryData/ComplementaryData.test.js"
+    "test": "jest ./test/Web/web.test.js"
   },
   "keywords": [],
   "author": "",
@@ -25,24 +13,11 @@
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
     "babel-jest": "^26.3.0",
-    "date-and-time": "^2.0.1",
-    "dotenv": "^16.0.0",
-    "faker-br": "^0.4.1",
     "jest": "^26.4.2",
-    "jest-jasmine2": "^28.0.3",
     "jest-puppeteer": "^4.4.0",
-    "project-name-generator": "^2.1.9",
-    "puppeteer": "^5.5.0",
-    "puppeteer-firefox": "^0.5.0",
-    "puppeteer-xpath": "^0.1.0",
-    "random-number": "0.0.9",
-    "scroll": "^3.0.1",
-    "xpath": "0.0.32"
+    "puppeteer": "^5.3.0"
   },
   "devDependencies": {
-    "chai": "^4.3.4",
-    "jest-expect": "0.0.1",
-    "mocha": "^9.1.2",
     "prettier": "^2.1.1"
   }
 }
